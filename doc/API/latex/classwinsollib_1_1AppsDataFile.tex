@@ -1,0 +1,107 @@
+\hypertarget{classwinsollib_1_1AppsDataFile}{
+\section{winsollib.Apps\-Data\-File Class Reference}
+\label{classwinsollib_1_1AppsDataFile}\index{winsollib::AppsDataFile@{winsollib::AppsDataFile}}
+}
+Class represent the Application XML file input/output.  
+
+
+Inherits \hyperlink{classwinsollib_1_1DataFile}{winsollib.Data\-File}.
+
+Inheritance diagram for winsollib.Apps\-Data\-File:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=87pt]{classwinsollib_1_1AppsDataFile__inherit__graph}
+\end{center}
+\end{figure}
+Collaboration diagram for winsollib.Apps\-Data\-File:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=87pt]{classwinsollib_1_1AppsDataFile__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+def \hyperlink{classwinsollib_1_1AppsDataFile_c1fe263619352c8a85a48a3ba16a60e2}{\_\-\_\-init\_\-\_\-}
+\begin{CompactList}\small\item\em Inicialice \hyperlink{classwinsollib_1_1AppsDataFile}{Apps\-Data\-File}. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1AppsDataFile_17b0352842a241f33a0d597a0971a388}{get\_\-Apps}
+\begin{CompactList}\small\item\em Add all applications from XML file to the \hyperlink{classwinsollib_1_1App}{App} List. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1AppsDataFile_03308e0dfa313b1163d8cbafd77a8353}{write\_\-to\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Write the applications list to XML file. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Class represent the Application XML file input/output. 
+
+\begin{Desc}
+\item[Author:]David Barrag\~{A}!`n Merino $<$bameda \mbox{[}AT\mbox{]} di.uc3m \mbox{[}DOT\mbox{]} com$>$ 
+
+CRISOL-UC3M $<$htp://crisol.uc3m.es$>$ \end{Desc}
+
+
+
+
+Definition at line 1776 of file winsollib.py.
+
+\subsection{Member Function Documentation}
+\hypertarget{classwinsollib_1_1AppsDataFile_c1fe263619352c8a85a48a3ba16a60e2}{
+\index{winsollib::AppsDataFile@{winsollib::Apps\-Data\-File}!__init__@{\_\-\_\-init\_\-\_\-}}
+\index{__init__@{\_\-\_\-init\_\-\_\-}!winsollib::AppsDataFile@{winsollib::Apps\-Data\-File}}
+\subsubsection[\_\-\_\-init\_\-\_\-]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Apps\-Data\-File.\_\-\_\-init\_\-\_\- ( {\em self},  {\em xml\_\-file},  {\em dtd\_\-file})}}
+\label{classwinsollib_1_1AppsDataFile_c1fe263619352c8a85a48a3ba16a60e2}
+
+
+Inicialice \hyperlink{classwinsollib_1_1AppsDataFile}{Apps\-Data\-File}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\_\-file}]- XML path file. \item[{\em dtd\_\-file}]- DTD path file.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[See also:]Data\-File.\_\-\_\-init\_\-() \end{Desc}
+
+
+Reimplemented from \hyperlink{classwinsollib_1_1DataFile_22c2b3c07b3991b6c2300719eccd9687}{winsollib.Data\-File}.
+
+Definition at line 1784 of file winsollib.py.\hypertarget{classwinsollib_1_1AppsDataFile_17b0352842a241f33a0d597a0971a388}{
+\index{winsollib::AppsDataFile@{winsollib::Apps\-Data\-File}!get_Apps@{get\_\-Apps}}
+\index{get_Apps@{get\_\-Apps}!winsollib::AppsDataFile@{winsollib::Apps\-Data\-File}}
+\subsubsection[get\_\-Apps]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Apps\-Data\-File.get\_\-Apps ( {\em self},  {\em app\_\-list},  {\em save} = {\tt 0})}}
+\label{classwinsollib_1_1AppsDataFile_17b0352842a241f33a0d597a0971a388}
+
+
+Add all applications from XML file to the \hyperlink{classwinsollib_1_1App}{App} List. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em app\_\-list}]- The application list. \item[{\em save}]- The save value (0 to System \hyperlink{classwinsollib_1_1App}{App} 1 to User \hyperlink{classwinsollib_1_1App}{App}). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]{\em true/1\/} if it is correct or {\em false/0\/} if isn't correct. \end{Desc}
+
+
+Definition at line 1792 of file winsollib.py.\hypertarget{classwinsollib_1_1AppsDataFile_03308e0dfa313b1163d8cbafd77a8353}{
+\index{winsollib::AppsDataFile@{winsollib::Apps\-Data\-File}!write_to_XML_file@{write\_\-to\_\-XML\_\-file}}
+\index{write_to_XML_file@{write\_\-to\_\-XML\_\-file}!winsollib::AppsDataFile@{winsollib::Apps\-Data\-File}}
+\subsubsection[write\_\-to\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Apps\-Data\-File.write\_\-to\_\-XML\_\-file ( {\em self},  {\em app\_\-list})}}
+\label{classwinsollib_1_1AppsDataFile_03308e0dfa313b1163d8cbafd77a8353}
+
+
+Write the applications list to XML file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em app\_\-list}]- Applications list.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[See also:]\hyperlink{classwinsollib_1_1DataFile_ec7a45f4fc3069f7da870bc41e27963f}{Data\-File.write\_\-apps\_\-to\_\-XML\_\-file()} \end{Desc}
+
+
+Definition at line 1879 of file winsollib.py.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/home/pelukas/winsol/\hyperlink{winsollib_8py}{winsollib.py}\end{CompactItemize}

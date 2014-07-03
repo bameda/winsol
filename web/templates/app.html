@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="D. Barragan" />
+    <meta name="description" content="Cd crisol home page" />
+    <title>Web CD-CRISOL</title>
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/color.css" />
+  </head>
+  
+  <body>
+
+    <!-- Titulo -->
+    <div id='web-logo'>
+      <a href="http://crisol.uc3m.es"><img src="/static/images/logo_crisol_mini.png" vspace="10" hspace="20"  align="right" border="0"></a>
+      <img src="/static/images/logo.png" width="200" vspace="10"  align="bottm" border="0">
+    </div>
+
+    <!-- Menu Principal -->
+    <div id="main-menu">
+      <p>
+        <div class="mega">
+          <p><b>Tamaño Composición</b></p>
+          <p>$size MB</p>
+        </div>
+      </p>
+      <p>
+        <ul id="left">
+          <li><a href="/index.html">Introducción</a></li>
+          <li><a href="/account.html">Datos de Usuario</a></li>
+          <li><a href="/help.html">Ayuda</a></li>
+	  <li><a href="/logout.html">Salir</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Acciones</h3>
+        <ul id="left">
+          <li><a href="/list_all.html">Listado de Aplicaciones</a></li>
+          <li><a href="/add_cat.html">Añadir Categoría</a></li>
+          <li><a href="/add_app.html">Añadir Aplicación</a></li>
+          <li><a href="/make_composition.html">Crear Composición</a></li>
+          <li><a href="/precompile_composition.html">Composiciones Precompiladas</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Listado de Categorías</h3>
+          <ul id="left">
+            #for $menu_cat in $menu_categories:
+            <li>
+                <a href="/category/$menu_cat.label"><img src="$menu_cat.icon_url" align="left" width="20" height="20" alt="" border="0" /> $menu_cat.name</a>
+                </li>
+          #end for
+        </ul>
+      </p>
+    </div>
+
+    <!-- Cuerpo de la página -->
+    
+    <div id="content">
+      <br> 
+      <img src="$app.icon_url" align="right" width="48" height="48" alt="Imagen no disponible" />
+      <h2 id="top">
+        #if $app.included:
+		<font color="Green">$app.name</font>
+	#else
+		<font color="Red">$app.name</font>
+	#end if
+      </h2>
+      <p>
+        <a href="/select_app/$app.name">Selecionar</a> |
+        <a href="/unselect_app/$app.name">No Seleccionar</a> ||
+        <a href="/modify_app/$app.name">Modificar</a> |
+        <a href="/del_app/$app.name">Borrar</a> ||
+        <a href="/add_app_man_online/$app.name">Añadir Manual Online</a> |
+        <a href="/add_app_man_offline/$app.name">Añadir Manual Offline</a> 
+      </p>
+      <p>
+        #if len($messages) > 0:
+          <table width="600" align="center">
+            <tbody>
+              #for $mes in $messages:
+                <tr bgcolor="#E0FFE0"><td>$mes</td></tr>
+              #end for
+            <tbody >
+          </table>
+          <br>
+        #end if
+        <ul>
+	  <li><h4>VERSION:</h4>$app.version</li>
+	  
+	  <li><h4>TAMAÑO:</h4>$app.size KB</li>
+	  
+	  <li><h4>WEB:</h4><a href="$app.site">$app.site</a></li>
+	  
+          #if $app.plataforms > 0
+	    <li><h4>PLATAFORMS:</h4>
+              #for $plat in $app.plataforms
+                $plat<br>
+              #end for
+            </li>
+	  #end if
+	    
+	  <li><h4>DESCRIPCION:</h4>$app.description</li>
+	  
+          #if len($app.categories) > 0
+	    <li><h4>CATEGORIAS:</h4>
+              #for $cat in $app.categories
+	        #for $m_cat in $menu_categories
+                  #if $m_cat.label == $cat
+                    <p><a href="/category/$cat"><img src="$m_cat.icon_url" align="left" width="20" height="20" hspace="10" alt="" border="0" />$m_cat.name</a></p>
+		  #end if
+                #end for
+              #end for
+            </li>
+	  #end if
+
+	  #if len($app.alternatives) > 0
+	    <li><h4>ALTERNATIVAS:</h4>
+              #for $alt in $app.alternatives
+                $alt<br>
+              #end for
+            </li>
+	  #end if
+	    
+          #if  len($app.manuals.app_man_online) > 0
+	    <li><h4>MANUALES ON-LINE:</h4>
+              <UL>
+                #for $man in $app.manuals.app_man_online
+                  <li><a href="$man.app_man_on_url">$man.app_man_on_name:</a> [$man.app_man_on_lang] $man.app_man_on_description</li>
+                #end for
+              </UL>
+            </li>
+	  #end if
+
+	  #if  len($app.manuals.app_man_offline) > 0
+	    <li><h4>MANUALES OFF-LINE:</h4>
+              <UL>
+                #for $man in $app.manuals.app_man_offline
+                  <li><a href="$man.app_man_off_url">$man.app_man_off_name ($man.app_man_off_size KB):</a> [$man.app_man_off_lang] $man.app_man_off_description</li>
+                #end for
+              </UL>
+	    </li>
+	  #end if
+
+        </ul>
+      </p>
+      <p> Puedes descargar este software de su página web oficial pinchando <a href=$app.software_url>aquí</a>.					
+    </div>
+
+    <div id="footer">
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Website designed by 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "bameda"; 
+	  var part2 = "di.uc3m.es?subject=[WinSOL] "; 
+	  var part3 = "David Barragán Merino";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+      
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+      </h5>
+      
+      <h5>
+        Contact: 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "cd-crisol-main"; 
+	  var part2 = "forja.rediris.es"; 
+	  var part3 = "WinSOL mail list";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+    </div>
+    <div align="right">
+      <br>
+        <a href="http://www.python.org"><img src="/static/images/use-python.gif" border="0"></a>
+	<a href="http://www.webpy.org"><img src="/static/images/use-web.py.gif" border="0">
+</a>
+    </div>
+  </body>
+</html>
+
+

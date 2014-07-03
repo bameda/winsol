@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="D. Barragan" />
+    <meta name="description" content="Cd crisol home page" />
+    <title>Web CD-CRISOL</title>
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/color.css" />
+  </head>
+  
+  <body>
+
+    <!-- Titulo -->
+    <div id='web-logo'>
+      <a href="http://crisol.uc3m.es"><img src="/static/images/logo_crisol_mini.png" vspace="10" hspace="20"  align="right" border="0"></a>
+      <img src="/static/images/logo.png" width="200" vspace="10"  align="bottm" border="0">
+    </div>
+
+    <!-- Menu Principal -->
+    <div id="main-menu">
+      <p>
+	<div class="mega">
+	  <p><b>Tamaño Composición</b></p>
+	  <p>$size MB</p>
+        </div>
+      </p>
+      <p>
+        <ul id="left">
+          <li><a href="/index.html">Introducción</a></li>
+	  <li><a href="/account.html">Datos de Usuario</a></li>
+          <li><a href="/help.html">Ayuda</a></li>
+	  <li><a href="/logout.html">Salir</a></li>
+	</ul>
+      </p>
+      <p>
+        <h3>Acciones</h3>
+        <ul id="left">
+	  <li><a href="/list_all.html">Listado de Aplicaciones</a></li>	
+	  <li><a href="/add_cat.html">Añadir Categoría</a></li>
+          <li><a href="/add_app.html">Añadir Aplicación</a></li>
+	  <li><a href="/make_composition.html">Crear Composición</a></li>
+          <li><a href="/precompile_composition.html">Composiciones Precompiladas</a></li>
+  	</ul>
+      </p>
+      <p>
+        <h3>Listado de Categorías</h3>
+        <ul id="left">
+	  #for $menu_cat in $menu_categories:
+	    <li>
+	      <a href="/category/$menu_cat.label"><img src="$menu_cat.icon_url" align="left" width="20" height="20" alt="" border="0" /> $menu_cat.name</a>
+	    </li>
+          #end for
+        </ul>
+      </p>
+
+    </div>
+
+    <!-- Cuerpo de la página -->
+    
+    <div id="content">
+      <br>
+      <h2 id="top">Ayuda</h2>
+      <br>
+      <h3>Manuales de Usuario</h3>
+      <br>
+      <p>
+        <ul>
+	  <li>
+	    <a href="https://forja.rediris.es/docman/view.php/27/237/User_Manual.pdf">
+	      <img src="/static/images/logo_pdf.png" align="top" alt="" border="0">  Manual de Usuario (formato pdf)
+	    </a>
+          </li>
+	  <li>
+	    <a href="https://forja.rediris.es/docman/view.php/27/238/User_Manual.odt">
+	      <img src="/static/images/logo_openoffice.png" align="top" alt="" border="0">  Manual de Usuario (formato OpenOffice.org)
+	    </a>
+	  </li>
+        </ul>
+      </p>
+      <h3>Preguntas Frecuentes</h3>
+      <br>
+      <p>
+        <dl >
+	  <dt><b>¿Qué es WinSOL? </b></dt>
+	    <dd>Es una aplicación web que nos permite generar CDs y DVDs de software libre para Windows de manera rápida y fácil, únicamente utilizando un PC y una conexión a Internet.</dd>
+	  <dt><b>¿Qué es un fichero ISO?</b></dt>
+            <dd>Es un fichero con un formato compatible con aplicaciones de grabación tipo: K3B, Nero, EasyCD, etc. Aunque es un sólo archivo, una vez grabado, el CD/DVD contendrá la estructura de carpetas y archivos incluidos en la imagen ISO.</dd>
+	  <dt><b>¿Cómo genero una composición?</b></dt>
+	    <dd>El proceso está descrito brevemente en la Introducción y puedes obtener información más detallada en el manual incluido en la opción Ayuda.</dd>
+	  <dt><b>¿Cómo puedo añadir más aplicaciones?</b></dt>
+            <dd>El proceso está descrito brevemente en la opción Añadir Aplicación y puedes obtener información más detallada en el manual incluido en la opción Ayuda.</dd>
+	  <dt><b>¿Cómo grabo la imagen?</b></dt>
+            <dd>Abre la aplicación de grabación que utilices en tu equipo. Busca la opción "Grabar Imagen" o similar, seleccionando si es necesario, archivos con extensión ".iso". Selecciona la imagen que has descargado de WINSOL y grábala con las opciones predeterminadas.</dd>
+	  <dt><b>¿Cómo utilizo el CD/DVD?</b></dt>
+            <dd>Los CD/DVDs generados a partir de las imágenes de WinSOL tienen un formato autoarrancable. De este modo, para utilizar el CD/DVD simplemente tendrás que introducirlo en un equipo con Windows y comprobarás como, automáticamente, se abre un navegador mostrando la página principal de tu compilación.</dd>
+	  <dt><b>¿Cuánto tiempo tengo para descargar una imagen?</b></dt>
+            <dd>Aunque el tiempo máximo es determinado por el número de imágenes y la capacidad del servidor WinSOL. La aplicación tiene establecido, de momento, un mínimo de dos días para que tengas tiempo de descargar la imagen a tu equipo.</dd>
+	</dl>
+      </p>
+    </div>
+    <div id="footer">
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Website designed by 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "bameda"; 
+	  var part2 = "di.uc3m.es?subject=[WinSOL] "; 
+	  var part3 = "David Barragán Merino";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+      
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+      </h5>
+      
+      <h5>
+        Contact: 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "cd-crisol-main"; 
+	  var part2 = "forja.rediris.es"; 
+	  var part3 = "WinSOL mail list";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+    </div>
+    <div align="right">
+      <br>
+        <a href="http://www.python.org"><img src="/static/images/use-python.gif" border="0"
+></a>
+        <a href="http://www.webpy.org"><img src="/static/images/use-web.py.gif" border="0">
+</a>
+    </div>
+  </body>
+</html>
+
+

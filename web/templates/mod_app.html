@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="D. Barragan" />
+    <meta name="description" content="Cd crisol home page" />
+    <title>Web CD-CRISOL</title>
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/color.css" />
+  </head>
+  
+  <body>
+
+    <!-- Titulo -->
+    <div id='web-logo'>
+      <a href="http://crisol.uc3m.es"><img src="/static/images/logo_crisol_mini.png" vspace="10" hspace="20"  align="right" border="0"></a>
+      <img src="/static/images/logo.png" width="200" vspace="10"  align="bottm" border="0">
+    </div>
+
+    <!-- Menu Principal -->
+    <div id="main-menu">
+      <p>
+        <div class="mega">
+          <p><b>Tamaño Composición</b></p>
+          <p>$size MB</p>
+        </div>
+      </p>
+      <p>
+        <ul id="left">
+          <li><a href="/index.html">Introducción</a></li>
+          <li><a href="/account.html">Datos de Usuario</a></li>
+          <li><a href="/help.html">Ayuda</a></li>
+	  <li><a href="/logout.html">Salir</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Acciones</h3>
+        <ul id="left">
+          <li><a href="/list_all.html">Listado de Aplicaciones</a></li>
+          <li><a href="/add_cat.html">Añadir Categoría</a></li>
+          <li><a href="/add_app.html">Añadir Aplicación</a></li>
+	  <li><a href="/make_composition.html">Crear Composición</a></li>
+	  <li><a href="/precompile_composition.html">Composiciones Precompiladas</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Listado de Categorías</h3>
+          <ul id="left">
+            #for $menu_cat in $menu_categories:
+            <li>
+                <a href="/category/$menu_cat.label"><img src="$menu_cat.icon_url" align="left" width="20" height="20" alt="" border="0" /> $menu_cat.name</a>
+                </li>
+          #end for
+        </ul>
+      </p>
+    </div>
+
+    <!-- Cuerpo de la página -->
+    
+    <div id="content">
+      <br> 
+      <h2 id="top">Modificar Aplicación</h2>
+      <br>
+      <div align="justify">Realice los cambios oportunos en el formulario. Recuerde que los valores en <b>Negrita</b> son obligatorios.
+      </div>
+      <br>
+      <div align="center">
+        <form method="POST" >
+          <table>
+            <tbody align="left" valign="top">
+              <tr>
+		<td>Nombre</td>
+                <td><input type="text" name="name" size="60" align="right" value="$app.name" disabled=true></td>
+              </tr>
+              <tr>
+		<td><b>Versión</b></td>
+                <td><input type="text" name="version" size="60" align="right" value="$app.version"></td>
+              </tr>
+              <tr>
+                <td>Tamaño (en KB)</td>
+                <td><input type="text" name="size" size="60" align="right" value="$app.size"></td>
+              </tr>
+              <tr>
+                <td>Web</td>
+                <td><input type="text" name="site" size="60" align="right"  value="$app.site"></td>
+              </tr>
+              <tr><td></td><td><em></em><font size="-3">ejemplo: "http://www.myapp.com"</font></em></td></tr>
+              <tr>
+                <td>Plataformas</td>
+                <td>
+                  <input type="checkbox" name="plat_win" $app.plat_win>Windows
+                  <input type="checkbox" name="plat_unix" $app.plat_unix>GNU-Linux/UNIX
+                  <input type="checkbox" name="plat_mac" $app.plat_mac>Mac OSX
+                </td>
+              </tr>
+              <tr>
+                <td>Mini Descripción</td>
+                <td><textarea name="minidescription" cols="52" rows="3">$app.minidescription</textarea></td>
+              </tr>
+              <tr>
+                <td>Descripción</td>
+                <td><textarea name="description" cols="52" rows="10">$app.description</textarea></td>
+              </tr>
+              <tr>
+		<td><b>Nombre del Fichero</b></td>
+                <td><input type="text" name="file" size="60" align="right" value="$app.file"></td>
+              </tr>
+              <tr><td></td><td><em></em><font size="-3">ejemplo: "app.exe"</font></em></td></tr>
+              <tr>
+		<td><b>Url del fichero</b></td>
+                <td><input type="text" name="file_url" size="60" align="right" value="$app.software_url"></td>
+              </tr>
+              <tr>
+                <td>Nombre del Icono</td>
+                <td><input type="text" name="icon" size="60" align="right" value="$app.icon"></td>
+              </tr>
+              <tr><td></td><td><em></em><font size="-3">ejemplo: "my_icon.png"</font></em></td></tr>
+              <tr>
+                <td>Url del Icono</td>
+                <td><input type="text" name="icon_url" size="60" align="right" value="$app.icon_url"></td>
+              </tr>
+              <tr>
+		<td>MD5SUM</td>
+                <td><input type="text" name="md5sum" size="60" align="right" value="$app.md5sum"></td>
+              </tr>
+              <tr>
+	        <td>Categorías</td>
+                <td>
+		  #for $val in $app.categories:
+		    <input type="checkbox" name="cat_$val.label" $val.status>$val.name<br>
+		  #end for
+		</td>
+              </tr>
+              <tr>
+                <td>Alternativas</td>
+                <td><input type="text" name="alternatives" size="60" align="right"  value="$app.alternatives"></td>
+              </tr>
+              <tr><td></td><td><em></em><font size="-3">ejemplo: "OpenOffice,StartOffice,KOffice"</td></tr>
+            </tbody>
+          </table><br>
+          <INPUT type="submit" value="Modificar Aplicación" align="middle"> <INPUT type="reset" value="Borrar cambios realizados" align="middle">
+        </form><br>
+      </div>
+    </div>
+
+    <div id="footer">
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Website designed by 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "bameda"; 
+	  var part2 = "di.uc3m.es?subject=[WinSOL] "; 
+	  var part3 = "David Barragán Merino";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+      
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+      </h5>
+      
+      <h5>
+        Contact: 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "cd-crisol-main"; 
+	  var part2 = "forja.rediris.es"; 
+	  var part3 = "WinSOL mail list";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+    </div>
+    <div align="right">
+      <br>
+        <a href="http://www.python.org"><img src="/static/images/use-python.gif" border="0"
+></a>
+        <a href="http://www.webpy.org"><img src="/static/images/use-web.py.gif" border="0">
+</a>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,282 @@
+\hypertarget{classwinsollib_1_1DataFile}{
+\section{winsollib.Data\-File Class Reference}
+\label{classwinsollib_1_1DataFile}\index{winsollib::DataFile@{winsollib::DataFile}}
+}
+Superclass to control the XML file imput/output.  
+
+
+Inherited by \hyperlink{classwinsollib_1_1AppsDataFile}{winsollib.Apps\-Data\-File}, \hyperlink{classwinsollib_1_1CategoriesDataFile}{winsollib.Categories\-Data\-File}, and \hyperlink{classwinsollib_1_1IncludesDataFile}{winsollib.Includes\-Data\-File}.
+
+Inheritance diagram for winsollib.Data\-File:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classwinsollib_1_1DataFile__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+def \hyperlink{classwinsollib_1_1DataFile_22c2b3c07b3991b6c2300719eccd9687}{\_\-\_\-init\_\-\_\-}
+\begin{CompactList}\small\item\em Inicialice the \hyperlink{classwinsollib_1_1DataFile}{Data\-File} values. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_9526df0d51f57fade5dbe0b541fc5da4}{check\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Check the XML integrity, with the DTD, and parser it. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_71feb0933f381bb2dc77115bbd3114ca}{is\_\-cheked}
+\begin{CompactList}\small\item\em Returnthe check value. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_ec7a45f4fc3069f7da870bc41e27963f}{write\_\-apps\_\-to\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Write the applications\_\-list to the XML file with the applications DTD structure. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_43018e66b71925ff9050c17e733b7308}{write\_\-categories\_\-to\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Write the categories list to the XML file with the categories DTD structure. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_76c4b5fd1fac580996b094f31c6f5f7a}{write\_\-includes\_\-to\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Write the includes list of category and applications with the includes DTD structure. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_d170e6164cbd6ecc3368a74e7e21ad2f}{get\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Get the XML path file. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_180e6a2106958fc221b476ee5ea443cd}{get\_\-DTD\_\-file}
+\begin{CompactList}\small\item\em Get the DTD path file. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_f9deb4c156634e7b17f945142493897b}{get\_\-tree}
+\begin{CompactList}\small\item\em Get the Tree structure. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_8b0dbebbb0dff05ac6afdadc68584bcb}{set\_\-XML\_\-file}
+\begin{CompactList}\small\item\em Set the XML path file. \item\end{CompactList}\item 
+def \hyperlink{classwinsollib_1_1DataFile_9942934eecb74d9bed46a9be94141418}{set\_\-DTD\_\-file}
+\begin{CompactList}\small\item\em Set the DTD path file. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hyperlink{classwinsollib_1_1DataFile_8f0afc91519f74a1b6c48d35c6de2c27}{\_\-\_\-xml\_\-file}
+\begin{CompactList}\small\item\em the XML file path. \item\end{CompactList}\item 
+\hyperlink{classwinsollib_1_1DataFile_385b781cf5c921e4f027140999ee1333}{\_\-\_\-dtd\_\-file}
+\begin{CompactList}\small\item\em The DTD file path. \item\end{CompactList}\item 
+\hyperlink{classwinsollib_1_1DataFile_e88564661aa0facb476bd06a63550b64}{\_\-\_\-check}
+\begin{CompactList}\small\item\em Check value ({\em true/1\/} or {\em false/0\/}). \item\end{CompactList}\item 
+\hyperlink{classwinsollib_1_1DataFile_37505659823960cd319e51a2ce74c56f}{\_\-\_\-tree}
+\begin{CompactList}\small\item\em The Element\-Tree Object from the XML file process. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Superclass to control the XML file imput/output. 
+
+\begin{Desc}
+\item[Author:]David Barrag\~{A}!`n Merino $<$bameda \mbox{[}AT\mbox{]} di.uc3m \mbox{[}DOT\mbox{]} com$>$ 
+
+CRISOL-UC3M $<$htp://crisol.uc3m.es$>$ \end{Desc}
+
+
+
+
+Definition at line 1652 of file winsollib.py.
+
+\subsection{Member Function Documentation}
+\hypertarget{classwinsollib_1_1DataFile_22c2b3c07b3991b6c2300719eccd9687}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!__init__@{\_\-\_\-init\_\-\_\-}}
+\index{__init__@{\_\-\_\-init\_\-\_\-}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[\_\-\_\-init\_\-\_\-]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.\_\-\_\-init\_\-\_\- ( {\em self},  {\em xml\_\-file},  {\em dtd\_\-file})}}
+\label{classwinsollib_1_1DataFile_22c2b3c07b3991b6c2300719eccd9687}
+
+
+Inicialice the \hyperlink{classwinsollib_1_1DataFile}{Data\-File} values. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\_\-file}]- XML file path. \item[{\em dtd\_\-file}]- DTD file path. \end{description}
+\end{Desc}
+
+
+Reimplemented in \hyperlink{classwinsollib_1_1AppsDataFile_c1fe263619352c8a85a48a3ba16a60e2}{winsollib.Apps\-Data\-File}, \hyperlink{classwinsollib_1_1CategoriesDataFile_cd08ce6d213ed244d0c27fc9af77bceb}{winsollib.Categories\-Data\-File}, and \hyperlink{classwinsollib_1_1IncludesDataFile_64deea7da911c3fb099dee54eb1f6cf9}{winsollib.Includes\-Data\-File}.
+
+Definition at line 1658 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_9526df0d51f57fade5dbe0b541fc5da4}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!check_XML_file@{check\_\-XML\_\-file}}
+\index{check_XML_file@{check\_\-XML\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[check\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.check\_\-XML\_\-file ( {\em self})}}
+\label{classwinsollib_1_1DataFile_9526df0d51f57fade5dbe0b541fc5da4}
+
+
+Check the XML integrity, with the DTD, and parser it. 
+
+\begin{Desc}
+\item[Returns:]{\em true/1\/} if it has been cheked or {\em false/0\/} if it hasn't. \end{Desc}
+
+
+Definition at line 1666 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_180e6a2106958fc221b476ee5ea443cd}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!get_DTD_file@{get\_\-DTD\_\-file}}
+\index{get_DTD_file@{get\_\-DTD\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[get\_\-DTD\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.get\_\-DTD\_\-file ( {\em self})}}
+\label{classwinsollib_1_1DataFile_180e6a2106958fc221b476ee5ea443cd}
+
+
+Get the DTD path file. 
+
+\begin{Desc}
+\item[Returns:]The DTD path file value. \end{Desc}
+
+
+Definition at line 1737 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_f9deb4c156634e7b17f945142493897b}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!get_tree@{get\_\-tree}}
+\index{get_tree@{get\_\-tree}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[get\_\-tree]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.get\_\-tree ( {\em self})}}
+\label{classwinsollib_1_1DataFile_f9deb4c156634e7b17f945142493897b}
+
+
+Get the Tree structure. 
+
+\begin{Desc}
+\item[Returns:]The Element\-Tree structure. \end{Desc}
+
+
+Definition at line 1743 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_d170e6164cbd6ecc3368a74e7e21ad2f}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!get_XML_file@{get\_\-XML\_\-file}}
+\index{get_XML_file@{get\_\-XML\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[get\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.get\_\-XML\_\-file ( {\em self})}}
+\label{classwinsollib_1_1DataFile_d170e6164cbd6ecc3368a74e7e21ad2f}
+
+
+Get the XML path file. 
+
+\begin{Desc}
+\item[Returns:]The XML path file value. \end{Desc}
+
+
+Definition at line 1731 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_71feb0933f381bb2dc77115bbd3114ca}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!is_cheked@{is\_\-cheked}}
+\index{is_cheked@{is\_\-cheked}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[is\_\-cheked]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.is\_\-cheked ( {\em self})}}
+\label{classwinsollib_1_1DataFile_71feb0933f381bb2dc77115bbd3114ca}
+
+
+Returnthe check value. 
+
+\begin{Desc}
+\item[Returns:]{\em true/1\/} if it has been cheked or {\em false/0\/} if it hasn't. \end{Desc}
+
+
+Definition at line 1684 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_9942934eecb74d9bed46a9be94141418}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!set_DTD_file@{set\_\-DTD\_\-file}}
+\index{set_DTD_file@{set\_\-DTD\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[set\_\-DTD\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.set\_\-DTD\_\-file ( {\em self},  {\em dtd\_\-file})}}
+\label{classwinsollib_1_1DataFile_9942934eecb74d9bed46a9be94141418}
+
+
+Set the DTD path file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em dtd\_\-file}]- New DTD path file. \end{description}
+\end{Desc}
+
+
+Definition at line 1756 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_8b0dbebbb0dff05ac6afdadc68584bcb}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!set_XML_file@{set\_\-XML\_\-file}}
+\index{set_XML_file@{set\_\-XML\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[set\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.set\_\-XML\_\-file ( {\em self},  {\em xml\_\-file})}}
+\label{classwinsollib_1_1DataFile_8b0dbebbb0dff05ac6afdadc68584bcb}
+
+
+Set the XML path file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\_\-file}]- New XML path file. \end{description}
+\end{Desc}
+
+
+Definition at line 1749 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_ec7a45f4fc3069f7da870bc41e27963f}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!write_apps_to_XML_file@{write\_\-apps\_\-to\_\-XML\_\-file}}
+\index{write_apps_to_XML_file@{write\_\-apps\_\-to\_\-XML\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[write\_\-apps\_\-to\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.write\_\-apps\_\-to\_\-XML\_\-file ( {\em self},  {\em app\_\-list})}}
+\label{classwinsollib_1_1DataFile_ec7a45f4fc3069f7da870bc41e27963f}
+
+
+Write the applications\_\-list to the XML file with the applications DTD structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em app\_\-list}]- Application list. \end{description}
+\end{Desc}
+
+
+Definition at line 1690 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_43018e66b71925ff9050c17e733b7308}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!write_categories_to_XML_file@{write\_\-categories\_\-to\_\-XML\_\-file}}
+\index{write_categories_to_XML_file@{write\_\-categories\_\-to\_\-XML\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[write\_\-categories\_\-to\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.write\_\-categories\_\-to\_\-XML\_\-file ( {\em self},  {\em category\_\-list})}}
+\label{classwinsollib_1_1DataFile_43018e66b71925ff9050c17e733b7308}
+
+
+Write the categories list to the XML file with the categories DTD structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em category\_\-list}]- Categories list. \end{description}
+\end{Desc}
+
+
+Definition at line 1701 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_76c4b5fd1fac580996b094f31c6f5f7a}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!write_includes_to_XML_file@{write\_\-includes\_\-to\_\-XML\_\-file}}
+\index{write_includes_to_XML_file@{write\_\-includes\_\-to\_\-XML\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[write\_\-includes\_\-to\_\-XML\_\-file]{\setlength{\rightskip}{0pt plus 5cm}def winsollib.Data\-File.write\_\-includes\_\-to\_\-XML\_\-file ( {\em self},  {\em category\_\-list},  {\em app\_\-list})}}
+\label{classwinsollib_1_1DataFile_76c4b5fd1fac580996b094f31c6f5f7a}
+
+
+Write the includes list of category and applications with the includes DTD structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em category\_\-list}]- Categories list. \item[{\em app\_\-list}]- Application list. \end{description}
+\end{Desc}
+
+
+Definition at line 1713 of file winsollib.py.
+
+\subsection{Member Data Documentation}
+\hypertarget{classwinsollib_1_1DataFile_e88564661aa0facb476bd06a63550b64}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!__check@{\_\-\_\-check}}
+\index{__check@{\_\-\_\-check}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[\_\-\_\-check]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classwinsollib_1_1DataFile_e88564661aa0facb476bd06a63550b64}{winsollib.Data\-File::\_\-\_\-check}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classwinsollib_1_1DataFile_e88564661aa0facb476bd06a63550b64}
+
+
+Check value ({\em true/1\/} or {\em false/0\/}). 
+
+
+
+Definition at line 1661 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_385b781cf5c921e4f027140999ee1333}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!__dtd_file@{\_\-\_\-dtd\_\-file}}
+\index{__dtd_file@{\_\-\_\-dtd\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[\_\-\_\-dtd\_\-file]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classwinsollib_1_1DataFile_385b781cf5c921e4f027140999ee1333}{winsollib.Data\-File::\_\-\_\-dtd\_\-file}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classwinsollib_1_1DataFile_385b781cf5c921e4f027140999ee1333}
+
+
+The DTD file path. 
+
+
+
+Definition at line 1660 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_37505659823960cd319e51a2ce74c56f}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!__tree@{\_\-\_\-tree}}
+\index{__tree@{\_\-\_\-tree}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[\_\-\_\-tree]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classwinsollib_1_1DataFile_37505659823960cd319e51a2ce74c56f}{winsollib.Data\-File::\_\-\_\-tree}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classwinsollib_1_1DataFile_37505659823960cd319e51a2ce74c56f}
+
+
+The Element\-Tree Object from the XML file process. 
+
+
+
+Definition at line 1675 of file winsollib.py.\hypertarget{classwinsollib_1_1DataFile_8f0afc91519f74a1b6c48d35c6de2c27}{
+\index{winsollib::DataFile@{winsollib::Data\-File}!__xml_file@{\_\-\_\-xml\_\-file}}
+\index{__xml_file@{\_\-\_\-xml\_\-file}!winsollib::DataFile@{winsollib::Data\-File}}
+\subsubsection[\_\-\_\-xml\_\-file]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{classwinsollib_1_1DataFile_8f0afc91519f74a1b6c48d35c6de2c27}{winsollib.Data\-File::\_\-\_\-xml\_\-file}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classwinsollib_1_1DataFile_8f0afc91519f74a1b6c48d35c6de2c27}
+
+
+the XML file path. 
+
+
+
+Definition at line 1659 of file winsollib.py.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/home/pelukas/winsol/\hyperlink{winsollib_8py}{winsollib.py}\end{CompactItemize}

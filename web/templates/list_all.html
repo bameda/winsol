@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="D. Barragan" />
+    <meta name="description" content="Cd crisol home page" />
+    <title>Web CD-CRISOL</title>
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/color.css" />
+  </head>
+  
+  <body>
+
+    <!-- Titulo -->
+    <div id='web-logo'>
+      <a href="http://crisol.uc3m.es"><img src="/static/images/logo_crisol_mini.png" vspace="10" hspace="20"  align="right" border="0"></a>
+      <img src="/static/images/logo.png" width="200" vspace="10"  align="bottm" border="0">
+    </div>
+
+    <!-- Menu Principal -->
+    <div id="main-menu">
+      <p>
+        <div class="mega">
+          <p><b>Tamaño Composición</b></p>
+          <p>$size MB</p>
+        </div>
+      </p>
+      <p>
+        <ul id="left">
+          <li><a href="/index.html">Introducción</a></li>
+          <li><a href="/account.html">Datos de Usuario</a></li>
+          <li><a href="/help.html">Ayuda</a></li>
+	  <li><a href="/logout.html">Salir</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Acciones</h3>
+        <ul id="left">
+          <li><a href="/list_all.html">Listado de Aplicaciones</a></li>
+          <li><a href="/add_cat.html">Añadir Categoría</a></li>
+	  <li><a href="/add_app.html">Añadir Aplicación</a></li>
+	  <li><a href="/make_composition.html">Crear Composición</a></li>
+	  <li><a href="/precompile_composition.html">Composiciones Precompiladas</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Listado de Categorías</h3>
+          <ul id="left">
+            #for $menu_cat in $menu_categories:
+            <li>
+                <a href="/category/$menu_cat.label"><img src="$menu_cat.icon_url" align="left" width="20" height="20" alt="" border="0" /> $menu_cat.name</a>
+                </li>
+          #end for
+        </ul>
+      </p>
+    </div>
+
+    <!-- Cuerpo de la página -->
+    
+    <div id="content">
+      <br> 
+      <h2 id="top">Listados</h2>
+      <p>Esta opción te permite obtener una visión global de las categorías y aplicaciones que ofrece WinSOL. Desde este listado puedes realizar la selección de aplicaciones individuales o por categoría. Recuerda que también puedes realizar tu selección pinchando en la opción de la categoría concreta del menú principal.</p>
+      <p>Además del listado general, podrás obtener el listado de aplicaciones seleccionadas o de aplicaciones no seleccionadas.</p>
+      <p>
+        <div align="center">
+          <form method="POST" >
+            <table>
+              <tbody align="left" valign="top">
+                <tr>
+                  <td>Selecciona el tipo de lista</td>
+		    <td>
+		      <select name="mode" value="$list_mode">
+		        <option value="1"	
+                          #if $list_mode == "1":
+		            SELECTED 
+                          #end if
+		        >Lista Completa Detallada</option>
+		        <option value="2" 
+		          #if $list_mode == "2": 
+		            SELECTED 
+                          #end if
+		         >Lista Seleccionados</option>
+		         <option value="3" 
+                           #if $list_mode == "3": 
+		             SELECTED 
+                           #end if
+		         >Lista No Seleccionados</option>
+		      </select>
+                      <INPUT type="submit" value="Ver Lista" align="middle">
+	          </td>
+                </tr>
+	      </tbody>
+            </table>
+          </form>
+        </div>
+        <p>
+	<div align="justify"> Puedes pulsar en el nombre de la categoría/aplicación para obtener su descripción o puedes seleccionarlas/deseleccionarlas pulsando en los símbolos <img src="/static/images/select.gif" border="0" alt="+"> y <img src="/static/images/unselect.gif" border="0" alt="-">. Si pulsas sobre el símbolo <img src="/static/images/select_all.gif" border="0" alt="*"> se seleccionará la categoría y sus aplicaciones relacionadas. Para deseleccionar pulsa sobre <img src="/static/images/unselect_all.gif" border="0" alt="=">. Si pulsas sobre <b>"Seleccionar Todo"</b> y <b>"No Seleccionar Todo"</b> se seleccionarán o deseleccionarán todas las categorías y aplicaciones respectivamente.</div><br>
+        #if $list_mode == "1":
+	  <h3>Lista Completa Detallada</h3></br>
+	  <br>
+	  <p>
+            <a href="/list_all_select_all/$list_mode">Selecionar Todo</a> |
+	    <a href="/list_all_unselect_all/$list_mode">Limpiar Seleccionados</a>
+	  </p>
+	  <ul> <!-- List all -->
+            #for $cat in $menu_categories:
+              <li>
+                #if $cat.included:
+		  <b><font color="Green" size="4">
+		    <a href='/list_all_unselect_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría">
+		      <img src="/static/images/unselect.gif" border="0" alt="">
+		    </a>  
+		    <a href='/list_all_select_all_by_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría y su contenido">
+		      <img src="/static/images/select_all.gif" border="0" alt="*">
+		    </a>
+		    <a href='/list_all_unselect_all_by_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría y su contenido">
+		      <img src="/static/images/unselect_all.gif" border="0" alt="=">
+		    </a>
+		    <a href="/category/$cat.label"><img src="$cat.icon_url" width="30" height="30" alt="" border="0" /> $cat.name</a> Seleccionada
+                  </font></b>
+                #else
+		  <font color="Red" size="4">
+		    <a href='/list_all_select_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría">
+		      <img src="/static/images/select.gif" border="0" alt="+">
+		    </a>  
+		    <a href='/list_all_select_all_by_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría y su contenido">
+		      <img src="/static/images/select_all.gif" border="0" alt="*">
+		    </a>
+		    <a href='/list_all_unselect_all_by_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría y su contenido">
+		      <img src="/static/images/unselect_all.gif" border="0" alt="=">
+		    </a> 
+		    <a href="/category/$cat.label"><img src="$cat.icon_url" width="25" height="25" alt="" border="0" /> $cat.name</a> No Seleccionada
+	          </font>
+                #end if
+                <ul>
+                  #for $app in $cat.apps:
+                    <li>
+                      #if $app.included:
+		    <b><font color="Green"><a href='/list_all_unselect_application/$list_mode/$app.name' title="Pulse para Deseleccionar la aplicación"><img src="/static/images/unselect.gif" border="0" alt="-"></a>  <a href="/app/$app.name">$app.name $app.version</a> Seleccionada</font></b>
+                      #else
+		    <font color="Red"><a href='/list_all_select_application/$list_mode/$app.name' title="Pulse para Seleccionar la aplicación"><img src="/static/images/select.gif" border="0" alt="+"></a>  <a href="/app/$app.name">$app.name $app.version</a> No Seleccionada</font>
+                      #end if
+                    </li>
+                  #end for
+                </ul>
+              </li>
+            #end for
+          </ul>
+	#end if
+	#if $list_mode == "2":
+	  <h3>Lista Seleccionados</h3></br>
+          <br>
+          <p>
+            <a href="/list_all_select_all/$list_mode">Selecionar Todo</a> |
+            <a href="/list_all_unselect_all/$list_mode">Limpiar Seleccionados</a>
+          </p>
+	  <ul> <!-- See the selected apps -->
+	    #for $cat in $menu_categories:
+                #if $cat.included:
+	          <li><b><font color="Green" size="4">
+		    <a href='/list_all_unselect_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría">
+		      <img src="/static/images/unselect.gif" border="0" alt="">
+		    </a>  
+		    <a href='/list_all_select_all_by_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría y su contenido">
+		      <img src="/static/images/select_all.gif" border="0" alt="*">
+		    </a>
+		    <a href='/list_all_unselect_all_by_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría y su contenido">
+		      <img src="/static/images/unselect_all.gif" border="0" alt="=">
+		    </a>
+		    <a href="/category/$cat.label"><img src="$cat.icon_url" width="25" height="25" alt="" border="0" /> $cat.name</a> Seleccionada
+		  </font></b>
+               
+                  <ul>
+                    #for $app in $cat.apps:
+                        #if $app.included:
+		          <li><b><font color="Green"><a href='/list_all_unselect_application/$list_mode/$app.name' title="Pulse para Deseleccionar la aplicación"><img src="/static/images/unselect.gif" border="0" alt="-"></a>  <a href="/app/$app.name">$app.name $app.version</a> Seleccionada</font></b></li>
+                        #end if
+                    #end for
+                  </ul>
+                </li>
+              #end if
+            #end for
+          </ul>
+	#end if
+	#if $list_mode == "3":
+	  <h3>Lista No Seleccionados</h3></br>
+	  <br>
+          <p>
+            <a href="/list_all_select_all/$list_mode">Selecionar Todo</a> |
+            <a href="/list_all_unselect_all/$list_mode">Limpiar Seleccionados</a>
+          </p>
+	  <ul> <!-- See the unselected apps -->
+	    #for $cat in $menu_categories:
+              <li>
+                #if $cat.included:
+		  <b><font color="Green" size="4">
+		    <a href='/list_all_unselect_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría">
+		      <img src="/static/images/unselect.gif" border="0" alt="">
+		    </a>  
+		    <a href='/list_all_select_all_by_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría y su contenido">
+		      <img src="/static/images/select_all.gif" border="0" alt="*">
+		    </a>
+		    <a href='/list_all_unselect_all_by_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría y su contenido">
+		      <img src="/static/images/unselect_all.gif" border="0" alt="=">
+		    </a>
+		    <a href="/category/$cat.label"><img src="$cat.icon_url" width="25" height="25" alt="" border="0" /> $cat.name</a> Seleccionada
+                  </font></b>
+                #else
+		  <font color="Red" size="4">
+		    <a href='/list_all_select_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría">
+		      <img src="/static/images/select.gif" border="0" alt="+">
+		    </a>  
+		    <a href='/list_all_select_all_by_category/$list_mode/$cat.label' title="Pulse para Seleccionar la categoría y su contenido">
+		      <img src="/static/images/select_all.gif" border="0" alt="*">
+		    </a>
+		    <a href='/list_all_unselect_all_by_category/$list_mode/$cat.label' title="Pulse para Deseleccionar la categoría y su contenido">
+		      <img src="/static/images/unselect_all.gif" border="0" alt="=">
+		    </a> 
+		    <a href="/category/$cat.label"><img src="$cat.icon_url" width="25" height="25" alt="" border="0" /> $cat.name</a> No Seleccionada
+	          </font>
+                #end if
+                <ul>
+                  #for $app in $cat.apps:
+                      #if $app.included == 0:
+  		        <li><font color="Red"><a href='/list_all_select_application/$list_mode/$app.name' title="Pulse para Seleccionar la aplicación"><img src="/static/images/select.gif" border="0" alt="+"></a>  <a href="/app/$app.name">$app.name $app.version</a> No Seleccionada</font></li>
+                      #end if
+                  #end for
+                </ul>
+              </li>
+            #end for
+          </ul>
+        #end if
+      </p>
+    </div>
+
+    <div id="footer">
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Website designed by 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "bameda"; 
+	  var part2 = "di.uc3m.es?subject=[WinSOL] "; 
+	  var part3 = "David Barragán Merino";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+      
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+      </h5>
+      
+      <h5>
+        Contact: 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "cd-crisol-main"; 
+	  var part2 = "forja.rediris.es"; 
+	  var part3 = "WinSOL mail list";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+    </div>
+    <div align="right">
+      <br>
+        <a href="http://www.python.org"><img src="/static/images/use-python.gif" border="0"
+></a>
+        <a href="http://www.webpy.org"><img src="/static/images/use-web.py.gif" border="0">
+</a>
+    </div>
+  </body>
+</html>
+
+

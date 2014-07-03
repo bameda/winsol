@@ -1,68 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+ WinSOL (https://forja.rediris.es/projects/cd-crisol)
+ Copyright (C) 2006-2007 by David Barragán Merino <bameda@di.uc3m.es>
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+-->
+
 <CATEGORIES>
 		<CATEGORY>
-                        <CAT_NAME>Ofimiatica</CAT_NAME>
+                        <CAT_NAME>Ofimática</CAT_NAME>
 			<CAT_LABEL>office</CAT_LABEL>
-			<CAT_DESCRIPTION>Office applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones para la Ofimática.</CAT_DESCRIPTION>	
+			<CAT_ICON>office.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/office.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Desarrollo</CAT_NAME>
 			<CAT_LABEL>devel</CAT_LABEL>
-			<CAT_DESCRIPTION>Development Applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones de programación: para el diseño y el desarrollo.</CAT_DESCRIPTION>	
+                        <CAT_ICON>devel.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/devel.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Red</CAT_NAME>
 			<CAT_LABEL>net</CAT_LABEL>
-			<CAT_DESCRIPTION>Network applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones de Red: navegadores, correo, servidores, mensajería instantánea, edición web,...</CAT_DESCRIPTION>	
+			<CAT_ICON>net.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/net.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
-                        <CAT_NAME>Matematicas</CAT_NAME>
+                        <CAT_NAME>Matemáticas</CAT_NAME>
 			<CAT_LABEL>math</CAT_LABEL>
-			<CAT_DESCRIPTION>Mathematic applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones para las Matemáticas y las ciencias numéricas en general.</CAT_DESCRIPTION>	
+			<CAT_ICON>math.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/math.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Juegos</CAT_NAME>
 			<CAT_LABEL>games</CAT_LABEL>
-			<CAT_DESCRIPTION>Games and funy applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Juegos y aplicaciones para el entretenimiento.</CAT_DESCRIPTION>	
+			<CAT_ICON>games.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/games.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
-                        <CAT_NAME>Tecnicas</CAT_NAME>
+                        <CAT_NAME>Técnicas</CAT_NAME>
 			<CAT_LABEL>tecnic</CAT_LABEL>
-			<CAT_DESCRIPTION>Tecnic applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones técnicas: modelado, dibujo técnico, aplicaciones CAD,...</CAT_DESCRIPTION>	
+			<CAT_ICON>technical.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/technical.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
-                        <CAT_NAME>Graficos</CAT_NAME>
+                        <CAT_NAME>Gráficos</CAT_NAME>
 			<CAT_LABEL>graphics</CAT_LABEL>
-			<CAT_DESCRIPTION>Draw applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones para el diseño gráfico, edición y visualización fotográfica,...</CAT_DESCRIPTION>	
+			<CAT_ICON>graphics.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/graphics.png</CAT_ICON_URL>
+		</CATEGORY>
 		<CATEGORY>
-                        <CAT_NAME>Educacion</CAT_NAME>
+                        <CAT_NAME>Educación</CAT_NAME>
 			<CAT_LABEL>teach</CAT_LABEL>
-			<CAT_DESCRIPTION>Learn applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones para educación y el aprendizaje.</CAT_DESCRIPTION>	
+			<CAT_ICON>education.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/education.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Multimedia</CAT_NAME>
 			<CAT_LABEL>multimedia</CAT_LABEL>
-			<CAT_DESCRIPTION>Multimedia applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones multimedia: visualización y edición de video, modelado,...</CAT_DESCRIPTION>	
+			<CAT_ICON>multimedia.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/multimedia.png</CAT_ICON_URL>
+		</CATEGORY>
 		<CATEGORY>
                         <CAT_NAME>Miscelania</CAT_NAME>
 			<CAT_LABEL>other</CAT_LABEL>
-			<CAT_DESCRIPTION>Other applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones variadas.</CAT_DESCRIPTION>	
+			<CAT_ICON>misc.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/misc.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Bases de Datos</CAT_NAME>
 			<CAT_LABEL>ddbb</CAT_LABEL>
-			<CAT_DESCRIPTION>Data Base applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones relacionadas con las Bases de Datos: Diseño, gestión,...</CAT_DESCRIPTION>	
+                        <CAT_ICON>ddbb.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/ddbb.png</CAT_ICON_URL>
+		</CATEGORY>
 		<CATEGORY>
                         <CAT_NAME>Sistemas Operativos</CAT_NAME>
 			<CAT_LABEL>ssoo</CAT_LABEL>
-			<CAT_DESCRIPTION>OO.SS. applications.</CAT_DESCRIPTION>	
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones sobre Sistemas Operativos: virtualización, emulación,...</CAT_DESCRIPTION>	
+                        <CAT_ICON>ssoo.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/ssoo.png</CAT_ICON_URL>
+		</CATEGORY>
                 <CATEGORY>
-                        <CAT_NAME>Sistema y Administracion</CAT_NAME>
+                        <CAT_NAME>Sistema y Administración</CAT_NAME>
 			<CAT_LABEL>admin</CAT_LABEL>
-			<CAT_DESCRIPTION>Administration applications.</CAT_DESCRIPTION>
-                </CATEGORY>
+			<CAT_DESCRIPTION>Aplicaciones para Administradores: gestión de Sistemas, mantenimiento, antivirus,....</CAT_DESCRIPTION>
+                        <CAT_ICON>admin.png</CAT_ICON>
+			<CAT_ICON_URL>http://winsol.uc3m.es/static/images/categories/admin.png</CAT_ICON_URL>
+		</CATEGORY>
 </CATEGORIES>

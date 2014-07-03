@@ -1,10 +1,22 @@
+#
+# WinSOL Configuration
+#
+#   see ./baseconfig/config
+#       ~/.winsol/config
+#
+
+# XML files
 USER_APPS_XML = CONFIG_DIR + "/apps.xml"
 USER_CATEGORIES_XML = CONFIG_DIR + "/categories.xml"
 USER_INCLUDES_XML = CONFIG_DIR + "/includes.xml"
+
+# User directories values
 IMAGE_DIR = CONFIG_DIR + "/image"
 SOFTWARE_DIR = CONFIG_DIR + "/software"
 ICONS_DIR = CONFIG_DIR + "/icons"
 MANUALS_DIR = CONFIG_DIR + "/manuals"
 TEMPLATE_DIR = MASTER_DIR+"/baseconfig/templates/default"
-ISO_FILE = CONFIG_DIR + "/CD-Crisol.iso"
+IMAGE_TYPE = "iso"      # "zip" or "iso"
+ISO_FILE = CONFIG_DIR + "/WinSOL.iso"
+ZIP_FILE = CONFIG_DIR + "/WinSOL.zip"
 HTML_DIR = IMAGE_DIR + "/html"

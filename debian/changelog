@@ -1,3 +1,24 @@
+winsol (0.3-1) unstable; urgency=low
+
+  * Changed the name to WinSOL.
+  * Changed the icons and logos.
+  * Created lib, command interface ands web interface pakages.
+  * Added new web interface like a daemon service.
+  * Fixed some errors in cdcrisollib.Image methods.
+  * Fixed some encoding errors in 'build html' in 'make_html()' cdcrisollib.Image method.
+  * Added some method to add On-Line/Off-Line manuals in Image class.
+  * Added the API code documentation.
+  * Added the User Manual.
+  * Added the Administrator Manual.
+  * Translated the XML files to Spanish.
+  * Added "size" atribute to the applications and off-line manuals.
+  * Added "icon" and "icon_url" to get category icons.
+  * Added "Get Image Size" method.
+  * Added "Get zip file" as an other composition type like "Get iso file".
+  * Added "crisol_v1" html template (default WinSOL v 0.3 html template).
+
+ -- David BarragÃ¡n Merino <bameda@di.uc3m.es>  Fri, 12 Feb 2007 10:43:41 +0100
+
 cd-crisol (0.2-1) unstable; urgency=low
   
   * Added more functions to select and unselect all applications or all by
@@ -23,11 +44,11 @@ cd-crisol (0.2-1) unstable; urgency=low
   * When a aplications icon url is broke, this icon is delete 
     automaticly.
 
- -- Jesúus Espino Garcia <jespino@di.uc3m.es>  Sun, 25 Jun 2006 01:56:37 +0200
+ -- JesÃºs Espino Garcia <jespino@di.uc3m.es>  Sun, 25 Jun 2006 01:56:37 +0200
 
 cd-crisol (0.1-1) unstable; urgency=low
 
   * Initial release.
 
- -- Jesúus Espino Garcia <jespino@di.uc3m.es>  Mon, 15 May 2006 13:38:38 +0200
+ -- JesÃºs Espino Garcia <jespino@di.uc3m.es>  Mon, 15 May 2006 13:38:38 +0200
 

@@ -7,9 +7,7 @@
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
-
+export DH_VERBOSE=1
 
 
 CFLAGS = -Wall -g
@@ -35,7 +33,7 @@ build-stamp: configure-stamp
 
 	# Add here commands to compile the package.
 	#$(MAKE)
-	#docbook-to-man debian/cd-crisol.sgml > cd-crisol.1
+	#docbook-to-man debian/winsol.sgml > winsol.1
 
 	touch build-stamp
 
@@ -56,17 +54,38 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/cd-crisol.
-	#$(MAKE) install DESTDIR=$(CURDIR)/debian/cd-crisol
-	mkdir -p $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp *.dtd $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp *.xml $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp cd-crisol $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp cdcrisollib.py $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp -r baseconfig $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp -r doc $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	cp -r cd-base $(CURDIR)/debian/cd-crisol/usr/share/cd-crisol/
-	ln -s /usr/share/cd-crisol/cd-crisol $(CURDIR)/debian/cd-crisol/usr/bin
-
+	#$(MAKE) install DESTDIR=$(CURDIR)/debian/winsol
+	mkdir -p $(CURDIR)/debian/libwinsol/usr/share/winsol/
+	mkdir -p $(CURDIR)/debian/winsol/usr/share/winsol/
+	mkdir -p $(CURDIR)/debian/winsol-console/usr/share/winsol/
+	mkdir -p $(CURDIR)/debian/winsol-console/usr/bin/
+	mkdir -p $(CURDIR)/debian/winsol-web/usr/share/winsol/
+	mkdir -p $(CURDIR)/debian/winsol-web/usr/bin/
+	mkdir -p $(CURDIR)/debian/winsol-doc/usr/share/doc/winsol-doc
+	mkdir -p $(CURDIR)/debian/winsol-gtk/usr/share/winsol/
+	mkdir -p $(CURDIR)/debian/winsol-gtk/usr/bin/
+	mkdir -p $(CURDIR)/debian/winsol-qt/usr/share/winsol/
+	mkdir -p $(CURDIR)/debian/winsol-qt/usr/bin/
+	cp *.dtd $(CURDIR)/debian/libwinsol/usr/share/winsol/
+	cp *.xml $(CURDIR)/debian/libwinsol/usr/share/winsol/
+	cp winsol.py $(CURDIR)/debian/winsol-console/usr/share/winsol/
+	chmod 755 $(CURDIR)/debian/winsol-console/usr/share/winsol/winsol.py
+	cp winsollib.py $(CURDIR)/debian/libwinsol/usr/share/winsol/
+	cp -r baseconfig $(CURDIR)/debian/libwinsol/usr/share/winsol/
+	cp -r doc $(CURDIR)/debian/winsol-doc/usr/share/doc/winsol-doc/
+	cp -r cd-base $(CURDIR)/debian/libwinsol/usr/share/winsol/
+	cp -r web $(CURDIR)/debian/winsol-web/usr/share/winsol/
+	chmod 755 $(CURDIR)/debian/winsol-web/usr/share/winsol/web/web_winsol.py
+	mkdir -p $(CURDIR)/debian/libwinsol/etc/winsol/
+	cp baseconfig/web_config $(CURDIR)/debian/libwinsol/etc/winsol/
+	cp apps.xml $(CURDIR)/debian/libwinsol/etc/winsol/
+	cp categories.xml $(CURDIR)/debian/libwinsol/etc/winsol/
+	ln -s /usr/share/winsol/winsol.py $(CURDIR)/debian/winsol-console/usr/bin/winsol
+	ln -s /usr/share/winsol/web/web_winsol.py $(CURDIR)/debian/winsol-web/usr/bin/web_winsol
+	#echo ""
+	#echo "NOTA: No olvide configurar la base de datos para ejecutar web_cdcrisol."
+	#echo "      Puede obtener ayuda en <winso_lpath>/web/doc/create_tables.sql"
+	#echo ""
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -86,7 +105,7 @@ binary-arch: build install
 #	dh_installemacsen
 #	dh_installpam
 #	dh_installmime
-#	dh_installinit
+	dh_installinit
 #	dh_installcron
 #	dh_installinfo
 	dh_installman
@@ -95,7 +114,7 @@ binary-arch: build install
 	dh_compress
 	dh_fixperms
 #	dh_perl
-#	dh_python
+	dh_python
 #	dh_makeshlibs
 	dh_installdeb
 	dh_shlibdeps

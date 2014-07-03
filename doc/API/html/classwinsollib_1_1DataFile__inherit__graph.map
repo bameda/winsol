@@ -1,0 +1,4 @@
+base referer
+rect $classwinsollib_1_1AppsDataFile.html 5,81 179,105
+rect $classwinsollib_1_1CategoriesDataFile.html 203,81 413,105
+rect $classwinsollib_1_1IncludesDataFile.html 437,81 632,105

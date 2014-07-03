@@ -1,0 +1,16 @@
+WinSOL -- GENERADOR DE CDS DE S. L. PARA WINDOWS
+---------------------------------------------------
+
+Hola $user.name $user.surname, se le ha enviado este mail porque usted ha creado una composición con nuestro sistema WinSOL.
+
+Puede descargar su composición desde aquí:
+
+$user.image_url
+
+Si tiene alguna duda puede ponerse en contacto con nosotros mandando un mail a la dirección de correo electrónico: cd-crisol-main@forja.rediris.es. 
+
+----
+
+Centro de Recursos de Información y Software Libres
+Universidad Carlos III de Madrid
+http://crisol.uc3m.es

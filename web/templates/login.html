@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="D. Barragan" />
+    <meta name="description" content="Cd crisol home page" />
+    <title>Web CD-CRISOL</title>
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/color.css" />
+  </head>
+  
+  <body>
+	  
+    <!-- Titulo -->
+    <div id='web-logo'>
+      <a href="http://crisol.uc3m.es"><img src="/static/images/logo_crisol_mini.png" vspace="10" hspace="20"  align="right" border="0"></a>
+      <img src="/static/images/logo.png" width="200" vspace="10"  align="bottom" border="0">
+    </div> 
+
+    <!-- Menu Principal -->
+    <div id="main-menu">
+      <p>
+        <!--<div class="mega">
+          <p><b> Restructuracion de la BBDD</b></p>
+          <p>Se han borrado todos los usuarios de la BBDD. Vuelva a registrarse. Gracias</p>
+          <a href="" class="link">por BAMEDA - 13/12/06</a>
+  i     </div>-->
+      </p>
+
+    </div>
+
+    <!-- Cuerpo de la página -->
+    <div id="content">
+      <br>
+      <h2 id="top">Login</h2>
+      <br>
+      #if len($errors) > 0:
+        <table width="600" align="center">
+          <tbody>
+            #for $err in $errors:
+              <tr bgcolor="#FFC9C9"><td>$err</td></tr>
+            #end for
+          <tbody >
+        </table>
+      #end if
+      #if len($messages) > 0:
+        <table width="600" align="center">
+          <tbody>
+            #for $mes in $messages:
+              <tr bgcolor="#E0FFE0"><td>$mes</td></tr>
+            #end for
+          <tbody >
+	  </table>
+       #end if
+       <p><a href="http://forja.rediris.es/projects/cd-crisol">WinSOL</a> (antes CD-CRISOL) es una herramienta que nos permite generar CDs y DVDs de software libre para Windows de manera  rápida y fácil, únicamente utilizando un PC y una conexión a Internet.</p>
+       <p>A través de las opciones que proporciona, podremos seleccionar las aplicaciones que queremos incluir en nuestra Composición o, incluso, añadir nuestras propias aplicaciones. Una vez seleccionadas las aplicaciones, seleccionaremos la presentación que queremos para nuestra Composición. Además para evitar que tengas que generar la composición, te proporcionamos un conjunto de composiciones listas para descargar.</p>
+       <p>Finalmente, generaremos un fichero con el formato que prefieras: compatible con las aplicaciones de grabación (iso) o preparado para descomprimirlo en tu disco o Memoria USB (zip).</p>
+       <p>Descargar nuestra Composición personalizada será tan fácil como pinchar en un enlace que recibiremos en nuestro correo electrónico.</p>
+       <p>Para acceder a tu cuenta personal introduce tu <b>usuario</b> y tu <b>contraseña</b> o registrate si eres un nuevo usuario pulsando en <b>"Crear nueva cuenta de usuario"</b>. Si no recuerdas tu contraseña pulsa en <b>"¿Olvidó su contraseña?"</b> y le mandaremos un e-mail para recordarsela.<p>
+      <br>
+      <div align="center">
+        <form method="POST" enctype="multipart/form-data">
+          <table>
+            <tbody align="left" valign="top">
+              <tr>
+		<td><b>Usuario</b></td>
+                <td><input type="text" name="nick" size="60" align="right" value="$user.nick"></td>
+              </tr>
+              <tr>
+		<td><b>Password</b></td>
+                <td><input type="password" name="password" size="60" align="right" value="$user.password"></td>
+              </tr>
+            </tbody>
+          </table><br>
+          <INPUT type="submit" value="Aceptar" align="middle"> <INPUT type="reset" value="Borrar" align="middle">
+        </form>
+	<p></p>	
+	<a href="/add_user.html">Crear nueva cuenta de usuario</a><br>
+	<a href="/get_password.html">¿Olvidó su contraseña?</a><br>
+	<p></p>
+      </div>
+      <p> 
+    </div>
+
+    <div id="footer">
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Website designed by 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "bameda"; 
+	  var part2 = "di.uc3m.es?subject=[WinSOL] "; 
+	  var part3 = "David Barragán Merino";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+      
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+      </h5>
+      
+      <h5>
+        Contact: 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "cd-crisol-main"; 
+	  var part2 = "forja.rediris.es"; 
+	  var part3 = "WinSOL mail list";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+    </div>
+    <div align="right">
+      <br>
+        <a href="http://www.python.org"><img src="/static/images/use-python.gif" border="0"></a>
+	<a href="http://www.webpy.org"><img src="/static/images/use-web.py.gif" border="0"></a>
+    </div>
+  </body>
+</html>
+
+

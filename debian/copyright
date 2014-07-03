@@ -1,9 +1,11 @@
-This package was debianized by Jes˙us Espino Garcia <jespino@di.uc3m.es> on
-Mon, 15 May 2006 13:38:38 +0200.
+This package was debianized by David Barrag√°n Merino <bameda@di.uc3m.es> on
+Fri, 15 Dec 2006 10:40:35 +0100.
 
-It was downloaded from https://forja.rediris.es/projects/cd-crisol/
+It was downloaded from <http://forja.rediris.es/projects/cd-crisol/>
 
-Copyright Holder: David Barrag·n Merino <d.barragan@alumnos.uc3m.es>
+Upstream Author: David Barrag√°n Merino <bameda@di.uc3m.es>
+
+Copyright: 2006 CRISOL-UC3M
 
 License:
 
@@ -24,3 +26,5 @@ License:
 On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL'.
 
+The Debian packaging is (C) 2006, David Barrag√°n Merino <bameda@di.uc3m.es> and
+is licensed under the GPL, see above.

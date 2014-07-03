@@ -1,0 +1,49 @@
+# -*- coding: UTF-8 -*-
+##############################################
+## WinSOL Web Services Configuration values ##
+##############################################
+
+# Main
+SYSTEM_TEMP_DIR = "/var/lib/winsol"
+HOST = "http://localhost"
+
+# System's XML path files
+MASTER_CATEGORIES_XML = SYSTEM_CONFIG_DIR + "/categories.xml"
+MASTER_APPS_XML = SYSTEM_CONFIG_DIR + "/apps.xml"
+
+# User's XML files name
+USER_CATEGORIES_XML_FILE = "/categories.xml"
+USER_APPS_XML_FILE = "/apps.xml"
+USER_INCLUDES_XML_FILE = "/includes.xml"
+
+# System directories
+USERS_DIR = SYSTEM_TEMP_DIR + "/users"
+SOFTWARE_DIR = SYSTEM_TEMP_DIR + "/software"
+ICONS_DIR =  SYSTEM_TEMP_DIR + "/icons"
+MANUALS_DIR = SYSTEM_TEMP_DIR + "/manuals"
+
+# DDBB
+DB_GS = 'mysql'	# Don't change it
+DB_USER = "user_winsol"
+DB_PASSWORD = "pass_winsol"
+DB_NAME = "winsol"
+DB_TABLE_USER = "_users" 
+DB_TABLE_APPS_STADISTIC = "_stadistic_app"
+
+# SMTP Server
+SMTP_SERVER = "localhost"
+SMTP_PORT = "25"
+USE_LOGIN = 0	# 1 = Use authentification | 0 = Don't use authentification
+SMTP_USER = "user_winsol"	# SMTP user login (if USE_LOGIN = 1)
+SMTP_PASSWORD = "pass"		# SMTP user password (if USE_LOGIN = 1)
+MAIL_FROM_ADDRS = "WinSOL <winsol.noreply@winsol.uc3m.es>"
+MAIL_COMPOSITION_SUBJECT = "[WinSOL] Get your WinSOL composition"
+MAIL_PASSWORD_SUBJECT = "[WinSOL] Get your user password here"
+MAIL_TEMPLATE = "default"
+
+# Miscelanea
+CATEGORY_ICON="default_category.png"
+CATEGORY_ICON_URL="/static/images/categories/default_category.png"
+APPLICATION_ICON="default_app.png"
+APPLICATION_ICON_URL="/static/images/apps/default_app.png"
+PASSWD_CRYPTO_KEY="MySecretTripleDesKeyData"

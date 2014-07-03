@@ -1,7 +1,7 @@
 <!-- "categories.dtd file" -->
 <!--
- CD-Crisol (https://forja.rediris.es/projects/cd-crisol)
- Copyright (C) 2006 by David Barragán Merino <d.barragan@alumnos.uc3m.es>
+ WinSOL (https://forja.rediris.es/projects/cd-crisol)
+ Copyright (C) 2006-2007 by David Barragán Merino <bameda@di.uc3m.es>
 
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public License
@@ -19,8 +19,10 @@
 -->
 
 <!ELEMENT CATEGORIES (CATEGORY*)>
-<!ELEMENT CATEGORY (CAT_NAME, CAT_LABEL, CAT_DESCRIPTION)>
+<!ELEMENT CATEGORY (CAT_NAME, CAT_LABEL, CAT_DESCRIPTION?, CAT_ICON?, CAT_ICON_URL?)>
 <!ELEMENT CAT_NAME (#PCDATA)>
 <!ELEMENT CAT_LABEL (#PCDATA)>
 <!ELEMENT CAT_DESCRIPTION (#PCDATA)>
+<!ELEMENT CAT_ICON (#PCDATA)>
+<!ELEMENT CAT_ICON_URL (#PCDATA)>
 

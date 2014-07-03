@@ -1,0 +1,299 @@
+\hypertarget{namespacewinsol}{
+\section{Package winsol}
+\label{namespacewinsol}\index{winsol@{winsol}}
+}
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL}
+\begin{CompactList}\small\item\em \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL} Command Interface class. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+def \hyperlink{namespacewinsol_1d428628bd033b6912f0001e379aedf5}{print\_\-help}
+\begin{CompactList}\small\item\em Function that print the \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL} help. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+string \hyperlink{namespacewinsol_6681e9b2087addd71f66d08599352879}{MASTER\_\-DIR} = \char`\"{}/usr/share/\hyperlink{namespacewinsol_624e4bca2810b741068d3494a5a7612d}{winsol}\char`\"{}
+\begin{CompactList}\small\item\em \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL} master directory path. \item\end{CompactList}\item 
+tuple \hyperlink{namespacewinsol_46eae7a0f9c136c5a878e4877cf346ad}{CONFIG\_\-DIR} = os.getenv(\char`\"{}HOME\char`\"{})
+\begin{CompactList}\small\item\em User config directory path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_75406b2652e6bf9dc6b9566a0cb0e517}{CATEGORIES\_\-DTD} = \char`\"{}/categories.dtd\char`\"{}
+\begin{CompactList}\small\item\em System categories DTD file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_de0a178fcabafce978c245668b647015}{APPS\_\-DTD} = \char`\"{}/apps.dtd\char`\"{}
+\begin{CompactList}\small\item\em System applications DTD file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_9a613f23f40b0893b5d130ccfc1a899e}{INCLUDES\_\-DTD} = \char`\"{}/includes.dtd\char`\"{}
+\begin{CompactList}\small\item\em System includes DTD file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_3af9670786db792ef5991af5c3ae5793}{MASTER\_\-CATEGORIES\_\-XML} = \char`\"{}/categories.xml\char`\"{}
+\begin{CompactList}\small\item\em System categories XML file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_a0bf1d73390881ffdffdc95bee515f38}{MASTER\_\-APPS\_\-XML} = \char`\"{}/apps.xml\char`\"{}
+\begin{CompactList}\small\item\em System applications XML file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_329896e2d91a81d585750db3b5019e3a}{USER\_\-CATEGORIES\_\-XML} = \char`\"{}/categories.xml\char`\"{}
+\begin{CompactList}\small\item\em User categories XML file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_c33a1cb562b690cab5c72abf5dc6889a}{USER\_\-APPS\_\-XML} = \char`\"{}/apps.xml\char`\"{}
+\begin{CompactList}\small\item\em User applications XML file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_f5b54eec64d2e3ce6c6b15a1fbc615dd}{USER\_\-INCLUDES\_\-XML} = \char`\"{}/includes.xml\char`\"{}
+\begin{CompactList}\small\item\em User includes XML file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_c38909a4db335a6aac960e8eb9134338}{IMAGE\_\-DIR} = \char`\"{}/image\char`\"{}
+\begin{CompactList}\small\item\em User source image directory path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_5d62034814a3e2376f045046fb8e597d}{SOFTWARE\_\-DIR} = \char`\"{}/software\char`\"{}
+\begin{CompactList}\small\item\em User software directory path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_cde697082cf908bfad7af04aae9ae3f7}{ICONS\_\-DIR} = \char`\"{}/icons\char`\"{}
+\begin{CompactList}\small\item\em User icon directory path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_ebc977350ca28d117f351ac77dbc9514}{MANUALS\_\-DIR} = \char`\"{}/manuals\char`\"{}
+\begin{CompactList}\small\item\em User manuals directory path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_8bc163ee74d98083104d5033c3262940}{TEMPLATE\_\-DIR} = \char`\"{}/baseconfig/templates/default\char`\"{}
+\begin{CompactList}\small\item\em User template html directory path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_3143fdfd6d34bd48ac2fec1e067af1df}{ISO\_\-FILE} = \char`\"{}/Win\-SOL.iso\char`\"{}
+\begin{CompactList}\small\item\em User ISO file path. \item\end{CompactList}\item 
+string \hyperlink{namespacewinsol_bbcde53c0ba69049711616caed5431b6}{HTML\_\-DIR} = \char`\"{}/html\char`\"{}
+\begin{CompactList}\small\item\em User html directory path. \item\end{CompactList}\item 
+list \hyperlink{namespacewinsol_e85bfaa286fd710182b7d906a514c2ea}{xml\_\-files} = \mbox{[} \hyperlink{namespacewinsol_3af9670786db792ef5991af5c3ae5793}{MASTER\_\-CATEGORIES\_\-XML}, \hyperlink{namespacewinsol_a0bf1d73390881ffdffdc95bee515f38}{MASTER\_\-APPS\_\-XML}, \hyperlink{namespacewinsol_329896e2d91a81d585750db3b5019e3a}{USER\_\-CATEGORIES\_\-XML}, \hyperlink{namespacewinsol_c33a1cb562b690cab5c72abf5dc6889a}{USER\_\-APPS\_\-XML}, \hyperlink{namespacewinsol_f5b54eec64d2e3ce6c6b15a1fbc615dd}{USER\_\-INCLUDES\_\-XML} \mbox{]}
+\begin{CompactList}\small\item\em A XML file path List. \item\end{CompactList}\item 
+list \hyperlink{namespacewinsol_3bdf23ecc07b0e9a9d7f680ae9c2cb6f}{dtd\_\-files} = \mbox{[} \hyperlink{namespacewinsol_75406b2652e6bf9dc6b9566a0cb0e517}{CATEGORIES\_\-DTD}, \hyperlink{namespacewinsol_de0a178fcabafce978c245668b647015}{APPS\_\-DTD}, \hyperlink{namespacewinsol_9a613f23f40b0893b5d130ccfc1a899e}{INCLUDES\_\-DTD}\mbox{]}
+\begin{CompactList}\small\item\em A DTD file path List. \item\end{CompactList}\item 
+tuple \hyperlink{namespacewinsol_624e4bca2810b741068d3494a5a7612d}{winsol} = \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL}( \hyperlink{namespacewinsol_e85bfaa286fd710182b7d906a514c2ea}{xml\_\-files}, \hyperlink{namespacewinsol_3bdf23ecc07b0e9a9d7f680ae9c2cb6f}{dtd\_\-files} )
+\begin{CompactList}\small\item\em A Win\-Sol Object. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacewinsol_1d428628bd033b6912f0001e379aedf5}{
+\index{winsol@{winsol}!print_help@{print\_\-help}}
+\index{print_help@{print\_\-help}!winsol@{winsol}}
+\subsubsection[print\_\-help]{\setlength{\rightskip}{0pt plus 5cm}def winsol.print\_\-help ()}}
+\label{namespacewinsol_1d428628bd033b6912f0001e379aedf5}
+
+
+Function that print the \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL} help. 
+
+
+
+Definition at line 750 of file winsol.py.
+
+\subsection{Variable Documentation}
+\hypertarget{namespacewinsol_6681e9b2087addd71f66d08599352879}{
+\index{winsol@{winsol}!MASTER_DIR@{MASTER\_\-DIR}}
+\index{MASTER_DIR@{MASTER\_\-DIR}!winsol@{winsol}}
+\subsubsection[MASTER\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_6681e9b2087addd71f66d08599352879}{winsol.MASTER\_\-DIR} = \char`\"{}/usr/share/\hyperlink{namespacewinsol_624e4bca2810b741068d3494a5a7612d}{winsol}\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_6681e9b2087addd71f66d08599352879}
+
+
+\hyperlink{classwinsol_1_1WinSOL}{Win\-SOL} master directory path. 
+
+
+
+Definition at line 35 of file winsol.py.\hypertarget{namespacewinsol_46eae7a0f9c136c5a878e4877cf346ad}{
+\index{winsol@{winsol}!CONFIG_DIR@{CONFIG\_\-DIR}}
+\index{CONFIG_DIR@{CONFIG\_\-DIR}!winsol@{winsol}}
+\subsubsection[CONFIG\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}tuple \hyperlink{namespacewinsol_46eae7a0f9c136c5a878e4877cf346ad}{winsol.CONFIG\_\-DIR} = os.getenv(\char`\"{}HOME\char`\"{})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_46eae7a0f9c136c5a878e4877cf346ad}
+
+
+User config directory path. 
+
+
+
+Definition at line 37 of file winsol.py.\hypertarget{namespacewinsol_75406b2652e6bf9dc6b9566a0cb0e517}{
+\index{winsol@{winsol}!CATEGORIES_DTD@{CATEGORIES\_\-DTD}}
+\index{CATEGORIES_DTD@{CATEGORIES\_\-DTD}!winsol@{winsol}}
+\subsubsection[CATEGORIES\_\-DTD]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_75406b2652e6bf9dc6b9566a0cb0e517}{winsol.CATEGORIES\_\-DTD} = \char`\"{}/categories.dtd\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_75406b2652e6bf9dc6b9566a0cb0e517}
+
+
+System categories DTD file path. 
+
+
+
+Definition at line 42 of file winsol.py.\hypertarget{namespacewinsol_de0a178fcabafce978c245668b647015}{
+\index{winsol@{winsol}!APPS_DTD@{APPS\_\-DTD}}
+\index{APPS_DTD@{APPS\_\-DTD}!winsol@{winsol}}
+\subsubsection[APPS\_\-DTD]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_de0a178fcabafce978c245668b647015}{winsol.APPS\_\-DTD} = \char`\"{}/apps.dtd\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_de0a178fcabafce978c245668b647015}
+
+
+System applications DTD file path. 
+
+
+
+Definition at line 44 of file winsol.py.\hypertarget{namespacewinsol_9a613f23f40b0893b5d130ccfc1a899e}{
+\index{winsol@{winsol}!INCLUDES_DTD@{INCLUDES\_\-DTD}}
+\index{INCLUDES_DTD@{INCLUDES\_\-DTD}!winsol@{winsol}}
+\subsubsection[INCLUDES\_\-DTD]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_9a613f23f40b0893b5d130ccfc1a899e}{winsol.INCLUDES\_\-DTD} = \char`\"{}/includes.dtd\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_9a613f23f40b0893b5d130ccfc1a899e}
+
+
+System includes DTD file path. 
+
+
+
+Definition at line 46 of file winsol.py.\hypertarget{namespacewinsol_3af9670786db792ef5991af5c3ae5793}{
+\index{winsol@{winsol}!MASTER_CATEGORIES_XML@{MASTER\_\-CATEGORIES\_\-XML}}
+\index{MASTER_CATEGORIES_XML@{MASTER\_\-CATEGORIES\_\-XML}!winsol@{winsol}}
+\subsubsection[MASTER\_\-CATEGORIES\_\-XML]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_3af9670786db792ef5991af5c3ae5793}{winsol.MASTER\_\-CATEGORIES\_\-XML} = \char`\"{}/categories.xml\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_3af9670786db792ef5991af5c3ae5793}
+
+
+System categories XML file path. 
+
+
+
+Definition at line 51 of file winsol.py.\hypertarget{namespacewinsol_a0bf1d73390881ffdffdc95bee515f38}{
+\index{winsol@{winsol}!MASTER_APPS_XML@{MASTER\_\-APPS\_\-XML}}
+\index{MASTER_APPS_XML@{MASTER\_\-APPS\_\-XML}!winsol@{winsol}}
+\subsubsection[MASTER\_\-APPS\_\-XML]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_a0bf1d73390881ffdffdc95bee515f38}{winsol.MASTER\_\-APPS\_\-XML} = \char`\"{}/apps.xml\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_a0bf1d73390881ffdffdc95bee515f38}
+
+
+System applications XML file path. 
+
+
+
+Definition at line 53 of file winsol.py.\hypertarget{namespacewinsol_329896e2d91a81d585750db3b5019e3a}{
+\index{winsol@{winsol}!USER_CATEGORIES_XML@{USER\_\-CATEGORIES\_\-XML}}
+\index{USER_CATEGORIES_XML@{USER\_\-CATEGORIES\_\-XML}!winsol@{winsol}}
+\subsubsection[USER\_\-CATEGORIES\_\-XML]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_329896e2d91a81d585750db3b5019e3a}{winsol.USER\_\-CATEGORIES\_\-XML} = \char`\"{}/categories.xml\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_329896e2d91a81d585750db3b5019e3a}
+
+
+User categories XML file path. 
+
+
+
+Definition at line 58 of file winsol.py.\hypertarget{namespacewinsol_c33a1cb562b690cab5c72abf5dc6889a}{
+\index{winsol@{winsol}!USER_APPS_XML@{USER\_\-APPS\_\-XML}}
+\index{USER_APPS_XML@{USER\_\-APPS\_\-XML}!winsol@{winsol}}
+\subsubsection[USER\_\-APPS\_\-XML]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_c33a1cb562b690cab5c72abf5dc6889a}{winsol.USER\_\-APPS\_\-XML} = \char`\"{}/apps.xml\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_c33a1cb562b690cab5c72abf5dc6889a}
+
+
+User applications XML file path. 
+
+
+
+Definition at line 60 of file winsol.py.\hypertarget{namespacewinsol_f5b54eec64d2e3ce6c6b15a1fbc615dd}{
+\index{winsol@{winsol}!USER_INCLUDES_XML@{USER\_\-INCLUDES\_\-XML}}
+\index{USER_INCLUDES_XML@{USER\_\-INCLUDES\_\-XML}!winsol@{winsol}}
+\subsubsection[USER\_\-INCLUDES\_\-XML]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_f5b54eec64d2e3ce6c6b15a1fbc615dd}{winsol.USER\_\-INCLUDES\_\-XML} = \char`\"{}/includes.xml\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_f5b54eec64d2e3ce6c6b15a1fbc615dd}
+
+
+User includes XML file path. 
+
+
+
+Definition at line 62 of file winsol.py.\hypertarget{namespacewinsol_c38909a4db335a6aac960e8eb9134338}{
+\index{winsol@{winsol}!IMAGE_DIR@{IMAGE\_\-DIR}}
+\index{IMAGE_DIR@{IMAGE\_\-DIR}!winsol@{winsol}}
+\subsubsection[IMAGE\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_c38909a4db335a6aac960e8eb9134338}{winsol.IMAGE\_\-DIR} = \char`\"{}/image\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_c38909a4db335a6aac960e8eb9134338}
+
+
+User source image directory path. 
+
+
+
+Definition at line 67 of file winsol.py.\hypertarget{namespacewinsol_5d62034814a3e2376f045046fb8e597d}{
+\index{winsol@{winsol}!SOFTWARE_DIR@{SOFTWARE\_\-DIR}}
+\index{SOFTWARE_DIR@{SOFTWARE\_\-DIR}!winsol@{winsol}}
+\subsubsection[SOFTWARE\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_5d62034814a3e2376f045046fb8e597d}{winsol.SOFTWARE\_\-DIR} = \char`\"{}/software\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_5d62034814a3e2376f045046fb8e597d}
+
+
+User software directory path. 
+
+
+
+Definition at line 69 of file winsol.py.\hypertarget{namespacewinsol_cde697082cf908bfad7af04aae9ae3f7}{
+\index{winsol@{winsol}!ICONS_DIR@{ICONS\_\-DIR}}
+\index{ICONS_DIR@{ICONS\_\-DIR}!winsol@{winsol}}
+\subsubsection[ICONS\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_cde697082cf908bfad7af04aae9ae3f7}{winsol.ICONS\_\-DIR} = \char`\"{}/icons\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_cde697082cf908bfad7af04aae9ae3f7}
+
+
+User icon directory path. 
+
+
+
+Definition at line 71 of file winsol.py.\hypertarget{namespacewinsol_ebc977350ca28d117f351ac77dbc9514}{
+\index{winsol@{winsol}!MANUALS_DIR@{MANUALS\_\-DIR}}
+\index{MANUALS_DIR@{MANUALS\_\-DIR}!winsol@{winsol}}
+\subsubsection[MANUALS\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_ebc977350ca28d117f351ac77dbc9514}{winsol.MANUALS\_\-DIR} = \char`\"{}/manuals\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_ebc977350ca28d117f351ac77dbc9514}
+
+
+User manuals directory path. 
+
+
+
+Definition at line 73 of file winsol.py.\hypertarget{namespacewinsol_8bc163ee74d98083104d5033c3262940}{
+\index{winsol@{winsol}!TEMPLATE_DIR@{TEMPLATE\_\-DIR}}
+\index{TEMPLATE_DIR@{TEMPLATE\_\-DIR}!winsol@{winsol}}
+\subsubsection[TEMPLATE\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_8bc163ee74d98083104d5033c3262940}{winsol.TEMPLATE\_\-DIR} = \char`\"{}/baseconfig/templates/default\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_8bc163ee74d98083104d5033c3262940}
+
+
+User template html directory path. 
+
+
+
+Definition at line 75 of file winsol.py.\hypertarget{namespacewinsol_3143fdfd6d34bd48ac2fec1e067af1df}{
+\index{winsol@{winsol}!ISO_FILE@{ISO\_\-FILE}}
+\index{ISO_FILE@{ISO\_\-FILE}!winsol@{winsol}}
+\subsubsection[ISO\_\-FILE]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_3143fdfd6d34bd48ac2fec1e067af1df}{winsol.ISO\_\-FILE} = \char`\"{}/Win\-SOL.iso\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_3143fdfd6d34bd48ac2fec1e067af1df}
+
+
+User ISO file path. 
+
+
+
+Definition at line 77 of file winsol.py.\hypertarget{namespacewinsol_bbcde53c0ba69049711616caed5431b6}{
+\index{winsol@{winsol}!HTML_DIR@{HTML\_\-DIR}}
+\index{HTML_DIR@{HTML\_\-DIR}!winsol@{winsol}}
+\subsubsection[HTML\_\-DIR]{\setlength{\rightskip}{0pt plus 5cm}string \hyperlink{namespacewinsol_bbcde53c0ba69049711616caed5431b6}{winsol.HTML\_\-DIR} = \char`\"{}/html\char`\"{}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_bbcde53c0ba69049711616caed5431b6}
+
+
+User html directory path. 
+
+
+
+Definition at line 79 of file winsol.py.\hypertarget{namespacewinsol_e85bfaa286fd710182b7d906a514c2ea}{
+\index{winsol@{winsol}!xml_files@{xml\_\-files}}
+\index{xml_files@{xml\_\-files}!winsol@{winsol}}
+\subsubsection[xml\_\-files]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{namespacewinsol_e85bfaa286fd710182b7d906a514c2ea}{winsol::xml\_\-files} = \mbox{[} \hyperlink{namespacewinsol_3af9670786db792ef5991af5c3ae5793}{MASTER\_\-CATEGORIES\_\-XML}, \hyperlink{namespacewinsol_a0bf1d73390881ffdffdc95bee515f38}{MASTER\_\-APPS\_\-XML}, \hyperlink{namespacewinsol_329896e2d91a81d585750db3b5019e3a}{USER\_\-CATEGORIES\_\-XML}, \hyperlink{namespacewinsol_c33a1cb562b690cab5c72abf5dc6889a}{USER\_\-APPS\_\-XML}, \hyperlink{namespacewinsol_f5b54eec64d2e3ce6c6b15a1fbc615dd}{USER\_\-INCLUDES\_\-XML} \mbox{]}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_e85bfaa286fd710182b7d906a514c2ea}
+
+
+A XML file path List. 
+
+
+
+Definition at line 805 of file winsol.py.\hypertarget{namespacewinsol_3bdf23ecc07b0e9a9d7f680ae9c2cb6f}{
+\index{winsol@{winsol}!dtd_files@{dtd\_\-files}}
+\index{dtd_files@{dtd\_\-files}!winsol@{winsol}}
+\subsubsection[dtd\_\-files]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{namespacewinsol_3bdf23ecc07b0e9a9d7f680ae9c2cb6f}{winsol::dtd\_\-files} = \mbox{[} \hyperlink{namespacewinsol_75406b2652e6bf9dc6b9566a0cb0e517}{CATEGORIES\_\-DTD}, \hyperlink{namespacewinsol_de0a178fcabafce978c245668b647015}{APPS\_\-DTD}, \hyperlink{namespacewinsol_9a613f23f40b0893b5d130ccfc1a899e}{INCLUDES\_\-DTD}\mbox{]}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_3bdf23ecc07b0e9a9d7f680ae9c2cb6f}
+
+
+A DTD file path List. 
+
+
+
+Definition at line 806 of file winsol.py.\hypertarget{namespacewinsol_624e4bca2810b741068d3494a5a7612d}{
+\index{winsol@{winsol}!winsol@{winsol}}
+\index{winsol@{winsol}!winsol@{winsol}}
+\subsubsection[winsol]{\setlength{\rightskip}{0pt plus 5cm}\hyperlink{namespacewinsol_624e4bca2810b741068d3494a5a7612d}{winsol::winsol} = \hyperlink{classwinsol_1_1WinSOL}{Win\-SOL}( \hyperlink{namespacewinsol_e85bfaa286fd710182b7d906a514c2ea}{xml\_\-files}, \hyperlink{namespacewinsol_3bdf23ecc07b0e9a9d7f680ae9c2cb6f}{dtd\_\-files} )\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{namespacewinsol_624e4bca2810b741068d3494a5a7612d}
+
+
+A Win\-Sol Object. 
+
+\begin{Desc}
+\item[See also:]\hyperlink{classwinsol_1_1WinSOL}{Win\-SOL} \end{Desc}
+
+
+Definition at line 809 of file winsol.py.

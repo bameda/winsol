@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="D. Barragan" />
+    <meta name="description" content="Cd crisol home page" />
+    <title>Web CD-CRISOL</title>
+    <link rel="stylesheet" type="text/css" href="/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/color.css" />
+  </head>
+  
+  <body>
+
+    <!-- Titulo -->
+    <div id='web-logo'>
+      <a href="http://crisol.uc3m.es"><img src="/static/images/logo_crisol_mini.png" vspace="10" hspace="20"  align="right" border="0"></a>
+      <img src="/static/images/logo.png" width="200" vspace="10"  align="bottm" border="0">
+    </div>
+
+    <!-- Menu Principal -->
+    <div id="main-menu">
+      <p>
+	<div class="mega">
+	  <p><b>Tamaño Composición</b></p>
+	  <p>$size MB</p>
+        </div>
+      </p>
+      <p>
+        <ul id="left">
+          <li><a href="/index.html">Introducción</a></li>
+	  <li><a href="/account.html">Datos de Usuario</a></li>
+	  <li><a href="/help.html">Ayuda</a></li> 
+	  <li><a href="/logout.html">Salir</a></li>
+	</ul>
+      </p>
+      <p>
+        <h3>Acciones</h3>
+        <ul id="left">
+	  <li><a href="/list_all.html">Listado de Aplicaciones</a></li>	
+	  <li><a href="/add_cat.html">Añadir Categoría</a></li>
+          <li><a href="/add_app.html">Añadir Aplicación</a></li>
+          <li><a href="/make_composition.html">Crear Composición</a></li>
+          <li><a href="/precompile_composition.html">Composiciones Precompiladas</a></li>
+        </ul>
+      </p>
+      <p>
+        <h3>Listado de Categorías</h3>
+        <ul id="left">
+	  #for $menu_cat in $menu_categories:
+	    <li>
+	      <a href="/category/$menu_cat.label"><img src="$menu_cat.icon_url" align="left" width="20" height="20" alt="" border="0" /> $menu_cat.name</a>
+	    </li>
+          #end for
+        </ul>
+      </p>
+
+    </div>
+
+    <!-- Cuerpo de la página -->
+    
+    <div id="content">
+      <br>
+      <h2 id="top">Composiciones Precompiladas</h2>
+      <p>En esta sección ponemos a tu disposición un conjunto de imágenes listas para descargar. Como verás hay una imagen con el contenido completo de aplicaciones y varias generadas por categoría.</p>
+      
+      <p>Si la imagen que buscas se encuentra entre ellas, puedes descargarla pinchando en los iconos situados a la derecha de cada imagen. Cada uno se corresponde con los dos formatos de archivo que proporciona WinSOL: <img src="/static/images/logo_iso.png" align="top" width="20" height="20" alt="" border="0" alt="iso"> ISO y <img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"> ZIP.</p>
+      <br>
+      <p>
+        <table border="0" align="center">
+          <thead align="center" valign="bottom">
+            <tr>
+              <th>NOMBRE</th>
+              <th>DESCRIPCIÓN</th>
+              <th>TAMAÑO</th>
+              <th>DESCARGAR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="/static/images/categories/all.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Completa</td>
+              <td>Selección con todas las categorías y aplicaciones por defecto.</td>
+              <td>1,2 GB</td>
+	      <td align="center">
+	        <a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_all.iso"><img src="/static/images/logo_iso.png" align="top" width="20" height="20" alt="" border="0" alt="iso"></a>
+                <a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_all.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a>
+	      </td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/ddbb.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Bases de Datos</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Bases de Datos".</td>
+              <td>126 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_ddbb.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/devel.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Desarrollo</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Desarrollo".</td>
+              <td>403 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_devel.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/education.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Educación</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Educación".</td>
+              <td>76 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_teach.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/graphics.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Gráficos</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Gráficos".</td>
+              <td>57 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_graphics.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/games.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Juegos</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Juegos".</td>
+              <td>157 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_games.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/math.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Matemáticas</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Matemáticas".</td>
+              <td>152 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_math.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/misc.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Miscelania</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Miscelania".</td>
+              <td>65 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_other.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/multimedia.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Multimedia</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Multimedia".</td>
+              <td>85 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_multimedia.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/office.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Ofimática</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Ofimática".</td>
+              <td>203 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_office.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/net.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Red</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Red".</td>
+              <td>110 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_net.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/admin.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Sistemas y Administración</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Sistemas y Administración".</td>
+              <td>17 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_admin.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/ssoo.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Sistemas Operatívos</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Sistemas Operativos".</td>
+              <td>8 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_ssoo.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+            <tr>
+              <td><img src="/static/images/categories/technical.png" align="top" width="20" height="20" alt="" border="0" hspace="5">Compilación Técnicas</td>
+              <td>Selección de todas las aplicaciones pertenecientes a la categoría "Técnicas".</td>
+              <td>133 MB</td>
+              <td align="center"><a href="http://hubert.uc3m.es/winsol/precompiled/WinSOL_tecnic.zip"><img src="/static/images/logo_zip.png" align="top" width="20" height="20" alt="" border="0" alt="zip"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+      <br><br><br>
+      <div align="right">
+      	Última Actualización: <b>20/03/2007</b> 
+      </div>
+    </div>
+    <div id="footer">
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Website designed by 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "bameda"; 
+	  var part2 = "di.uc3m.es?subject=[WinSOL] "; 
+	  var part3 = "David Barragán Merino";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+      
+      <h5><a href="http://creativecommons.org/licenses/GPL/2.0/"><img src="/static/images/logo_cc.png" border="0" alt="logo CC" align="top" hspace="2"></a>
+        2007 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+      </h5>
+      
+      <h5>
+        Contact: 
+        <script language="javascript"> 
+      	  <!-- 
+	  var part1 = "cd-crisol-main"; 
+	  var part2 = "forja.rediris.es"; 
+	  var part3 = "WinSOL mail list";
+	  document.write('<a href="mai' + 'lto:' + part1 + '@' + part2 + '">');
+	  document.write(part3 + '</a>');
+          // -->
+        </script>
+      </h5>
+    </div>
+    <div align="right">
+      <br>
+        <a href="http://www.python.org"><img src="/static/images/use-python.gif" border="0"
+></a>
+        <a href="http://www.webpy.org"><img src="/static/images/use-web.py.gif" border="0">
+</a>
+    </div>
+  </body>
+</html>
+
+

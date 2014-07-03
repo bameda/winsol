@@ -1,12 +1,48 @@
-Source: cd-crisol
+Source: winsol
 Section: misc
 Priority: optional
-Maintainer: Jesúus Espino Garcia <jespino@di.uc3m.es>
-Build-Depends: debhelper (>= 4.0.0)
-Standards-Version: 3.6.2
+Maintainer: David BarragÃ¡n Merino <bameda@di.uc3m.es>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
 
-Package: cd-crisol
+Package: winsol
 Architecture: all
-Depends: python, python-elementtree, python-cheetah, python-xml
-Description: Free Windows Software CD generator
- CD-Crisol generate CDs of Free Software for windows.
+Depends: libwinsol, winsol-console
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
+
+Package: libwinsol
+Architecture: all
+Depends: python, python-elementtree, python-cheetah, python-xml, mkisofs, zip 
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
+
+Package: winsol-doc
+Architecture: all
+#Depends: 
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
+
+Package: winsol-console
+Architecture: all
+Depends: libwinsol
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
+
+Package: winsol-web
+Architecture: all
+Depends: libwinsol, mysql-server, python-mysqldb
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
+
+Package: winsol-gtk
+Architecture: all
+Depends: libwinsol
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
+
+Package: winsol-qt
+Architecture: all
+Depends: libwinsol
+Description: Free Windows CD Software Generator 
+ Free Windows CD Software Generator.
