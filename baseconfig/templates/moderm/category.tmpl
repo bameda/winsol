@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style type="text/css">
+body {
+	background-color: #FFFFCC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	color: #336699;
+}
+
+td, th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	color: #333333;
+}
+
+a {
+	font-size: 12px;
+	color: #336600;
+}
+
+form {
+	background-color: #CCCC99;
+}
+
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+ background-color: #99CC00; color: #003333;}
+
+.subtitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 30px;
+ color: #003300;}
+
+.header {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	background-color: #669900;
+ color: #FFFF33;
+}
+
+.nav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: #CCFF99;
+}
+
+.navLink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #DEDECA;
+}
+
+.sidebar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 14px;
+	padding: 3px;
+	background-color: #FFFFCC;
+ color: #003333;
+}
+
+.sidebarHeader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #003300;
+	background-color: #FFFF66;
+}
+
+.sidebarFooter {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #FFFF99;
+ font-style: italic;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	color: #333333;
+	background-color: #CCFF99;
+}
+
+.legal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #333333;
+}
+
+.box1 {
+	border-width: thin;
+	border-color: #99FF99 #003300 #003300 #99FF99;
+ border-style: double;
+ }
+
+.promo {
+	font-family: "Times New Roman", Times, serif;
+	color: #000033;
+}
+
+.titlebar {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	background-color: #336699;
+}
+
+.dingbat {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+ color: #660000; font-weight: bolder; font-size: medium;
+ }
+
+input.big {
+	width: 100px;
+}
+
+input.small {
+	width: 50px;
+}
+.Estilo1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 20px; background-color: #669900; color: #FFFF33; font-weight: bold; }
+</style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CD-Crisol: aplicacion</title>
+<div align="center" class="Estilo1">
+  		<h1>CD CRISOL </h1>
+	</div>
+</head>
+
+<body>
+
+<table width="766" height="92" align="center" border="0">
+  <caption class="nav">
+    <div align="center">Cetogor&iacute;a: </div>
+  </caption>
+  <tr>
+    <th width="155" class="footer" scope="row"><div align="right"><strong>Nombre</strong></div></th>
+    <td width="595"><div align="justify"><strong>$category.name</strong></div></td>
+  </tr>
+  <tr>
+    <th class="footer" scope="row"><div align="right"><strong>Etiqueta</strong></div></th>
+    <td><div align="justify"><strong>$category.label</strong></div></td>
+  </tr>
+  <tr>
+    <th class="footer" scope="row"><div align="right"><strong>Aplicaciones</strong></div></th>
+    <td>
+        #for $app in $category.apps:
+           #if $app.included :
+            <div align="justify"><a href="../apps/$app.html_file">$app.name</a></div>
+           #end if
+        #end for
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p align="center" class="sidebarFooter">CD-Crisol v. 0.1   2006  - &copy; CRISOL (<a href="http://crisol.uc3m.es">crisol.uc3m.es</a>)</p>
+</body>
+
+</html>

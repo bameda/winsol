@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<div align="center">
+			<h1><h1>CD Software Libre del Crisol</h1></title>
+		</div>
+	</head>
+	
+	<body bgcolor="#D6AA95">
+		<div align="center">
+			<h2>Lista de categor?as</h2>
+			#for $category in $categories:
+				<div> <A href="./categories/$category.html_file">$category.name ($category.label)</A> </div>
+			#end for 
+		</div>
+	</body>
+</html>

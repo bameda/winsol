@@ -1,0 +1,12 @@
+Source: cd-crisol
+Section: misc
+Priority: optional
+Maintainer: Jesúus Espino Garcia <jespino@di.uc3m.es>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.2
+
+Package: cd-crisol
+Architecture: all
+Depends: python, python-elementtree, python-cheetah, python-xml
+Description: Free Windows Software CD generator
+ CD-Crisol generate CDs of Free Software for windows.

@@ -1,0 +1,4 @@
+[autorun]
+icon=luc3m.ico
+label=CD-Crisol v. 0.1
+open=browsercall.exe html\index.html

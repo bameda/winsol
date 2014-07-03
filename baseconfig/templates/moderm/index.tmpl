@@ -1,0 +1,157 @@
+<html>
+<style type="text/css">
+body {
+	background-color: #FFFFCC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	color: #336699;
+}
+
+td, th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	color: #333333;
+}
+
+a {
+	font-size: 12px;
+	color: #336600;
+}
+
+form {
+	background-color: #CCCC99;
+}
+
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+ background-color: #99CC00; color: #003333;}
+
+.subtitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 30px;
+ color: #003300;}
+
+.header {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	background-color: #669900;
+ color: #FFFF33;
+}
+
+.nav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: #CCFF99;
+}
+
+.navLink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #DEDECA;
+}
+
+.sidebar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 14px;
+	padding: 3px;
+	background-color: #FFFFCC;
+ color: #003333;
+}
+
+.sidebarHeader {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #003300;
+	background-color: #FFFF66;
+}
+
+.sidebarFooter {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #FFFF99;
+ font-style: italic;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	color: #333333;
+	background-color: #CCFF99;
+}
+
+.legal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #333333;
+}
+
+.box1 {
+	border-width: thin;
+	border-color: #99FF99 #003300 #003300 #99FF99;
+ border-style: double;
+ }
+
+.promo {
+	font-family: "Times New Roman", Times, serif;
+	color: #000033;
+}
+
+.titlebar {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	background-color: #336699;
+}
+
+.dingbat {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+ color: #660000; font-weight: bolder; font-size: medium;
+ }
+
+input.big {
+	width: 100px;
+}
+
+input.small {
+	width: 50px;
+}
+.Estilo1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 20px; background-color: #669900; color: #FFFF33; font-weight: bold; }
+</style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CD-Crisol: aplicacion</title>
+<div align="center" class="Estilo1">
+  		<h1>CD CRISOL </h1>
+	</div>
+</head>
+
+<body>
+
+<table width="353" height="37" align="center" border="0">
+  <caption class="nav">
+    <div align="center">Lista de Categor&iacute;as </div>
+  </caption>
+     #for $category in $categories:
+  	<tr>
+       	   <th width="347" height="33" class="footer" scope="row"><div align="center"><a href="./categories/$category.html_file">$category.name ($category.label)</a></div></th>
+  	</tr>
+     #end for
+</table>
+<p>&nbsp;</p>
+<p align="center" class="sidebarFooter">CD-Crisol v. 0.1   2006  - &copy; CRISOL (<a href="http://crisol.uc3m.es">crisol.uc3m.es</a>)</p>
+</body>
+
+</html>
