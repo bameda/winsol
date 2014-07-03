@@ -2,54 +2,67 @@
 <CATEGORIES>
 		<CATEGORY>
                         <CAT_NAME>Ofimiatica</CAT_NAME>
-			<CAT_LABEL>office</CAT_LABEL>	
+			<CAT_LABEL>office</CAT_LABEL>
+			<CAT_DESCRIPTION>Office applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Desarrollo</CAT_NAME>
 			<CAT_LABEL>devel</CAT_LABEL>
+			<CAT_DESCRIPTION>Development Applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Red</CAT_NAME>
 			<CAT_LABEL>net</CAT_LABEL>
+			<CAT_DESCRIPTION>Network applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Matematicas</CAT_NAME>
 			<CAT_LABEL>math</CAT_LABEL>
+			<CAT_DESCRIPTION>Mathematic applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Juegos</CAT_NAME>
 			<CAT_LABEL>games</CAT_LABEL>
+			<CAT_DESCRIPTION>Games and funy applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Tecnicas</CAT_NAME>
 			<CAT_LABEL>tecnic</CAT_LABEL>
+			<CAT_DESCRIPTION>Tecnic applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Graficos</CAT_NAME>
 			<CAT_LABEL>graphics</CAT_LABEL>
+			<CAT_DESCRIPTION>Draw applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
 		<CATEGORY>
                         <CAT_NAME>Educacion</CAT_NAME>
 			<CAT_LABEL>teach</CAT_LABEL>
+			<CAT_DESCRIPTION>Learn applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Multimedia</CAT_NAME>
 			<CAT_LABEL>multimedia</CAT_LABEL>
+			<CAT_DESCRIPTION>Multimedia applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
 		<CATEGORY>
                         <CAT_NAME>Miscelania</CAT_NAME>
 			<CAT_LABEL>other</CAT_LABEL>
+			<CAT_DESCRIPTION>Other applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Bases de Datos</CAT_NAME>
 			<CAT_LABEL>ddbb</CAT_LABEL>
+			<CAT_DESCRIPTION>Data Base applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
 		<CATEGORY>
                         <CAT_NAME>Sistemas Operativos</CAT_NAME>
 			<CAT_LABEL>ssoo</CAT_LABEL>
+			<CAT_DESCRIPTION>OO.SS. applications.</CAT_DESCRIPTION>	
                 </CATEGORY>
                 <CATEGORY>
                         <CAT_NAME>Sistema y Administracion</CAT_NAME>
 			<CAT_LABEL>admin</CAT_LABEL>
+			<CAT_DESCRIPTION>Administration applications.</CAT_DESCRIPTION>
                 </CATEGORY>
 </CATEGORIES>

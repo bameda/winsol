@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<div align="center">
+			<h1><h1>CD Software Libre del Crisol</h1></title>
+		</div>
+	</head>
+	
+	<body bgcolor="#D6AA95">
+		<div align="center">
+			<h2>Aplicación</h2>
+			<table>
+				<TR><TD> NOMBRE:</TD><TD>$application.name</TD></TR>
+				<TR><TD> VERSION:</td><TD>$application.version</TD></TR>
+				<TR><TD> WEB:</td><TD>$application.site </TD></TR>
+				<TR><TD> DESCRIPCIÓN:</td><TD>$application.description </TD></TR>
+				<TR><TD> CATEGORIAS:</td><TD>
+					#for $cat in $application.categories
+						$cat
+					#end for
+				</TD></TR>
+				<TR><TD> ALTERNATIVAS:</td><TD>
+					#for $alt in $application.alternatives
+						$alt 
+					#end for
+				</TD></TR>
+				<TR><TD> ONLINE MANUALS:</td><TD>
+					#for $man in $application.manuals.app_man_online
+					         <li><B><A href="$man.app_man_on_url">$man.app_man_on_name</A>:  </B>$man.app_man_on_description</li>
+					#end for
+				</TD></TR>
+				<TR><TD> OFFLINE MANUALS:</td><TD>
+					#for $man in $application.manuals.app_man_offline
+					    <li><B> <A href="../../manuals/$man.app_man_off_file">$man.app_man_off_name</A>:  </B>$man.app_man_off_description</li>
+					#end for
+				</TD></TR>
+				<TR>  <A href="../../software/$application.file">Instalar $application.name version $application.version</A> </div> <TR>
+			</table> 
+		</div>
+	</body>
+</html>

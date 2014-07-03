@@ -1,9 +1,23 @@
 #!/usr/bin/python
-# -*- coding: iso-8859-15 -*-
-
-# CD-Crisol v. 0.1 (https://forja.rediris.es/projects/cd-crisol)
-# Devel by: David Barragán Merino (d.barragan.alumnos.uc3m.es)
-# CRISOL-UC3M (http://crisol.uc3m.es)
+# -*- coding: UTF-8 -*-
+#
+# CD-Crisol (https://forja.rediris.es/projects/cd-crisol)
+# Copyright (C) 2006 by David Barragán Merino <d.barragan@alumnos.uc3m.es>
+#                                             <bameda@gmail.com>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
 import os
 os.chdir("/usr/share/cd-crisol/")
@@ -28,6 +42,7 @@ USER_INCLUDES_XML = CONFIG_DIR + "/includes.xml"
 IMAGE_DIR = CONFIG_DIR + "/image"
 SOFTWARE_DIR = CONFIG_DIR + "/software"
 ICONS_DIR = CONFIG_DIR + "/icons"
+MANUALS_DIR = CONFIG_DIR + "/manuals"
 TEMPLATE_DIR = MASTER_DIR+"/baseconfig/templates/default" 
 ISO_FILE = CONFIG_DIR + "/CD-Crisol.iso"
 HTML_DIR = IMAGE_DIR + "/html"
@@ -39,9 +54,22 @@ if not os.path.exists(CONFIG_DIR):
 	shutil.copy(MASTER_DIR+"/baseconfig/categories.xml",CONFIG_DIR+"/categories.xml")
 	shutil.copy(MASTER_DIR+"/baseconfig/apps.xml",CONFIG_DIR+"/apps.xml")
 	shutil.copy(MASTER_DIR+"/baseconfig/includes.xml",CONFIG_DIR+"/includes.xml")
-
-if os.path.exists(CONFIG_DIR+"/config"): 
 	execfile(CONFIG_DIR+"/config")
+else:
+	if os.path.exists(CONFIG_DIR+"/config"): 
+		execfile(CONFIG_DIR+"/config")
+	else:
+		shutil.copy(MASTER_DIR+"/baseconfig/config",CONFIG_DIR+"/config")
+		execfile(CONFIG_DIR+"/config")
+
+if not os.path.exists(CONFIG_DIR+"/categories.xml"):
+	shutil.copy(MASTER_DIR+"/baseconfig/categories.xml",CONFIG_DIR+"/categories.xml")
+
+if not os.path.exists(CONFIG_DIR+"/apps.xml"):
+	shutil.copy(MASTER_DIR+"/baseconfig/apps.xml",CONFIG_DIR+"/apps.xml")
+
+if not os.path.exists(CONFIG_DIR+"/includes.xml"):
+	shutil.copy(MASTER_DIR+"/baseconfig/includes.xml",CONFIG_DIR+"/includes.xml")
 
 
 class CDCrisol:
@@ -74,16 +102,24 @@ class CDCrisol:
 					print "\t  + " + app.get_name()
                         	elif not app.is_included():
 					print "\t  - " + app.get_name()
+	def list_apps(self):
+		for app in self.__image.get_all_apps():
+			print "\t\t" + app.get_name() + " " + app.get_version()
+
+	
 	def add_category(self):
 	        print "Write the \"Category Name\":",
                 name = raw_input()
                 print "Write the \"Category Label\":",
                 label = raw_input()
-                if ( self.__image.add_category( [name, label] )):
+		print "Write the \"Category Description\":",
+                description = raw_input()
+
+                if ( self.__image.add_category( [name, label, description] )):
 			print "!! Adding \"" + name + "\" category." 
 			self.__image.save_categories_to_xml_file()
 		else:
-			print "EE Imposible add this new category, it's posible that there is another one with te same label."
+			print "EE Unable to add the new category, it's possible that there is another one with the same label."
 
 	def del_category(self, label = ""):
 		if self.__image.del_category(label):
@@ -91,55 +127,76 @@ class CDCrisol:
 			self.__image.save_categories_to_xml_file()
 			self.__image.save_includes_to_xml_file()
 		else:
-			print "EE Imposible delete the category. It's posible that there isn't any category with this label or this category is protected"
-		
+			print "EE Unable to delete the category. It's possible that there isn't any category with this label or this category is protected"	
 
 	def modify_category(self, label):
 		if self.__image.get_category_by_label(label) == None:
-			print "EE There isn't any category with this label"
+			print "EE There isn't any category with that label"
 		else:
 			dict = self.__image.get_category_dict_by_label(label)
 			values = []
+			
 			print "Write the \"Category Name\" (default: \"" + dict['name'] + "\"):",
 			name = raw_input()
 			if name == "": name = dict['name']
 			values.append(name)
+			
+			print "Write the \"Category Description\" (default: \"" + dict['description'] + "\"):",
+                        description = raw_input()
+                        if description == "": descrioption = dict['description']
+                        values.append(description)
+
 			if self.__image.modify_category_values(label, values):
 				print "!! Modify \"" + name + "\" category." 
 				self.__image.save_categories_to_xml_file()
 				self.__image.save_applications_to_xml_file()
 			else: 
-				print "EE There aren't tow o more categories with the same label."
+				print "EE There is already a category with that label."
 
 	def select_category(self, label):
 		if self.__image.select_category(label):
 			print "!! The category is selected"
 			self.__image.save_includes_to_xml_file()
 		else:
-			print "EE There isn't any category with this label"
+			print "EE There isn't any category with that label"
 			
+	def select_all_categories(self):
+		if self.__image.select_all_categories():	
+			print "!! All categories are selected"
+			self.__image.save_includes_to_xml_file()
+		else:
+			print "EE Unable to selected all categories"
+
 	def unselect_category(self, label):
 		if self.__image.unselect_category(label):
 			print "!! The category is unselected"
 			self.__image.save_includes_to_xml_file()
 		else:
-			print "EE There isn't any category with this label"
+			print "EE There isn't any category with that label"
+	
+	def unselect_all_categories(self):
+		if self.__image.unselect_all_categories():	
+			print "!! All categories are unselected"
+			self.__image.save_includes_to_xml_file()
+		else:
+			print "EE Unable to unselected all categories"
 	
 	def view_category(self, label):
 		if self.__image.get_category_by_label(label) == None:
-			print "EE There isn't any category with this label"
+			print "EE There isn't any category with that label"
 		else:
 			dict = self.__image.get_category_dict_by_label(label)
 			print " CATEGORY DETAILS:"
 			print ""
 			print "   NAME:\t\t" + dict['name']
 			print "   LABEL:\t\t" + dict['label']
+			print "   DESCRIPTION:\t\t" + dict['description']
 			if dict["included"]: print "   INCLUDED:\t\tyes"
 			else: print "   INCLUDED:\t\tno"
 			if len( dict['apps'] ) > 0:
 				print "   APLICATIONS:"
 				for app in dict['apps']:
-					print "         \t\t" + app['name']
+					print "         \t\t- " + app['name']
 			print""
 
 	def add_application(self):
@@ -149,9 +206,51 @@ class CDCrisol:
 		version = raw_input()
                 print "Site:",
                 site = raw_input()
-                print "Manual (press ENTER to ignore):",
-                manual = raw_input()
-                print "Description:",
+		manuals = {}
+		manuals['app_man_online'] = []
+		manuals['app_man_offline'] = []
+		man_on = "-"
+		while man_on != None:
+			man_on = {}
+			print "Online Manual Name (press ENTER to finish): ",
+			man_on['app_man_on_name'] = raw_input()
+			if (man_on['app_man_on_name'] != ""):
+				print "Online Manual URL: ",
+	                        man_on['app_man_on_url'] = raw_input()
+				print "Online Manual Description: ",
+                	        man_on['app_man_on_description'] = raw_input()
+				print "Online Manual Language: ",
+                        	man_on['app_man_on_lang'] = raw_input()
+				manuals['app_man_online'].append(man_on)
+			else:
+				man_on = None
+		man_off = "-"
+                while man_off != None:
+                        man_off = {}
+                        print "Offline Manual Name (press ENTER to finish): ",
+                        man_off['app_man_off_name'] = raw_input()
+                        if (man_off['app_man_off_name'] != ""):
+                                print "Offline Manual URL: ",
+                                man_off['app_man_off_url'] = raw_input()
+				print "Offline Manual File Name: ",
+                                man_off['app_man_off_file'] = raw_input()
+                                print "Offline Manual Description: ",
+                                man_off['app_man_off_description'] = raw_input()
+                                print "Offline Manual Language: ",
+                                man_off['app_man_off_lang'] = raw_input()
+                                manuals['app_man_offline'].append(man_off)
+                        else:
+                                man_off = None                
+		plataforms = []
+                plat = None
+                while plat != "":
+                        if plat != None:
+                                plataforms.append(plat)
+                        print "Plataforms (press ENTER to finish):",
+                        plat = raw_input()
+                print "Mini-Description:",
+		minidescription = raw_input()
+		print "Description:",
                 description = raw_input()
                 print "File:",
                 file = raw_input()
@@ -177,16 +276,16 @@ class CDCrisol:
                                 alternatives.append(alt)
                         print "Alternatives (press ENTER to finish):",
                         alt = raw_input()
-                self.__image.add_app( [name, version, site, manual, description, file, software_url, icon, icon_url, md5sum, categories, alternatives ] )
+                self.__image.add_app( [name, version, site, manuals, plataforms, minidescription, description, file, software_url, icon, icon_url, md5sum, categories, alternatives ] )
                 self.__image.save_applications_to_xml_file()
 
-	def del_application(self, naem):
+	def del_application(self, name):
 		if self.__image.del_app(name):
 			print "!! Deleting application \"" + name + "\""
 			self.__image.save_applications_to_xml_file()
 			self.__image.save_includes_to_xml_file()
 		else:
-			print "EE Imposible delete the application. It's posible that there isn't any application with this name or this application is protected"
+			print "EE Unable to delete the application. It's possible that there isn't any application with that name or the application is protected"
 	
 	def modify_application(self, name):
 		if self.__image.get_app_by_name(name) == None:
@@ -204,15 +303,86 @@ class CDCrisol:
 			site = raw_input()
 			if site == "": site = dict['site']
 			values.append(site)
-
-			if dict['manual'] == None:	
-				print "Write the \"App Manual page\" (default: \"\"):",
-				manual = raw_input()
+			
+			manuals = {}
+			manuals['app_man_online'] = []
+			manuals['app_man_offline'] = []
+			man_on = ""
+			for manual in dict['manuals']['app_man_online']:
+				if (man_on != ""): man_on = man_on + "\n         "
+				man_on = man_on  + "=>" + manual['app_man_on_name'] + "\", \"" + manual['app_man_on_url'] + "\", \"" + manual['app_man_on_description'] + "\", \"" + manual['app_man_on_lang'] + "\""  
+			print "Write \"default\" to get the default \"App Online Manuals\" or press ENTER to add new ones"
+			print "default: " + man_on,
+			man_on  = raw_input()
+			if man_on == "default":
+                                manuals['app_man_online'] = dict['manuals']['app_man_online']
 			else:
-				print "Write the \"App Manual page\" (default: \"" + dict['manual'] + "\"):",
-				manual = raw_input()
-				if manual == "": manual = dict['manual']
-			values.append(manual)
+				man_on = "-"
+                		while man_on != None:
+                        		man_on = {}
+                        		print "Online Manual Name (press ENTER to finish): ",
+                        		man_on['app_man_on_name'] = raw_input()
+                        		if (man_on['app_man_on_name'] != ""):
+                                		print "Online Manual URL: ",
+                                		man_on['app_man_on_url'] = raw_input()
+                                		print "Online Manual Description: ",
+                                		man_on['app_man_on_description'] = raw_input()
+                                		print "Online Manual Language: ",
+                                		man_on['app_man_on_lang'] = raw_input()
+                                		manuals['app_man_online'].append(man_on)
+                        		else:
+                                		man_on = None
+			man_off = ""
+                        for manual in dict['manuals']['app_man_offline']:
+                                if (man_off != ""): man_off = man_off + "\n         "
+                                man_off = man_off  + "=>" + manual['app_man_off_name'] + "\", \"" + manual['app_man_off_url'] + "\", \"" + manual['app_man_off_file'] + "\", \"" + manual['app_man_off_description'] + "\", \"" + manual['app_man_off_lang'] + "\""
+                        print "Write \"default\" to get the default \"App Offline Manuals\" or press ENTER to add new ones"
+                        print "default: " + man_off,
+                        man_off  = raw_input()
+                        if man_off == "default":
+                                manuals['app_man_offline'] = dict['manuals']['app_man_offline']
+                        else:
+				man_off = "-"
+		                while man_off != None:
+	        	                man_off = {}
+                		        print "Offline Manual Name (press ENTER to finish): ",
+                		        man_off['app_man_off_name'] = raw_input()
+		                        if (man_off['app_man_off_name'] != ""):
+		                                print "Offline Manual URL: ",
+		                                man_off['app_man_off_url'] = raw_input()
+        		                        print "Offline Manual File Name: ",
+        		                        man_off['app_man_off_file'] = raw_input()
+        		                        print "Offline Manual Description: ",
+        		                        man_off['app_man_off_description'] = raw_input()
+        		                        print "Offline Manual Language: ",
+        		                        man_off['app_man_off_lang'] = raw_input()
+        		                        manuals['app_man_offline'].append(man_off)
+        		                else:
+        		                        man_off = None	
+			values.append(manuals)	
+
+			p = ""
+                        for ptf in dict['plataforms']:
+                                if ptf != None:
+                                        p =  p + ", " + ptf
+                        print "Write \"default\" to get the default \"App Plataforms\" or press ENTER to add new ones (default: \"" + p + "\"):",
+                        plat = raw_input()
+                        plataforms = []
+                        if plat == "default":
+                                plataforms = dict['plataforms']
+                        else:
+                                plat = "-"
+                                while plat != "":
+                                        print "Plataforms (press ENTER to finish):",
+                                        plat = raw_input()
+                                        if plat != "":
+                                                plataforms.append(plat)
+                        values.append(plataforms)
+
+			print "Write the \"App Mini-Description\" (default: \"" + dict['minidescription'] + "\"):",
+                        minidescription = raw_input()
+                        if minidescription == "": minidescription = dict['minidescription']
+                        values.append(minidescription)
 
 			print "Write the \"App Description\" (default: \"" + dict['description'] + "\"):",
 			description = raw_input()
@@ -252,7 +422,7 @@ class CDCrisol:
 			for ctg in dict['categories']:
 				if ctg != None: 
 					c =  c + ", " + ctg 
-			print "Write \"default\" to get the defaults \"App Categories\" or press ENTER to add the news ones (default: \"" + c + "\"):",
+			print "Write \"default\" to get the default \"App Categories\" or press ENTER to add new ones (default: \"" + c + "\"):",
 			cat = raw_input()
 			categories = []
 			if cat == "default": 
@@ -260,7 +430,7 @@ class CDCrisol:
 			else:
 				cat = "-"
 				while cat != "":
-					print "Categories (press ENTER to finish):"
+					print "Categories (press ENTER to finish):",
 					cat = raw_input()
 					if cat != "":
                           	      		categories.append(cat)
@@ -287,25 +457,54 @@ class CDCrisol:
 				print "!! Modify \"" + name + "\" application." 
 				self.__image.save_applications_to_xml_file()
 			else: 
-				print "EE There aren't tow o more applications with the same name."
+				print "EE There is already an application with that name."
 
 	def select_application(self, name):
 		if self.__image.select_app(name):
 			print "!! The application is selected"
 			self.__image.save_includes_to_xml_file()
 		else:
-			print "EE There isn't any application with this name"
+			print "EE There isn't any application with that name"
+
+
+	def select_all_applications(self):
+		if self.__image.select_all_apps():
+			print "!! All the applications are selected"
+			self.__image.save_includes_to_xml_file()
+		else:
+			print "EE Unable to select all applications"
+        
+	def select_all_applications_by_category(self, category_label):
+		if self.__image.select_apps_by_category(category_label):
+			print "!! All applications from \"" + category_label + "\" category are selected"
+			self.__image.save_includes_to_xml_file()
+		else:
+			print "EE There isn't any category with that name"
 
 	def unselect_application(self, name):
 		if self.__image.unselect_app(name):
                         print "!! The application is unselected"
                         self.__image.save_includes_to_xml_file()
                 else:
-                        print "EE There isn't any application with this name"
+                        print "EE There isn't any application with that name"
+
+	def unselect_all_applications(self):
+		if self.__image.unselect_all_apps():
+			print "!! All the applications are unselected"
+			self.__image.save_includes_to_xml_file()
+		else:
+			print "EE Unable to unselect all applications"
+        
+	def unselect_all_applications_by_category(self, category_label):
+		if self.__image.unselect_apps_by_category(category_label):
+			print "!! All applications from \"" + category_label + "\" category are unselected"
+			self.__image.save_includes_to_xml_file()
+		else:
+			print "EE There isn't any category with that name"
 
 	def view_application(self, name):	
 		if self.__image.get_app_by_name(name) == None:
-			print "EE There isn't any application with this name"
+			print "EE There isn't any application with that name"
 		else:
 			dict = self.__image.get_app_dict_by_name(name)
 			print " APPLICATION DETAILS:"
@@ -314,8 +513,28 @@ class CDCrisol:
 			print "   VERSION:\t\t" + dict['version']
 			
 			print "   SITE:\t\t" + dict['site']
-			if dict['manual'] != None: print "   MANUAL:\t\t" + dict['manual']
-			print "   FILE:\t\t" + dict['name']
+			if ( (len(dict['manuals']['app_man_online']) > 0) or (len(dict['manuals']['app_man_offline']) > 0) ): print "   MANUALS"
+			if ( len(dict['manuals']['app_man_online']) > 0 ):
+				print "     ONLINE MANUALS:"
+				for man in dict['manuals']['app_man_online']:
+					print "     \t=> NAME:\t\t" + man['app_man_on_name']
+					print "     \t   URL:\t\t\t" + man['app_man_on_url']
+					print "     \t   LANGUAGE:\t\t" + man['app_man_on_lang']
+					print "     \t   DESCRIPTION:\t\t" + man['app_man_on_description']
+					
+			if ( len(dict['manuals']['app_man_offline']) > 0 ):
+                        	print "     OFFLINE MANUALS:"
+                                for man in dict['manuals']['app_man_offline']:
+                                        print "     \t=> NAME:\t\t" + man['app_man_off_name']
+                                        print "     \t   URL:\t\t\t" + man['app_man_off_url']
+					print "     \t   FILE NAME:\t\t" + man['app_man_off_file']
+                                        print "     \t   LANGUAGE:\t\t" + man['app_man_off_lang']
+                                        print "     \t   DESCRIPTION:\t\t" + man['app_man_off_description']
+			if len( dict['plataforms'] ) > 0:
+                                print "   PLATAFORMS:"
+                                for plat in dict['plataforms']:
+                                        print "         \t\t" + plat
+			print "   FILE:\t\t" + dict['file']
 			print "   SOFTWARE URL:\t" + dict['software_url']
 			print "   ICON:\t\t" + dict['icon']
 			if dict['icon_url'] != None:print "   ICON URL:\t\t" + dict['icon_url']
@@ -331,6 +550,7 @@ class CDCrisol:
 				for alt in dict['alternatives']:
 					if alt != None:
 						print "         \t\t" + alt
+			print "   MINI-DESCRIPTION:\t" + dict['minidescription']
 			print "   DESCRIPTION:\t\t" + dict['description']
 			print""
 
@@ -343,29 +563,39 @@ class CDCrisol:
 	def iso(self, image_dir, iso_file):
 		self.__image.make_iso( image_dir, iso_file )
 
-	def download(self, software_dir, icon_dir):
+	def download(self, software_dir, icon_dir, manual_dir):
 		if not os.path.exists( software_dir ): os.mkdir( software_dir )
 		if not os.path.exists( icon_dir ): os.mkdir( icon_dir )
-		for category in self.__image.get_all_categories():
-			if category.is_included():
-				for app in category.get_all_apps():
-					if app.is_included() :
-						app.download_software( software_dir )
-						app.download_icon( icon_dir )
+		if not os.path.exists( manual_dir ): os.mkdir( manual_dir )
+		
+		self.__image.download_software( software_dir )
+		self.__image.download_icons( icon_dir )
+		self.__image.download_manuals( manual_dir)
 
-	def copy( self, image_dir, software_dir, icons_dir, master_dir ):
+		self.__image.save_applications_to_xml_file()
+                self.__image.save_includes_to_xml_file()
+
+	def copy( self, image_dir, software_dir, icons_dir, manual_dir, master_dir ):
 		if not os.path.exists( image_dir ): os.mkdir( image_dir )
 		if not os.path.exists( image_dir + "/software" ): os.mkdir(image_dir + "/software" )
 		if not os.path.exists( image_dir + "/html" ): os.mkdir(image_dir + "/html" )
 		if not os.path.exists( image_dir + "/html/icons" ): os.mkdir( image_dir + "/html/icons" )
+		if not os.path.exists( image_dir + "/manuals" ): os.mkdir(image_dir + "/manuals" )
 		for category in self.__image.get_all_categories():
 			if category.is_included():
 				for app in category.get_all_apps():
 					if app.is_included():
 						if not os.path.exists( image_dir + "/software/" + app.get_file_name() ):
-							os.symlink( software_dir + "/" + app.get_file_name(),image_dir + "/software/" + app.get_file_name() )
-						if os.path.exists( icons_dir + "/" + app.get_icon_name() ):
-							os.symlink( icons_dir + "/" + app.get_icon_name(),image_dir + "/html/icons/" + app.get_icon_name() )
+							if os.path.exists( software_dir + "/" + app.get_file_name() ):
+								os.symlink( software_dir + "/" + app.get_file_name(), image_dir + "/software/" + app.get_file_name() )
+						if not os.path.exists( image_dir + "/html/icons/" + app.get_icon_name() ):
+							if  os.path.exists( icons_dir + "/" + app.get_icon_name() ):
+								os.symlink( icons_dir + "/" + app.get_icon_name(), image_dir + "/html/icons/" + app.get_icon_name() )
+						for manual in app.get_manuals()['app_man_offline']:
+							if not os.path.exists( image_dir + "/manuals/" + manual['app_man_off_file'] ):
+								if os.path.exists( manual_dir + "/" + manual['app_man_off_file'] ):
+									os.symlink( manual_dir + "/" + manual['app_man_off_file'], image_dir + "/manuals/" + manual['app_man_off_file'] )
+
 		if not os.path.exists( image_dir + "/autorun.inf" ): os.symlink( master_dir + "/cd-base/autorun.inf", image_dir + "/autorun.inf" )
 		if not os.path.exists( image_dir + "/browsercall.exe" ): os.symlink( master_dir + "/cd-base/browsercall.exe", image_dir + "/browsercall.exe" )
 		if not os.path.exists( image_dir + "/logo.ico" ):os.symlink( master_dir + "/cd-base/logo.ico", image_dir + "/logo.ico" )
@@ -377,31 +607,41 @@ def print_help():
 	print "Usage: " + sys.argv[0] + " <option> [parameter]\n"
 	print "Options:"
 	print ""
-	print "  Aplications manipulations:"
-	print "    add_app\t\t\t  Add an application."
-	print "    del_app <app-name>\t\t  Remove an application."
-	print "    mod_app <app-name>\t\t  Modify an application."
-	print "    select_app <app-name>\t  Select applications to include."
-	print "    unselect_app <app-name>\t  Unselect applications to include."
-	print "    view_app <app-name>\t\t  View an application details"
+	print "  Operations over applications:"
+	print "    add_app\t\t\t\t\t  Add an application."
+	print "    del_app <app-name>\t\t\t\t  Remove an application."
+	print "    mod_app <app-name>\t\t\t\t  Modify an application."
+	print "    select_app <app-name>\t\t\t  Select applications to include."
+	print "    select_all_apps\t\t\t\t  Select all applications."
+	print "    select_all_apps_by_categ <categ-label>\t  Select all applications by category."
+	print "    unselect_app <app-name>\t\t\t  Unselect applications to include."
+	print "    unselect_all_apps\t\t\t\t  Unselect all applications."
+        print "    unselect_all_apps_by_categ <categ-label>\t  Unselect all applications by category."
+	print "    view_app <app-name>\t\t\t\t  View an application details,"
 	print ""
-	print "  Categories manipulations:"
-	print "    add_categ\t\t\t  Add a category."
-	print "    del_categ <categ-label>\t  Remove a category."
-	print "    mod_categ <categ-label>\t  Modify a category"
-	print "    select_categ <categ-label>\t  Select categories to include."
-	print "    unselect_categ <categ-label>  Unselect categories to include."
-	print "    view_categ <categ-label>\t  View a category details"
+	print "  Operations over categories:"
+	print "    add_categ\t\t\t\t\t  Add a category."
+	print "    del_categ <categ-label>\t\t\t  Remove a category."
+	print "    mod_categ <categ-label>\t\t\t  Modify a category,"
+	print "    select_categ <categ-label>\t\t\t  Select categories to include."
+	print "    select_all_categ\t\t\t\t  Select all categories,"   
+	print "    unselect_categ <categ-label>\t\t  Unselect categories to include."
+	print "    unselect_all_categ\t\t\t\t  Select all categories,"
+	print "    view_categ <categ-label>\t\t\t  View a category details,"
+	print ""
+	print "    select_all\t\t\t\t\t  Select all applications and categories."
+	print "    unselect_all\t\t\t\t  Unselect all applications and categories."
+	print ""
 	print ""
 	print "  Image options:"	
-	print "    all\t\t\t\t  Execute html, copy and iso actions."
-	print "    clean\t\t\t  Clean the image directory."
-	print "    copy\t\t\t  Copy base files, software and icons."
-	print "    download\t\t\t  Download the necesary software."
-	print "    html\t\t\t  Generate html files into the image."
-	print "    iso\t\t\t\t  Generate an iso image from image directory."
-	print "    list\t\t\t  List all aplications and the status."
-	print "    mrproper\t\t\tClean the user config dir."
+	print "    all\t\t\t\t\t\t  Execute html, copy and iso actions."
+	print "    clean\t\t\t\t\t  Clean the image directory."
+	print "    copy\t\t\t\t\t  Copy base files, software and icons."
+	print "    download\t\t\t\t\t  Download the necesary software."
+	print "    html\t\t\t\t\t  Generate html files into the image."
+	print "    iso\t\t\t\t\t\t  Generate an iso image from image directory."
+	print "    list\t\t\t\t\t  List all aplications and the status."
+	print "    mrproper\t\t\t\t\t  Clean the user config dir."
 	print ""
 
 if len( sys.argv ) < 2 or len ( sys.argv ) > 3:
@@ -411,29 +651,32 @@ else:
 	xml_files = [ MASTER_CATEGORIES_XML, MASTER_APPS_XML, USER_CATEGORIES_XML, USER_APPS_XML, USER_INCLUDES_XML ]
 	dtd_files = [ CATEGORIES_DTD, APPS_DTD, INCLUDES_DTD]
 
-	try:
-		cdcrisol = CDCrisol( xml_files, dtd_files )
-	except Exception:	
-		print"EE Error. the program finish."
+	#try:
+	cdcrisol = CDCrisol( xml_files, dtd_files )
+	#except Exception, e:	
+	#	print"EE Error. the program finish."
 	
 	if sys.argv[1] == "html":
 		cdcrisol.html( IMAGE_DIR, TEMPLATE_DIR )
         elif sys.argv[1] == "clean":
 		cdcrisol.clean(IMAGE_DIR)
 	elif sys.argv[1] == "mrproper":
-		cdcrisol.view_mrproper()
+		cdcrisol.mrproper(CONFIG_DIR)
 	elif sys.argv[1] == "iso":
 		cdcrisol.iso(IMAGE_DIR, ISO_FILE)
 	elif sys.argv[1] == "download":
-		cdcrisol.download(SOFTWARE_DIR, ICONS_DIR)
+		cdcrisol.download(SOFTWARE_DIR, ICONS_DIR, MANUALS_DIR)
 	elif sys.argv[1] == "copy":
-		cdcrisol.copy(IMAGE_DIR,SOFTWARE_DIR,ICONS_DIR,MASTER_DIR)
+		cdcrisol.copy(IMAGE_DIR, SOFTWARE_DIR, ICONS_DIR, MANUALS_DIR, MASTER_DIR)
 	elif sys.argv[1] == "all":
-		cdcrisol.html(IMAGE_DIR,TEMPLATE_DIR)
-		cdcrisol.copy(IMAGE_DIR,SOFTWARE_DIR,ICONS_DIR,MASTER_DIR)
-		cdcrisol.iso(IMAGE_DIR,ISO_FILE)
+		cdcrisol.download(SOFTWARE_DIR, ICONS_DIR, MANUALS_DIR)
+		cdcrisol.html(IMAGE_DIR, TEMPLATE_DIR)
+		cdcrisol.copy(IMAGE_DIR, SOFTWARE_DIR, ICONS_DIR, MANUALS_DIR, MASTER_DIR)
+		cdcrisol.iso(IMAGE_DIR, ISO_FILE)
 	elif sys.argv[1] == "list":
 		cdcrisol.list()
+	elif sys.argv[1] == "list_apps":
+		cdcrisol.list_apps()
 	# Categories functions
 	elif sys.argv[1] == "add_categ":
 		cdcrisol.add_category()
@@ -443,8 +686,12 @@ else:
 		cdcrisol.modify_category(sys.argv[2])
 	elif sys.argv[1] == "select_categ":
 		cdcrisol.select_category(sys.argv[2])
+	elif sys.argv[1] == "select_all_categ":
+		cdcrisol.select_all_categories()
 	elif sys.argv[1] == "unselect_categ":
 		cdcrisol.unselect_category(sys.argv[2])
+	elif sys.argv[1] == "unselect_all_categ":
+		cdcrisol.unselect_all_categories()
 	elif sys.argv[1] == "view_categ":
 		cdcrisol.view_category(sys.argv[2])
 	# Applications fuction
@@ -456,10 +703,24 @@ else:
 		cdcrisol.modify_application(sys.argv[2])
 	elif sys.argv[1] == "select_app":
 		cdcrisol.select_application(sys.argv[2])
+	elif sys.argv[1] == "select_all_apps":
+                cdcrisol.select_all_applications()
+	elif sys.argv[1] == "select_all_apps_by_categ":
+                cdcrisol.select_all_applications_by_category(sys.argv[2])
 	elif sys.argv[1] == "unselect_app":
 		cdcrisol.unselect_application(sys.argv[2])
+	elif sys.argv[1] == "unselect_all_apps":
+                cdcrisol.unselect_all_applications()
+        elif sys.argv[1] == "unselect_all_apps_by_categ":
+                cdcrisol.unselect_all_applications_by_category(sys.argv[2])
 	elif sys.argv[1] == "view_app":
 		cdcrisol.view_application(sys.argv[2])
+	elif sys.argv[1] == "select_all":
+                cdcrisol.select_all_categories()
+		cdcrisol.select_all_applications()
+	elif sys.argv[1] == "unselect_all":
+                cdcrisol.unselect_all_categories()
+                cdcrisol.unselect_all_applications()
 	else:
 		print_help()
 

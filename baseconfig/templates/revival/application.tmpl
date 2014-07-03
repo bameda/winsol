@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="title" content="CD-CRISOL" />
+		<meta name="author" content="David Barrag&#225;n Merino" />
+		
+		<link rel="stylesheet" type="text/css" href="../mis/style.css" media="screen,projection" />
+		<!--<link rel="shortcut icon" href="http://developdaly.com/images/favicon.ico" /> -->
+
+		<title>CD-Crisol</title>
+	</head>
+
+	<body>
+		<div id="page">
+	
+			<div id="header">
+				<h1>CD-Crisol</h1>
+				<h2><a href="http://crisol.uc3m.es">CRISOL UC3M</a></h2>
+			</div>
+			
+			<div id="content">
+			
+				<div id="menu">
+					<div id="nav_top"></div>
+				
+					<h3>Categories</h3>
+					<ul>
+						#for $cat in $categories:
+							<li> <a href="../categories/$cat.html_file">$cat.name</a> </li>
+						#end for 
+	        		        </ul>	
+	                			
+					<div id="nav_btm"></div>
+				
+				</div>
+					
+				<div id="info">
+				
+					<div class="post_top"></div>
+				
+					<div class="post">
+						<h4><img src="../icons/$application.icon" style="float:center;" width="80" height="80" alt="image" /> $application.name</h4>
+						<br>
+						<ul>
+							<li><h3>VERSION:</h3>$application.version</li>
+							<li><h3>WEB:</h3><a href="$application.site">$application.site</a></li>
+							<li><h3>PLATAFORMS:</h2>
+                                                		#for $plat in $application.plataforms
+                                                        		$plat<br>
+                                                		#end for
+							<li>
+							<li><h3>DESCRIPCION:</h3>$application.description</li>
+							<li><h3>CATEGORIAS:</h3>
+								#for $cat in $application.categories
+									$cat<br>
+								#end for
+							</li>
+							<li><h3>ALTERNATIVAS:</h3>
+								#for $alt in $application.alternatives
+									$alt<br>
+								#end for
+							</li>
+							<li><h3>MANUALES ON-LINE:</h3>
+								<UL>
+									#for $man in $application.manuals.app_man_online
+										<li><A href="$man.app_man_on_url">$man.app_man_on_name:</A> [$man.app_man_on_lang] $man.app_man_on_description</li>
+									#end for
+								</UL>
+							</li>
+							<li><h3>MANUALES OFF-LINE:</h3>
+								<UL>
+									#for $man in $application.manuals.app_man_offline
+										<li><A href="../../manuals/$man.app_man_off_file">$man.app_man_off_name:</A> [$man.app_man_off_lang] $man.app_man_off_description</li>
+									#end for
+								</UL>
+							</li>
+						</ul>
+						<br>
+						<h3 dir="center"><a href="../../software/$application.file">Instalar $application.name $application.version</a></h3>
+					</div>
+					
+					<div class="post_btm"></div>
+					
+				</div>
+	
+			</div>
+			
+			<div id="footer">
+				&copy; 2006 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a><br>
+				Contact: <a href="mailto:&#098;&#097;&#109;&#101;&#100;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">CD-Crisol Devel Team.
+			</div>
+           
+		</div>
+                
+	</body>
+
+</html>

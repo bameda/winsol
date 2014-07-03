@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Cd-Crisol newLine Template</title>
+	</head>
+
+	<body bgcolor="#FFFFFF" background="../mis/images/bg.gif" text="#990000" link="#990000" vlink="#990000" alink="#990000">
+		<table width="1000" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+    			<td align="center" height="70" width="302">&nbsp;</td>
+    			<td height="70" width="66"><img src="../mis/images/spacer.gif" width="4" height="4"></td>
+   			  <td width="632" height="70"><font color="#990000" face="Arial, Helvetica, sans-serif" size="6"><b>CD - CRISOL  </b></font></td>
+  		  	</tr>
+  			<tr> 
+    			<td width="302" valign="top">&nbsp;</td>
+    			<td width="66"><img src="../mis/images/spacer.gif" width="4" height="4"></td>
+    			<td valign="top">&nbsp;</td>
+  			</tr>
+  			<tr> 
+    			<td width="302" valign="top" align="center">
+					<font color="#990000" face="Arial, Helvetica, sans-serif">
+					<!-- Menu List -->
+						<h3 align="center"><A href="../index.html">INICIO</A></h3>
+						<h3 align="center">CATEGORIAS</h3>
+							#for $cat in $categories:
+								<div> <A href="./$cat.html_file">$cat.name ($cat.label)</A> </div>
+							#end for 
+		      </font></td>
+    			<td width="66"></td>
+    			<td valign="top"> 
+    	  			<div align="center"> 
+					<!-- Description -->
+					<h2>Categoría</h2>
+					<font face="Arial, Helvetica, sans-serif" size="1" color="#990000">
+						<table border="2" bordercolor="#990000">
+							<TR><TD width="121"> NOMBRE:</TD>
+							<TD width="474" align="center"> <strong>$category.name</strong> </TD>
+							</TR>
+							<TR><TD> ETIQUETA:</td><TD> $category.label</TD></TR>
+							<TR><TD> APLICACIONES:</td><TD> 
+								#for $app in $category.apps:
+								 	#if $app.included :   
+										<div> <A href="../apps/$app.html_file">$app.name</A> </div>
+									#end if
+								#end for
+							</TD></TR>
+						</table> 
+					</font>
+		      		</div>
+    			</td>
+  			</tr>
+  			<tr> 
+    			<td width="302" valign="top">&nbsp;</td>
+    			<td width="66">&nbsp;</td>
+    			<td valign="top"> 
+    	  			<div align="center">
+    	    			<p><font face="Arial, Helvetica, sans-serif" size="1" color="#990000"><b><font color="#990000">&copy; 2006 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a> <br> <font color="#990000">Contact:</font> <a href="mailto:&#098;&#097;&#109;&#101;&#100;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">CD-Crisol Devel Team</p>
+				</div>
+    			</td>
+  			</tr>
+	</table>
+	</body>
+</html>

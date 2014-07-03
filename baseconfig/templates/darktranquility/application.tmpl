@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="title" content="CD-CRISOL" />
+	<meta name="author" content="David Barrag&#225;n Merino" />
+	<link rel="stylesheet" type="text/css" href="../mis/style.css" media="screen,projection" />
+<title>CD-CRISOL</title>
+</head>
+
+	<body>
+	
+		<div id="page">
+	
+			<div id="header">
+		
+				<h1>CD-Crisol</h1>
+		
+			</div>
+	
+			<div id="menu">
+				<h2>Categories</h2>
+				<ul>
+					#for $cat in $categories:
+						<li> <a href="../categories/$cat.html_file">$cat.name</a> </li>
+						#end for 
+	        		        </ul>	
+
+		                <div class="menu"></div>
+			</div>
+				
+			<div id="content">
+				<div class="post">
+					<h3><img src="../icons/$application.icon" style="float:right;" width="100" height="100" alt="NO IMG" /> $application.name</h3>
+					<br>
+					<h2>VERSION: </h2>$application.version</li>
+					<h2>WEB: </h2><a href="$application.site">$application.site</a></li>
+					<h2>PLATAFORMS: </H2> 
+						#for $plat in $application.plataforms
+							$plat<br>
+						#end for
+					<h2>DESCRIPCION: </h2>$application.description</li>
+					<h2>CATEGORIAS: </h2>
+						#for $cat in $application.categories
+							$cat<br>  
+						#end for
+					<h2>ALTERNATIVAS: </h2>
+						#for $alt in $application.alternatives
+							$alt<br>  
+						#end for
+					<h2>MANUALES ON-LINE: </h2>
+						#for $man in $application.manuals.app_man_online
+							<A href="$man.app_man_on_url">$man.app_man_on_name:</A> [$man.app_man_on_lang] $man.app_man_on_description<br>
+						#end for
+					<h2>MANUALES OFF-LINE:</h2>
+						#for $man in $application.manuals.app_man_offline
+							<A href="../../manuals/$man.app_man_off_file">$man.app_man_off_name:</A> [$man.app_man_off_lang] $man.app_man_off_description<br>
+						#end for
+				</div>
+			</div>
+		</div>
+          
+		<div id="footer">
+			&copy; 2006 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a><br>
+			Contact: <a href="mailto:&#098;&#097;&#109;&#101;&#100;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">CD-Crisol Devel Team.
+		</div>
+           
+	</body>
+
+</html>

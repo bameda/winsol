@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="title" content="CD-CRISOL" />
+	<meta name="author" content="David Barrag&#225;n Merino" />
+	<link rel="stylesheet" type="text/css" href="../mis/style.css" media="screen,projection" />
+<title>CD-CRISOL</title>
+</head>
+
+	<body>
+	
+		<div id="page">
+	
+			<div id="header">
+				<h1>CD-Crisol</h1>
+			</div>
+	
+			<div id="menu">
+				<h2>Categories</h2>
+				<ul>
+					#for $cat in $categories:
+						<li> <a href="$cat.html_file">$cat.name</a> </li>
+						#end for 
+	        		        </ul>	
+
+		                <div class="menu"></div>
+			</div>
+				
+			<div id="content">
+				<div class="post">
+					<h3>$category.name ($category.label)</h3>
+					<h2>Description: </h2>$category.description
+					<h2>Applications: </h2>
+					#for $app in $category.apps:
+						#if $app.included :
+							<A href="../apps/$app.html_file">$app.name:</A> $app.minidescription<br>
+						#end if
+					#end for	
+			</div>
+		</div>
+          
+		<div id="footer">
+			&copy; 2006 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a><br>
+			Contact: <a href="mailto:&#098;&#097;&#109;&#101;&#100;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">CD-Crisol Devel Team.
+		</div>
+           
+	</body>
+
+</html>

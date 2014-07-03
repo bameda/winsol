@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+ CD-Crisol (https://forja.rediris.es/projects/cd-crisol)
+ Copyright (C) 2006 by David Barragán Merino <d.barragan@alumnos.uc3m.es>
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+-->
+
 <APPLICATIONS>
 	<APP>
 		<APP_NAME>7-ZIP</APP_NAME>
 		<APP_VERSION>4.32</APP_VERSION>
 		<APP_SITE>http://www.7-zip.org/</APP_SITE>
-		<APP_MANUAL />
+		<APP_MANUALS />
+		<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>7-Zip is a program for creating or unpacking archived and compressed files.</APP_MINIDESCRIPTION>
 		<APP_DESCRIPTION>7-Zip is a program for creating or unpacking archived and compressed files. It can unpack 7zip, ZIP, CAB, RAR, ARJ, GZIP, BZIP2, TAR, CPIO, RPM and DEB files, or create file archives in those formats. For the standard ZIP and GZIP formats, 7-Zip provides a compression ratio that is 2 - 10 % better than that provided by PKZip or WinZip, and the native 7zip format can provide a 45% reduction in file size from the common zip format. The program is highly configurable, allowing the user to balance the level of compression and speed. The interface is designed to mimic the standard Windows shell, Explorer, and is localized to 40 languages. Though 7-Zip is free of charge, you have the option of "registering" if you would like official technical support for the program.</APP_DESCRIPTION>
 		<APP_FILE>7z43i2.exe</APP_FILE>
-		<APP_DOWNLOAD_URL>http://ufpr.dl.sourceforge.net/sourceforge/sevenzip/7z432.exee</APP_DOWNLOAD_URL>
-		<APP_ICON>7ziplogo.png</APP_ICON>
+		<APP_DOWNLOAD_URL>http://ufpr.dl.sourceforge.net/sourceforge/sevenzip/7z432.exe</APP_DOWNLOAD_URL>
+		<APP_ICON>7zip.png</APP_ICON>
 		<APP_ICON_URL>http://www.7-zip.org/7ziplogo.png</APP_ICON_URL>
 		<APP_MD5SUM>1c412567bb5473911a44ce17b5aa02dd</APP_MD5SUM>
 		<APP_CATEGORIES>
@@ -21,13 +44,26 @@
 		<APP_NAME>Abiword</APP_NAME>
 		<APP_VERSION>2.4.4</APP_VERSION>
                 <APP_SITE>http://www.abiword.org/</APP_SITE>
-                <APP_MANUAL>http://www.abiword.org/support/manual/</APP_MANUAL>
-                <APP_DESCRIPTION>AbiWord is a light weight, stand alone word processor that can read and write a large number of document formats, including MS-Word. Due to its small size it is well suited for use on older hardware, and will run happily on a 486DX with 16MB of RAM, while still letting you edit all the relevant document formats of today. Key features include HTML export, unlimited undo and redo, support for spell checking, styles, columns, tables, images, and bulleted/numbered lists.
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+				<APP_MAN_ONLINE_NAME>Abiword On-Line User's Manuals</APP_MAN_ONLINE_NAME>
+				<APP_MAN_ONLINE_URL>http://www.abiword.org/support/manual/</APP_MAN_ONLINE_URL>
+				<APP_MAN_ONLINE_DESCRIPTION>AbiWord User's Manual: tutorials, manuals, How-to...</APP_MAN_ONLINE_DESCRIPTION>
+				<APP_MAN_ONLINE_LANG>Français, English, Polish</APP_MAN_ONLINE_LANG>
+			</APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>AbiWord is a light weight, stand alone word processor that can read and write a large number of document formats, including MS-Word</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>AbiWord is a light weight, stand alone word processor that can read and write a large number of document formats, including MS-Word. Due to its small size it is well suited for use on older hardware, and will run happily on a 486DX with 16MB of RAM, while still letting you edit all the relevant document formats of today. Key features include HTML export, unlimited undo and redo, support for spell checking, styles, columns, tables, images, and bulleted/numbered lists.
 
 There are a number of optional plug-ins available, including a thesaurus, Babelfish translation interface, and spelling dictionaries in many languages. It is automatically localized in a large number of languages; just change the locale setting in your Windows control panel and AbiWord automatically appears in the language you selected. Abiword is also bidirectional, offering support for right-to-left languages. If you simply need a word processor with the most common features, rather than a full office suite, then AbiWord is a good choice. AbiWord is available on multiple platforms, including Windows, Linux, MacOSX and Unix. </APP_DESCRIPTION>
                 <APP_FILE>abiword-setup-2.4.4.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://www.abiword.org/downloads/abiword/2.4.4/Windows/abiword-setup-2.4.4.exe</APP_DOWNLOAD_URL>
-                <APP_ICON>swish-a.jpg.png</APP_ICON>
+                <APP_ICON>abiword.png</APP_ICON>
                 <APP_ICON_URL>http://www.abiword.org/gfx/swish-a.jpg</APP_ICON_URL>
                 <APP_MD5SUM>955ca41fb20505d38d989d83c8118a97</APP_MD5SUM>
                 <APP_CATEGORIES>
@@ -40,11 +76,23 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Apache HTTP Server</APP_NAME>
 		<APP_VERSION>2.2.2</APP_VERSION>
                 <APP_SITE>http://httpd.apache.org</APP_SITE>
-                <APP_MANUAL>http://httpd.apache.org/docs/2.2/</APP_MANUAL>
-                <APP_DESCRIPTION>The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+				<APP_MAN_ONLINE_NAME>Apache manuals On-Line</APP_MAN_ONLINE_NAME>
+				<APP_MAN_ONLINE_URL>http://httpd.apache.org/docs/2.2/</APP_MAN_ONLINE_URL>
+				<APP_MAN_ONLINE_DESCRIPTION>All Apache manuals On-Line.</APP_MAN_ONLINE_DESCRIPTION>
+				<APP_MAN_ONLINE_LANG>Deutsch, Français, English, Spanish, Japanese, Korean, Portuguès (Brasil)</APP_MAN_ONLINE_LANG>
+			</APP_MAN_ONLINE>
+		</APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.</APP_DESCRIPTION>
                 <APP_FILE>apache_2.2.2-win32-x86-no_ssl.msi</APP_FILE>
                 <APP_DOWNLOAD_URL>http://apache.rediris.es/httpd/binaries/win32/apache_2.2.2-win32-x86-no_ssl.msi</APP_DOWNLOAD_URL>
-                <APP_ICON>apache_big.gif</APP_ICON>
+                <APP_ICON>apache.gif</APP_ICON>
                 <APP_ICON_URL>http://linuxwebmasterfree.com/images/081400/apache_big.gif</APP_ICON_URL>
                 <APP_MD5SUM>b654cdb448757b38b8968ff1b2f5bcb1</APP_MD5SUM>
                 <APP_CATEGORIES>
@@ -57,8 +105,13 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Armagetron Advanced</APP_NAME>
 		<APP_VERSION>0.2.8.1-1</APP_VERSION>
                 <APP_SITE>http://armagetronad.net/</APP_SITE>
-                <APP_MANUAL />
-                <APP_DESCRIPTION>This has been the tagline of Armagetron, since, well, a very long time, and is probably the shortest and most accurate description possible. Tron was an arcade game based on the movie of the same name, release by Disney in 1982. The original game consisted of 4 sub-games, the only one of concern is the 'Light Cycles' one, in which the player uses a left/right joystick to control a 'Light Cycle' which leaves a wall behind it wherever the cycle it goes, turning only at 90 degree angles. The player must then get the AI to crash into their wall while avoiding hitting the AI's own wall themselves. Those were the humble beginnings of Armagetron Advanced's game play, which has now blossomed into 16 player mayhem, with highly advanced AI, network game play, and of course all in a 3D environment.</APP_DESCRIPTION>
+                <APP_MANUALS />
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+                        <APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>3D Tron-like high speed game.</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>This has been the tagline of Armagetron, since, well, a very long time, and is probably the shortest and most accurate description possible. Tron was an arcade game based on the movie of the same name, release by Disney in 1982. The original game consisted of 4 sub-games, the only one of concern is the 'Light Cycles' one, in which the player uses a left/right joystick to control a 'Light Cycle' which leaves a wall behind it wherever the cycle it goes, turning only at 90 degree angles. The player must then get the AI to crash into their wall while avoiding hitting the AI's own wall themselves. Those were the humble beginnings of Armagetron Advanced's game play, which has now blossomed into 16 player mayhem, with highly advanced AI, network game play, and of course all in a 3D environment.</APP_DESCRIPTION>
                 <APP_FILE>armagetronad-0.2.8.1-1.vc6.win32.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://ovh.dl.sourceforge.net/sourceforge/armagetronad/armagetronad-0.2.8.1-1.vc6.win32.exe </APP_DOWNLOAD_URL>
                 <APP_ICON>armagetronad.png</APP_ICON>
@@ -74,8 +127,19 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>MoinMoin</APP_NAME>
 		<APP_VERSION>1.5.3</APP_VERSION>
                 <APP_SITE>http://moinmoin.wikiwikiweb.de/MoinMoinWiki</APP_SITE>
-                <APP_MANUAL>http://moinmoin.wikiwikiweb.de/HelpContents</APP_MANUAL>
-                <APP_DESCRIPTION>A wiki is a tool that allows many users to collaborate on generating and organising content. A wiki is usually hosted on the web so that different people can connect through their web browsers to collaborate. However you can also use a wiki locally on your own computer to help you stay organised, structuring your information with categories, sub-pages and hyper-links, just like on the web. You can even create attachments to your pages, like pictures or word processing documents you are working on for a specific project. A powerful feature of wikis is page versioning, which let's you store each page in multiple successive versions and track the changes between them. MoinMoin requires at least Python >= 2.3. We recommend using Python 2.4.x if possible.</APP_DESCRIPTION>
+                <APP_MANUALS>
+                        <APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>MoinMoin manuals On-Line</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://moinmoin.wikiwikiweb.de/HelpContents</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>MoinMoin online help, available in all MoinMoin wikis.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                </APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Python clone of WikiWiki</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>A wiki is a tool that allows many users to collaborate on generating and organising content. A wiki is usually hosted on the web so that different people can connect through their web browsers to collaborate. However you can also use a wiki locally on your own computer to help you stay organised, structuring your information with categories, sub-pages and hyper-links, just like on the web. You can even create attachments to your pages, like pictures or word processing documents you are working on for a specific project. A powerful feature of wikis is page versioning, which let's you store each page in multiple successive versions and track the changes between them. MoinMoin requires at least Python >= 2.3. We recommend using Python 2.4.x if possible.</APP_DESCRIPTION>
                 <APP_FILE>moin-1.5.3.tar.gz</APP_FILE>
                 <APP_DOWNLOAD_URL>http://ovh.dl.sourceforge.net/sourceforge/moin/moin-1.5.3.tar.gz</APP_DOWNLOAD_URL>
                 <APP_ICON>moinmoin.png</APP_ICON>
@@ -92,8 +156,41 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>OpenOffice.org</APP_NAME>
 		<APP_VERSION>2.0.3rc3</APP_VERSION>
                 <APP_SITE>http://www.openoffice.org</APP_SITE>
-                <APP_MANUAL>http://user-faq.openoffice.org/</APP_MANUAL>
-                <APP_DESCRIPTION>OpenOffice.org is a full-featured productivity suite including a word processor, spreadsheet, web page editor and presentation program. Notable features in this version are native PDF and Flash export at the click of button and a macro recorder for increased productivity. OpenOffice.org provides you with the ability to create mail merged documents from Outlook or Mozilla address books, spreadsheets, or other data sources and its tightly-integrated modules help to simplify work flow. Documents are stored in a compressed, open-standard XML format to ensure future availability of your data and to reduce file sizes. You can read and write documents in a wide range of formats including Microsoft Office. The word processor component, Writer, is suitable for the production of professional documents, reports, newsletters, and brochures. A powerful spreadsheet module called Calc contains sophisticated tools for calculation, data analysis and visualisation, its built-in charting tools are able to generate customisable 2D and 3D charts. The presentation utility, Impress, uses effects, animation and drawing tools to help you create effective multimedia slide shows to present your the way you want to. Use the Draw component to produce either simple diagrams or complex 3D illustrations and special effects for use in documents and presentations. The Database User Tools give you all the tools you need for day to day database work in a simple spreadsheet-like form. They support dBASE databases for simple applications, or any ODBC or JDBC compliant database for industrial strength database work.</APP_DESCRIPTION>
+                <APP_MANUALS>
+                        <APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>OpenOffice.org On-Line FAQS</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://user-faq.openoffice.org/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>OpenOffice list of Users Frequently Asked Questions</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>OpenOffice.org Tutorials</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.tutorialsforopenoffice.org/category_index/Index.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>OpenOffice tutorias to download in pdf or OO format.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>OpenOffice.org2 Users Guide</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://documentation.openoffice.org/manuals/OOo2.x/user_guide2_draft.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>OpenOffice.org2 Users Guide.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>Free OpenOffice.org user's guide.</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+			<APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>OpenOffice.org2 Setup Guide</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://documentation.openoffice.org/setup_guide2/2.x/en/SETUP_GUIDE_A4.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>OpenOffice.org2 Setup Guide.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>Free guide from the OpenOffice.org community to setting up OpenOffice.org.</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+                </APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>OpenOffice.org is a full-featured productivity suite including a word processor, spreadsheet, web page editor and presentation program.</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>OpenOffice.org is a full-featured productivity suite including a word processor, spreadsheet, web page editor and presentation program. Notable features in this version are native PDF and Flash export at the click of button and a macro recorder for increased productivity. OpenOffice.org provides you with the ability to create mail merged documents from Outlook or Mozilla address books, spreadsheets, or other data sources and its tightly-integrated modules help to simplify work flow. Documents are stored in a compressed, open-standard XML format to ensure future availability of your data and to reduce file sizes. You can read and write documents in a wide range of formats including Microsoft Office. The word processor component, Writer, is suitable for the production of professional documents, reports, newsletters, and brochures. A powerful spreadsheet module called Calc contains sophisticated tools for calculation, data analysis and visualisation, its built-in charting tools are able to generate customisable 2D and 3D charts. The presentation utility, Impress, uses effects, animation and drawing tools to help you create effective multimedia slide shows to present your the way you want to. Use the Draw component to produce either simple diagrams or complex 3D illustrations and special effects for use in documents and presentations. The Database User Tools give you all the tools you need for day to day database work in a simple spreadsheet-like form. They support dBASE databases for simple applications, or any ODBC or JDBC compliant database for industrial strength database work.</APP_DESCRIPTION>
                 <APP_FILE>OOo_2.0.3rc3_060519_Win32Intel_install.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://ftp.rediris.es/ftp/mirror/openoffice.org/contrib/rc/2.0.3rc3/OOo_2.0.3rc3_060519_Win32Intel_install.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>logonew.gif</APP_ICON>
@@ -109,12 +206,23 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>PDFCreator</APP_NAME>
 		<APP_VERSION>0.9.1</APP_VERSION>
                 <APP_SITE>http://sector7g.wurzel6.de/pdfcreator/index_en.htm</APP_SITE>
-                <APP_MANUAL>https://sourceforge.net/docman/?group_id=57796</APP_MANUAL>
-                <APP_DESCRIPTION>Use PDFCreator to generate PDF documents directly from any Windows program. PDF (Portable Document Format) files are the de facto standard in electronic publishing, because the author can be sure that the document will look as intended on all platforms, regardless of local fonts or lack thereof. PDFs can also be generated with commercial packages, but PDFCreator is by far the easiest and cheapest option (free). Once installed, simply select 'Print' from the File menu of your word processor or drawing program, and select 'PDFCreator Printer' from the list of printers. Click 'Save' and enter a name for your PDF output file. That's it!. Optionally, you may also enter information to identify the document, such as Title, Creation Date and Author. The Options dialogue lets you control the process in more detail. You can set the resolution and compression levels for the various file types, and control how fonts are included. Use the security feature to protect your document with a password. JPEG, PNG, Postscript (PS) and Encapsulated Postscript (EPS) output formats are also supported. </APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>PDFCreator On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>https://sourceforge.net/docman/?group_id=57796</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>PDFCreator list of Users Frequently Asked Questions and Setup Command Line Parameters</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Use PDFCreator to generate PDF documents directly from any Windows program.</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>Use PDFCreator to generate PDF documents directly from any Windows program. PDF (Portable Document Format) files are the de facto standard in electronic publishing, because the author can be sure that the document will look as intended on all platforms, regardless of local fonts or lack thereof. PDFs can also be generated with commercial packages, but PDFCreator is by far the easiest and cheapest option (free). Once installed, simply select 'Print' from the File menu of your word processor or drawing program, and select 'PDFCreator Printer' from the list of printers. Click 'Save' and enter a name for your PDF output file. That's it!. Optionally, you may also enter information to identify the document, such as Title, Creation Date and Author. The Options dialogue lets you control the process in more detail. You can set the resolution and compression levels for the various file types, and control how fonts are included. Use the security feature to protect your document with a password. JPEG, PNG, Postscript (PS) and Encapsulated Postscript (EPS) output formats are also supported. </APP_DESCRIPTION>
                 <APP_FILE>PDFCreator-0_9_1_AFPLGhostscript_32bit.msi</APP_FILE>
                 <APP_DOWNLOAD_URL>http://belnet.dl.sourceforge.net/sourceforge/pdfcreator/PDFCreator-0_9_1_AFPLGhostscript_32bit.msi</APP_DOWNLOAD_URL>
-                <APP_ICON>PDFCreator.ico</APP_ICON>
-                <APP_ICON_URL>http://svn.sourceforge.net/viewcvs.cgi/*checkout*/pdfcreator/trunk/Pictures/PDFCreator/PDFCreator.ico?rev=24</APP_ICON_URL>
+                <APP_ICON>PDFCreator.gif</APP_ICON>
+                <APP_ICON_URL>http://www.amyuni.com/images/products/pdfcreator.gif</APP_ICON_URL>
                 <APP_MD5SUM>986d28f84a3869b1d18b309bc0c0adce</APP_MD5SUM>
                 <APP_CATEGORIES>
                 	<APP_CATEGORY>office</APP_CATEGORY>
@@ -128,7 +236,20 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Blender</APP_NAME>
 		<APP_VERSION>2.41</APP_VERSION>
                 <APP_SITE>http://www.blender.org/cms/Home.2.0.html</APP_SITE>
-                <APP_MANUAL>http://www.blender.org/cms/Documentation.628.0.html</APP_MANUAL>
+		<APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Blender On-Line FAQs</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.blender.org/cms/Support.22.0.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>A Blender listt of Frequently Asked Questions</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Blender is an advanced 3D modeling program capable of producing high quality animations, performing rendering, post-production, interactive creation and playback.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Blender is an advanced 3D modeling program capable of producing high quality animations, performing rendering, post-production, interactive creation and playback. It is the only 3D creation suite which allows the artist to model, texture, animate, render, and export the finished product in a package less than 10 MB. The active development community is steadily adding new features and extensions such as the superb Yafray rendering engine for generating photo-realistic effects. Blender now also supports dynamic particle generation, advanced UV texture unwrapping methods using LSCM algorithms and much more. Blender natively exports to a multitude of 3D formats such as VRML, Cal3d, AC3D. With the powerful and easily extensible Python plugin support, you can write your own extensions or choose from a range of existing plug-ins. With the recent user interface overhaul and the release of the 2.3 Blender User's guide, using Blender is easier than ever. Even so, 3D modeling remains a complex computing task, with the result that Blender is an extensive application with a steep learning curve. </APP_DESCRIPTION>
                 <APP_FILE>blender-2.41-windows.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://blender.instinctive.de/Blender2.41/blender-2.41-windows.exe</APP_DOWNLOAD_URL>
@@ -147,8 +268,27 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>The Gimp</APP_NAME>
 		<APP_VERSION>2.2.11</APP_VERSION>
                 <APP_SITE>http://www.gimp.org</APP_SITE>
-                <APP_MANUAL>http://www.gimp.org/docs</APP_MANUAL>
-                <APP_DESCRIPTION> GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring. It has many capabilities. It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc. GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted. GIMP is written and developed under X11 on UNIX platforms. But basically the same code also runs on MS Windows and Mac OS X.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>The Ginp On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.gimp.org/docs/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>The Gimp User Manual, Configuration Manual, Developer Manual,...</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English, Chinese, Czech, Dutch (Nederlands), French (Français), German (Deutsch), Italian (Italiano), Swedish (Svenska)</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>The Gimp On-Line Tutorials</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.gimp.org/tutorials/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Some Beginner, Intermediate, Expert, Photo Editing, Web... tutorials.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+    		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>GIMP is an acronym for GNU Image Manipulation Program.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>GIMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring. It has many capabilities. It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc. GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted. GIMP is written and developed under X11 on UNIX platforms. But basically the same code also runs on MS Windows and Mac OS X.</APP_DESCRIPTION>
                 <APP_FILE>gimp-2.2.11-i586-setup.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>http://kent.dl.sourceforge.net/sourceforge/gimp-win/gimp-2.2.11-i586-setup.zip</APP_DOWNLOAD_URL>
                 <APP_ICON>1.01.png</APP_ICON>
@@ -164,8 +304,21 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>NVU</APP_NAME>
 		<APP_VERSION>1.0</APP_VERSION>
                 <APP_SITE>http://www.nvu.com/</APP_SITE>
-                <APP_MANUAL>http://www.nvu.com/faq.php</APP_MANUAL>
-                <APP_DESCRIPTION>Nvu (pronounced en-view) is the open source world's answer to Macromedia's Dreamweaver. It is a fully featured what-you-see-is-what-you-get web page editor, enabling you to create compelling web pages without having to devote months to learning HTML. Nvu includes an integrated FTP site manager, a style sheet editor, tabbed workspaces, and all the features you've come to expect from a fully-featured web page editor. Nvu also features integrated support for HTML code validation, to help you make your HTML as clean and light-weight as possible. Because Nvu is built based on the award-winning Gecko rendering engine that also powers the Firefox web browser, every moment is a live preview: what you see is truly what you get.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+	                        <APP_MAN_ONLINE_NAME>NVU On-Line FAQs</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.nvu.com/faq.php</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>A NVU listt of Frequently Asked Questions</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Nvu (pronounced en-view) is the open source world's answer to Macromedia's Dreamweaver.</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>Nvu (pronounced en-view) is the open source world's answer to Macromedia's Dreamweaver. It is a fully featured what-you-see-is-what-you-get web page editor, enabling you to create compelling web pages without having to devote months to learning HTML. Nvu includes an integrated FTP site manager, a style sheet editor, tabbed workspaces, and all the features you've come to expect from a fully-featured web page editor. Nvu also features integrated support for HTML code validation, to help you make your HTML as clean and light-weight as possible. Because Nvu is built based on the award-winning Gecko rendering engine that also powers the Firefox web browser, every moment is a live preview: what you see is truly what you get.</APP_DESCRIPTION>
                 <APP_FILE>nvu-1.0-win32-installer-full.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://cvs.nvu.com/download/nvu-1.0-win32-installer-full.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>nvu3.jpg</APP_ICON>
@@ -182,8 +335,28 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Vim</APP_NAME>
 		<APP_VERSION>7.0</APP_VERSION>
                 <APP_SITE>http://www.vim.org/</APP_SITE>
-                <APP_MANUAL>http://www.vim.org/docs.php</APP_MANUAL>
-                <APP_DESCRIPTION>Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems. Vim is often called a "programmer's editor," and so useful for programming that many consider it an entire IDE. It's not just for programmers, though. Vim is perfect for all kinds of text editing, from composing email to editing configuration files.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Vim On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.vim.org/docs.php</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Help files, books and FAQs</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English, Japanese</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>The Vim Book</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.truth.sk/vim/vimbook-OPL.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>Vim Book.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>A Vim Bookm writed by Steve Oualline</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Vim is a highly configurable text editor built to enable efficient text editing.</APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION>Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems. Vim is often called a "programmer's editor," and so useful for programming that many consider it an entire IDE. It's not just for programmers, though. Vim is perfect for all kinds of text editing, from composing email to editing configuration files.</APP_DESCRIPTION>
                 <APP_FILE>gvim70.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>ftp://ftp.vim.org/pub/vim/pc/gvim70.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>vim_header.gif</APP_ICON>
@@ -200,7 +373,13 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Firefox</APP_NAME>
 		<APP_VERSION>1.5.0.3</APP_VERSION>
                 <APP_SITE>http://www.mozilla.com/firefox/</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_MANUALS></APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Firefox light-weight web browser based on Mozilla technology.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Firefox light-weight web browser based on Mozilla technology. It empowers you to browse faster, more safely, and more efficiently. Key features include: Popup Blocking to stop those annoying ads popping up. Tabbed Browsing lets you view multiple web pages in a single window. Open links in the background so that they're ready for viewing when you're ready to read them. Text zooming is a quick way of enlarging or decreasing the text of any web page to make it more readable. You can expand this lightweight core by adding plug-ins that do everything from automatic form completion to blocking Flash animations. There is also a range of themes available to let you alter the look of the browser and you can further customise the toolbars and functionality. The Easy Transition system imports all of your settings, including favorites, passwords and other data from Internet Explorer and other browsers, so you can start surfing right away. But possibly the best reason to start using Firefox is its enhanced security. Built with your Security in mind from the start, Firefox keeps your computer safe from malicious spyware by not loading harmful ActiveX controls. A comprehensive set of privacy tools keep your online activity your business. In this age of rampant virus attacks, security concious web users browse with secure alternative browsers such as Firefox. If you install only one program from this CD (and you browse the web), you should make it Firefox.</APP_DESCRIPTION>
                 <APP_FILE>Firefox Setup 1.5.0.3.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://sunsite.rediris.es/pub/mozilla.org/firefox/releases/1.5.0.3/win32/es-ES/Firefox%20Setup%201.5.0.3.exe</APP_DOWNLOAD_URL>
@@ -217,7 +396,13 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Thunderbird</APP_NAME>
 		<APP_VERSION>1.5.0.2</APP_VERSION>
                 <APP_SITE>http://www.mozilla.com/thunderbird/</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_MANUALS></APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Thunderbird is a modern email client with features such as intelligent spam filters, a built-in spell checker, a range of themes and customisable layout.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Thunderbird is a modern email client with features such as intelligent spam filters, a built-in spell checker, a range of themes and customisable layout. Thunderbird provides IMAP/POP support, HTML e-mail composing, quick search, address book, advanced message filtering, address completion, import tools, and the ability to manage multiple e-mail and newsgroup accounts. With Thunderbird Extensions you can add additional features to help you build a mail client that meets your specific needs. As with Firefox, security is a central theme. Thunderbird provides enterprise and government grade security features such as S/MIME, digital signing, message encryption, support for certificates and security devices. The intelligent Thunderbird spam filter analyzes your e-mails to identify those that are most likely to be junk. These can be automatically deleted or diverted to a separate folder. The spam filter is adaptive and also learns from your address book and usage to improve its accuracy.</APP_DESCRIPTION>
                 <APP_FILE>Thunderbird Setup 1.5.0.2.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://ftp-mozilla.netscape.com/pub/mozilla.org/thunderbird/releases/1.5.0.2/win32/es-ES/Thunderbird%20Setup%201.5.0.2.exe</APP_DOWNLOAD_URL>
@@ -234,7 +419,20 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Audacity</APP_NAME>
 		<APP_VERSION>1.2.4b</APP_VERSION>
                 <APP_SITE>http://audacity.sourceforge.net</APP_SITE>
-                <APP_MANUAL>http://audacity.sourceforge.net/help/</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Audacity On-Line Help</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://audacity.sourceforge.net/help/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Audacity online Documentations, Tutorials and FAQs</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Audacity is a sound editing program which can record, playback, and mix sounds or apply effects using a variety of filters.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Audacity is a sound editing program which can record, playback, and mix sounds or apply effects using a variety of filters. Edit your sounds using Cut, Copy and Paste (with unlimited Undo) and mix multiple tracks together. Save your files in a number of formats, including WAV, Ogg Vorbis and AIFF, or use Audacity's native project format for high performance editing. MP3 support is available using the external LAME MP3 encoder, which is included with CDex, or can be installed from here after installing Audacity. It also has a built-in amplitude envelope editor, a customisable spectrogram mode and a frequency analysis window for audio analysis applications. Built-in effects include Bass Boost, Wahwah, and Noise Removal. This full-featured program is fast and stable, and is also available for Linux and MacOS X.</APP_DESCRIPTION>
                 <APP_FILE>audacity-win-1.2.4b.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://switch.dl.sourceforge.net/sourceforge/audacity/audacity-win-1.2.4b.exe</APP_DOWNLOAD_URL>
@@ -251,7 +449,34 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Celestia</APP_NAME>
 		<APP_VERSION>1.4.1</APP_VERSION>
                 <APP_SITE>http://www.shatters.net/celestia/</APP_SITE>
-                <APP_MANUAL>http://www.shatters.net/celestia/documentation.html</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Celestia On-Line FAQs</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.shatters.net/forum/viewtopic.php?t=2291</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>There's no official FAQ for Celestia yet; however, Selden Ball maintains a list of frequently asked questions on the Celestia forum.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>Celestia User's Guide</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.celestiamotherlode.net/creators/fsgregs/CelestiaUsersGuide1-4-1-pdf.zip</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>CelestiaUsersGuide1-4-1-en-pdf.zip</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>A Celestia 1.4.1 User's Guide in pdf format.</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+			<APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>Celestia User's Guide</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.shatters.net/celestia/docs/CelestiaUsersGuide-1.3.1-fr-pdf.zip</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>CelestiaUsersGuide1-3-1-fr-pdf.zip</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>A Celestia 1.3.1 User's Guide in pdf format.</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>French</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Celestia is a simulation of the entire universe, based on current astronomical information. </APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Celestia is a simulation of the entire universe, based on current astronomical information. It includes beautifully rendered planets, moons, and some smaller orbital bodies such as Mir and the International Space Station. Celestia is not limited to our solar system; you can visit other stars, or even travel outside the galaxy. You will find models of extra-solar planets in orbit around those stars for which we have evidence of planetary bodies. You have complete control over time and space, so you can view the stars from your chosen location and epoch. In addition, it is possible to create scripted presentations for complex demonstrations. his program is highly recommended for use in school presentations. There are some lesson plans for use in a middle/high school setting, contributed by Frank Gregorio . To get a good idea of Celestia's full capabilities, start the program and press D for Demo. Celestia requires an OpenGL-capable graphics card (which nearly all modern systems have). It is available for Windows, Linux, and MacOS X.</APP_DESCRIPTION>
                 <APP_FILE>celestia-win32-1.4.1.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://puzzle.dl.sourceforge.net/sourceforge/celestia/celestia-win32-1.4.1.exe</APP_DOWNLOAD_URL>
@@ -268,7 +493,18 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Notepad2</APP_NAME>
 		<APP_VERSION>2.1.0.12</APP_VERSION>
                 <APP_SITE>http://www.flos-freeware.ch/notepad2.html</APP_SITE>
-                <APP_MANUAL>http://www.flos-freeware.ch/np2faq.html</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Notepad2 On-Line FAQs</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.flos-freeware.ch/np2faq.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>A list of Notepad2 FAQs.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>It's a small, fast and free text editor with syntax highlighting for common languages.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>The original Notepad shipped with Windows is probably the handiest program of all times, small, fast, without frills! Notepad2 tries to follow this principle, it's a small, fast and free text editor with syntax highlighting for HTML and other common languages.</APP_DESCRIPTION>
                 <APP_FILE>notepad2.zip</APP_FILE>
 		<APP_DOWNLOAD_URL>http://www.flos-freeware.ch/zip/notepad2.zip</APP_DOWNLOAD_URL>
@@ -286,14 +522,12 @@ There are a number of optional plug-ins available, including a thesaurus, Babelf
                 <APP_NAME>Sokoban YASK</APP_NAME>
 		<APP_VERSION>1.297</APP_VERSION>
                 <APP_SITE>http://sourceforge.net/projects/sokobanyasc/</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
-                <APP_DESCRIPTION>Sokoban YASC (Yet Another Sokoban Clone) is a maddeningly simple game first conceived by Hiroyuki Imabayashi, a Japanese programmer. The word Sokoban means "warehouse keeper." The object of the game is to put all of the crates in your "warehouse" into the designated storage areas. Sounds easy, right? Well, there are a few restrictions:
-
-    * You are not allowed to pull crates, only push.
-    * You cannot push more than one box at a time.
-    * You cannot pass through a box or wall.
-
-These restrictions -- especially the first one -- turn a seemingly simple task into a delightfully difficult challenge. </APP_DESCRIPTION>
+                <APP_MANUALS></APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Yet Another Sokoban Clone.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Sokoban YASC (Yet Another Sokoban Clone) is a maddeningly simple game first conceived by Hiroyuki Imabayashi, a Japanese programmer. The word Sokoban means "warehouse keeper." The object of the game is to put all of the crates in your "warehouse" into the designated storage areas. Sounds easy, right? Well, there are a few restrictions: you are not allowed to pull crates, only push, you cannot push more than one box at a time and you cannot pass through a box or wall. These restrictions -- especially the first one -- turn a seemingly simple task into a delightfully difficult challenge. </APP_DESCRIPTION>
                 <APP_FILE>SokoYASC_1_297.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://belnet.dl.sourceforge.net/sourceforge/sokobanyasc/SokoYASC_1_297.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>none.png</APP_ICON>
@@ -309,7 +543,26 @@ These restrictions -- especially the first one -- turn a seemingly simple task i
                 <APP_NAME>Batter for Wesnoth</APP_NAME>
 		<APP_VERSION>1.1.3</APP_VERSION>
                 <APP_SITE>http://www.wesnoth.org/home</APP_SITE>
-                <APP_MANUAL>http://www.wesnoth.org/wiki/WesnothManual</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Batter for Wesnoth Online Players Guide</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.wesnoth.org/wiki/Play</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Game manual, walkthroughs, strategy guides, and more</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Batter for Wesnoth Content-Creation Guide</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.wesnoth.org/wiki/Create</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Manual showing how to create new campaigns for Wesnoth</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>The Battle for Wesnoth is a turn-based strategy game with a fantasy theme.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>The Battle for Wesnoth is a turn-based strategy game with a fantasy theme. It offers several campaigns, the first of which is 'The Heir to the Throne'. After ages of peace and prosperity the lands of Wesnoth have been overrun by hordes of Orcs and Undead. As the rightful heir to the throne of Wesnoth, you must gather a troupe of loyal adventurers to reclaim your throne. In a sequence of missions you must lead them wisely to help them gain experience and riches. In other campaigns you can play as other races, such as Elves, Dwarves, Orcs or Undead. The characters you can recruit have a range of traits, offering various strategic strengths and weaknesses on different terrains and against different opponents. The selection available will vary in different campaigns. With a network connection you can join friends in campaigns on-line. The Wesnoth project regularly organises on-line tournaments where the best campaigners can measure their skill.</APP_DESCRIPTION>
                 <APP_FILE>wesnoth-windows-1.1.3.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://ovh.dl.sourceforge.net/sourceforge/wesnoth/wesnoth-windows-1.1.3.exe</APP_DOWNLOAD_URL>
@@ -324,17 +577,44 @@ These restrictions -- especially the first one -- turn a seemingly simple task i
         </APP>
 	<APP>
                 <APP_NAME>Eclipse</APP_NAME>
-		<APP_VERSION>3.1.2</APP_VERSION>
+		<APP_VERSION>3.2</APP_VERSION>
                 <APP_SITE>http://www.eclipse.org</APP_SITE>
-                <APP_MANUAL>http://www.eclipse.org/documentation/main.html</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Eclipse 3.1 Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://help.eclipse.org/help31/index.jsp</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>The Eclipse On-Line Help Center.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+			<APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>Eclipse 3.1 Workbench User Guide</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1-200506271435/org.eclipse.platform.doc.user.3.1.pdf.zip&amp;url=http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/org.eclipse.platform.doc.user.3.1.pdf.zip&amp;mirror_id=1</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>eclipse.platform.doc.user.3.1.pdf.zip</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>Eclipse 3.1 Workbench User Guide</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+			<APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>Java Development User Guide</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1-200506271435/org.eclipse.jdt.doc.user.3.1.pdf.zip&amp;url=http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/org.eclipse.jdt.doc.user.3.1.pdf.zip&amp;mirror_id=1</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>eclipse.jdt.doc.user.3.1.pdf.zip</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>Java Development User Guide to Eclipse 3.1</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Eclipse is a complete Java (and more) IDE with a lot of plugins.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Eclipse is an open source community whose projects are focused on providing a vendor-neutral open development platform and application frameworks for building software. The Eclipse Foundation is a not-for-profit corporation formed to advance the creation, evolution, promotion, and support of the Eclipse Platform and to cultivate both an open source community and an ecosystem of complementary products, capabilities, and services.
 
 Eclipse has formed an independent open eco-system around royalty-free technology and a universal platform for tools integration. Eclipse based tools give developers freedom of choice in a multi-language, multi-platform, multi-vendor environment. Eclipse provides a plug-in based framework that makes it easier to create, integrate and utilize software tools, saving time and money. By collaborating and exploiting core integration technology, tool producers can leverage platform reuse and concentrate on core competencies to create new development technology. The Eclipse Platform is written in the Java language and comes with extensive plug-in construction toolkits and examples. It has already been deployed on a range of development workstations including Linux, HP-UX, AIX, Solaris, QNX, Mac OS X and Windows based systems. </APP_DESCRIPTION>
-                <APP_FILE>eclipse-SDK-3.1.2-win32.zip</APP_FILE>
-                <APP_DOWNLOAD_URL>http://eclipse.objectweb.org/downloads/drops/R-3.1.2-200601181600/eclipse-SDK-3.1.2-win32.zip</APP_DOWNLOAD_URL>
+                <APP_FILE>eclipse-SDK-3.2-win32.zip</APP_FILE>
+                <APP_DOWNLOAD_URL>http://download.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/download.php?dropFile=eclipse-SDK-3.2-win32.zip</APP_DOWNLOAD_URL>
                 <APP_ICON>header_logo.gif</APP_ICON>
                 <APP_ICON_URL>http://www.eclipse.org/eclipse.org-common/themes/Phoenix/images/header_logo.gif</APP_ICON_URL>
-                <APP_MD5SUM>73cbe8e94c7fa839ba1246b34b2a49cd</APP_MD5SUM>
+                <APP_MD5SUM>f8552d0761d96bc2d25cfa383a390ac5</APP_MD5SUM>
                 <APP_CATEGORIES>
                 	<APP_CATEGORY>devel</APP_CATEGORY>
                 </APP_CATEGORIES>
@@ -345,7 +625,26 @@ Eclipse has formed an independent open eco-system around royalty-free technology
                 <APP_NAME>Dia</APP_NAME>
 		<APP_VERSION>0.95</APP_VERSION>
                 <APP_SITE>http://www.gnome.org/projects/dia</APP_SITE>
-                <APP_MANUAL>http://www.gnome.org/projects/dia/</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Dia Tutorial</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.gnome.org/projects/dia/diatut/all/all.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>A nice little Dia tutorial</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+			<APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>Dia manual</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.gnome.org/projects/dia/doc/dia-manual.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>dia-manual.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>The PDF version of the Dia manual.</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+		<APP_PLATAFORMS>
+                        <APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Dia is a gtk+ based diagram creation program.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Dia is a gtk+ based diagram creation program released under the GPL license. Dia is inspired by the commercial Windows program 'Visio', though more geared towards informal diagrams for casual use. It can be used to draw many different kinds of diagrams. It currently has special objects to help draw entity relationship diagrams, UML diagrams, flowcharts, network diagrams, and many other diagrams. It is also possible to add support for new shapes by writing simple XML files, using a subset of SVG to draw the shape.
 
 It can load and save diagrams to a custom XML format (gzipped by default, to save space), can export diagrams to a number of formats, including EPS, SVG, XFIG, WMF and PNG, and can print diagrams (including ones that span multiple pages).</APP_DESCRIPTION>
@@ -366,7 +665,48 @@ It can load and save diagrams to a custom XML format (gzipped by default, to sav
                 <APP_NAME>MySQL</APP_NAME>
 		<APP_VERSION>5.1.7-beta</APP_VERSION>
                 <APP_SITE>http://www.mysql.com</APP_SITE>
-                <APP_MANUAL>http://mysql.rediris.es/doc/index.html</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>MySQL Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://mysql.rediris.es/doc/index.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>The Oficial MySQL Documentation page.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English, French, German, Chinese, Japanese, Russian, Spanish, Portuguese</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>MySQL Reference Manual</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://downloads.mysql.com/docs/refman-5.1-en.a4.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>mysql-refman-5.1-en.a4.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>The MySQL Reference Manual in pdf (v. 5.1)</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>MySQL Reference Manual</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://downloads.mysql.com/docs/refman-5.0-fr.a4.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>mysql-refman-5.0-fr.a4.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>The MySQL Reference Manual in pdf (v. 5.0)</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>French</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>MySQL Reference Manual</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://downloads.mysql.com/docs/refman-5.1-de.a4.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>mysql-refman-5.1-de.a4.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>The MySQL Reference Manual in pdf (v. 5.1)</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>German</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>MySQL Reference Manual</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://downloads.mysql.com/docs/refman-5.0-es.a4.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>mysql-refman-5.0-es.a4.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>The MySQL Reference Manual in pdf (v. 5.0)</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>Spanish</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>MySQL is a multithreaded, multi-user, SQL Database Management System (DBMS) with more than six million installations.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>MySQL is a multithreaded, multi-user, SQL Database Management System (DBMS) with more than six million installations. MySQL AB makes MySQL available as free software under the GNU General Public License (GPL), but they also dual-license it under traditional proprietary licensing arrangements for cases where the intended use is incompatible with the GPL.
 
 Unlike projects such as Apache, where the software is developed by a public community, and the copyright to the codebase is owned by its individual authors, MySQL is owned and sponsored by a single for-profit firm, the Swedish company MySQL AB, which holds the copyright to most of the codebase. The company develops and maintains the system, selling support and service contracts, as well as proprietary-licensed copies of MySQL, and employing people all over the world who collaborate via the Internet. MySQL AB was founded by David Axmark, Allan Larsson, and Michael "Monty" Widenius.</APP_DESCRIPTION>
@@ -386,8 +726,34 @@ Unlike projects such as Apache, where the software is developed by a public comm
                 <APP_NAME>Python</APP_NAME>
 		<APP_VERSION>2.4.3</APP_VERSION>
                 <APP_SITE>http://www.python.org/</APP_SITE>
-                <APP_MANUAL>http://www.python.org/doc/</APP_MANUAL>
-                <APP_DESCRIPTION>ython® is a dynamic object-oriented programming language that can be used for many kinds of software development. It offers strong support for integration with other languages and tools, comes with extensive standard libraries, and can be learned in a few days. Many Python programmers report substantial productivity gains and feel the language encourages the development of higher quality, more maintainable code.
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Python On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://docs.python.org/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>The Python Online Documentation with tutorials, manuals, FAQs...</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Dive Into Python</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://diveintopython.org/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Dive Into Python is a Python book for experienced programmers. You can buy a printed copy, read it online, or download it in a variety of formats. It is also available in multiple languages.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English, Italian, French, Spanish, Chinese, Korean, Russian</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>Dive Into Python</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://diveintopython.org/download/diveintopython-pdf-5.4.zip</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>diveintopython-pdf-5.4.zip</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>Dive Into Python is a Python book for experienced programmers. You can buy a printed copy, read it online, or download it in a variety of formats. It is also available in multiple languages. This is the printable pdf version</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Python® is a dynamic object-oriented programming language that can be used for many kinds of software development.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Python® is a dynamic object-oriented programming language that can be used for many kinds of software development. It offers strong support for integration with other languages and tools, comes with extensive standard libraries, and can be learned in a few days. Many Python programmers report substantial productivity gains and feel the language encourages the development of higher quality, more maintainable code.
 
 Python runs on Windows, Linux/Unix, Mac OS X, OS/2, Amiga, Palm Handhelds, and Nokia mobile phones. Python has also been ported to the Java and .NET virtual machines.
 
@@ -409,27 +775,16 @@ The Python Software Foundation (PSF) holds and protects the intellectual propert
                 <APP_NAME>Drupal</APP_NAME>
 		<APP_VERSION>4.7.1</APP_VERSION>
                 <APP_SITE>http://drupal.org/</APP_SITE>
-                <APP_MANUAL>http://drupal.org/handbooks</APP_MANUAL>
-                <APP_DESCRIPTION>Drupal is software that allows an individual or a community of users to easily publish, manage and organize a great variety of content on a website. Tens of thousands of people and organizations have used Drupal to set up scores of different kinds of web sites, including
+               	<APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Drupal is software that allows an individual or a community of users to easily publish, manage and organize a great variety of content on a website.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Drupal is software that allows an individual or a community of users to easily publish, manage and organize a great variety of content on a website. Tens of thousands of people and organizations have used Drupal to set up scores of different kinds of web sites, including community web portals and discussion sites,corporate web sites/intranet portals, personal web sites, aficionado sites, e-commerce applications, resource directories...
 
-    * community web portals and discussion sites
-    * corporate web sites/intranet portals
-    * personal web sites
-    * aficionado sites
-    * e-commerce applications
-    * resource directories
-
-Drupal includes features to enable
-
-    * content management systems
-    * blogs
-    * collaborative authoring environments
-    * forums
-    * newsletters
-    * picture galleries
-    * file uploads and download
-
-and much more.
+Drupal includes features to enable: content management systems, blogs, collaborative authoring environments, forums, newsletters, picture galleries, file uploads and download and much more.
 
 Drupal is open source software licensed under the GPL, and is maintained and developed by a community of thousands of users and developers. Drupal is free to download and use. If you like what Drupal can do for you, please work with us to expand and refine Drupal to suit your needs. </APP_DESCRIPTION>
                 <APP_FILE>drupal-4.7.1.tar.gz</APP_FILE>
@@ -448,22 +803,16 @@ Drupal is open source software licensed under the GPL, and is maintained and dev
                 <APP_NAME>Joomla!</APP_NAME>
 		<APP_VERSION>1.0.8</APP_VERSION>
                 <APP_SITE>http://www.joomla.org</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Joomla! is an award-winning Content Management System (CMS) that will help you build websites and other powerful online applications.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Joomla! is an award-winning Content Management System (CMS) that will help you build websites and other powerful online applications. Best of all, Joomla! is an open source solution that is freely available to everybody.
 
-Joomla! is used all over the world to power everything from simple, personal homepages to complex corporate web applications. Here are just some of the ways people use our software:
-
-    * Corporate websites or portals
-    * Online commerce
-    * Small business websites
-    * Non-profit and organizational websites
-    * Government applications
-    * Corporate intranets and extranets
-    * School and church websites
-    * Personal or family homepages
-    * Community-based portals
-    * Magazines and newspapers
-    * the possibilities are limitless…
+Joomla! is used all over the world to power everything from simple, personal homepages to complex corporate web applications. Here are just some of the ways people use our software: corporate websites or portals, online commerce, small business websites, non-profit and organizational websites, government applications, corporate intranets and extranets, school and church websites, personal or family homepages, community-based portals, magazines and newspapers, the possibilities are limitless…
 
 Joomla! can be used to easily manage every aspect of your website, from adding content and images to updating a product catalog or taking online reservations.</APP_DESCRIPTION>
                 <APP_FILE>Joomla_1.0.8-Stable-Full_Package.zip</APP_FILE>
@@ -482,7 +831,13 @@ Joomla! can be used to easily manage every aspect of your website, from adding c
                 <APP_NAME>Amaya</APP_NAME>
 		<APP_VERSION>9.51</APP_VERSION>
                 <APP_SITE>http://www.w3.org/Amaya/</APP_SITE>
-                <APP_MANUAL>http://www.w3.org/Amaya/User/Overview.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Amaya is a Web editor, i.e. a tool used to create and update documents directly on the Web.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Amaya is a Web editor, i.e. a tool used to create and update documents directly on the Web. Browsing features are seamlessly integrated with the editing and remote access features in a uniform environment. This follows the original vision of the Web as a space for collaboration and not just a one-way publishing medium.
 
 Work on Amaya started at W3C in 1996 to showcase Web technologies in a fully-featured Web client. The main motivation for developing Amaya was to provide a framework that can integrate as many W3C technologies as possible. It is used to demonstrate these technologies in action while taking advantage of their combination in a single, consistent environment.
@@ -506,7 +861,13 @@ Amaya includes a collaborative annotation application based on Resource Descript
                 <APP_NAME>OpenWengo</APP_NAME>
 		<APP_VERSION>2.0-beta1</APP_VERSION>
                 <APP_SITE>http://www.openwengo.org/</APP_SITE>
-                <APP_MANUAL>http://www.openwengo.org/index.php/openwengo/public/homePage/openwengo/public/projectsNg</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>OpenWengo is more than just VoIP software.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>WengoPhone is a communication tool based on the SIP protocol, developed by the OpenWengo community and released under the GNU General Public License. It is more than just VoIP software: it is a full-fledged communications tool that lets you enjoy free calls, video conferencing, SMS, chat over many existing protocols (MSN, AIM/ICQ, Yahoo!, Jabber)... Everything you need to stay in touch with your friends and family!</APP_DESCRIPTION>
                 <APP_FILE>WengoPhone-2.0-beta1-windows.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://download.wengo.com/wengophone/beta/WengoPhone-2.0-beta1-windows.exe</APP_DOWNLOAD_URL>
@@ -523,7 +884,13 @@ Amaya includes a collaborative annotation application based on Resource Descript
                 <APP_NAME>xChat</APP_NAME>
 		<APP_VERSION>2.6.3a</APP_VERSION>
                 <APP_SITE>http://www.xchat.org/</APP_SITE>
-                <APP_MANUAL>http://www.xchat.org/docs/</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>XChat is an IRC chat program for both Linux and Windows.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>XChat is an IRC chat program for both Linux and Windows. It allows you to join multiple IRC channels (chat rooms) at the same time, talk publicly, private one-on-one conversations etc. Even file transfers are possible.</APP_DESCRIPTION>
                 <APP_FILE>xchat-2.6.3a.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://www.xchat.org/files/binary/win32/xchat-2.6.3a.exe</APP_DOWNLOAD_URL>
@@ -540,39 +907,14 @@ Amaya includes a collaborative annotation application based on Resource Descript
                 <APP_NAME>aMSN</APP_NAME>
 		<APP_VERSION>0.95</APP_VERSION>
                 <APP_SITE>http://amsn.sourceforge.net/</APP_SITE>
-                <APP_MANUAL>http://amsn.sourceforge.net/docs.php</APP_MANUAL>
-                <APP_DESCRIPTION> aMSN is an free open source MSN Messenger clone, featuring:
-» Display pictures
-» Custom emoticons
-» Multi-language support (around 40 languages currently supported)
-» Sign in to more than one account at once
-» File transfers
-» Group support
-» Normal, and animated emoticons with sounds
-» Chat logs
-» Event alarms
-» Webcam support
-» History in color
-» Ability to autoclose the filetransfer window when it is finished
-» New plugins log window (Alt-P)
-» Plugins compatible with supported languages
-» Faster loading skin window
-» Skins in chatwindow
-» Resizable chatwindow bottom
-» When you add a new user, you can define in which group you want to add them
-» When a contact change status, the top of the chat window changes color ( green for away, grey for offline, etc.)
-» New panel GUI to alert when there's a new aMSN version
-» Possibility to download the new release directly by aMSN
-» Automatically update language files and plugins from the web
-» New gui for deleting users (also possible to block on deletion)
-» Possible to add notes for each user (XML)
-» Support for MSN Mobile service
-» Tabbed windows so you can group conversations using tabs
-» Status is displayed inside a frame, so it won't dissapear when you scroll
-» Display picture in notification alert (like MSN 7)
-» Statistics for history (logging)
-» Now possible to choose any state for your login status (before it was only possible to login invisible or online)
-» Timestamping
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>aMSN is an free open source MSN Messenger clone.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>aMSN is an free open source MSN Messenger clone, featuring: display pictures, custom emoticons, multi-language support (around 40 languages currently supported), sign in to more than one account at once, file transfers, group support, normal, and animated emoticons with sounds, chat logs, event alarms, webcam support, history in color, ability to autoclose the filetransfer window when it is finished, new plugins log window (Alt-P), plugins compatible with supported languages, faster loading skin window, skins in chatwindow, resizable chatwindow bottom, when you add a new user, you can define in which group you want to add them, when a contact change status, the top of the chat window changes color ( green for away, grey for offline, etc.), new panel GUI to alert when there's a new aMSN version, possibility to download the new release directly by aMSN, automatically update language files and plugins from the web, new gui for deleting users (also possible to block on deletion), possible to add notes for each user (XML), support for MSN Mobile service, tabbed windows so you can group conversations using tabs, status is displayed inside a frame, so it won't dissapear when you scroll, display picture in notification alert (like MSN 7), statistics for history (logging), now possible to choose any state for your login status (before it was only possible to login invisible or online), timestamping...
 
 But that's not all! More features can be added to aMSN with plugins, or for the adventurous, completely change the look of aMSN with different skins! </APP_DESCRIPTION>
                 <APP_FILE>amsn-0.95-windows-installer-2.exe</APP_FILE>
@@ -590,7 +932,20 @@ But that's not all! More features can be added to aMSN with plugins, or for the 
                 <APP_NAME>Octave</APP_NAME>
 		<APP_VERSION>2.1.73-1</APP_VERSION>
                 <APP_SITE>http://www.gnu.org/software/octave/octave.html</APP_SITE>
-                <APP_MANUAL>http://www.gnu.org/software/octave/docs.html</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Octave On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.gnu.org/software/octave/doc/interpreter/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>A Full 375 pag. Documentation.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>GNU Octave is a high-level language, primarily intended for numerical computations like MatLab</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>GNU Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with Matlab. It may also be used as a batch-oriented language.
 
 Octave has extensive tools for solving common numerical linear algebra problems, finding the roots of nonlinear equations, integrating ordinary functions, manipulating polynomials, and integrating ordinary differential and differential-algebraic equations. It is easily extensible and customizable via user-defined functions written in Octave's own language, or using dynamically loaded modules written in C++, C, Fortran, or other languages.
@@ -617,7 +972,12 @@ Octave was written by John W. Eaton and many others. Because Octave is free soft
                 <APP_NAME>TORCS</APP_NAME>
 		<APP_VERSION>1.2.4</APP_VERSION>
                 <APP_SITE>http://torcs.sourceforge.net/</APP_SITE>
-                <APP_MANUAL>http://torcs.sourceforge.net/manual/api/index.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>TORCS is a 3D racing cars simulator using OpenGL.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>TORCS is a 3D racing cars simulator using OpenGL.
 The goal is to have programmed robots drivers racing against each others.
 You can also drive yourself with either a wheel or keyboard or mouse.
@@ -639,7 +999,20 @@ This concept is directly inspired from RARS. </APP_DESCRIPTION>
                 <APP_NAME>FacturaLUX</APP_NAME>
 		<APP_VERSION>2.0</APP_VERSION>
                 <APP_SITE>http://www.facturalux.org/</APP_SITE>
-                <APP_MANUAL>http://www.facturalux.org/documentacion/index.php</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>FacturaLUX On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.facturalux.org/documentacion/index.php</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION> Online setup manuals, user's guides,...</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>Spanish</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>FacturaLUX es software libre de tipo ERP (Enterprise Resource Planning) orientado a la administración, gestión comercial, finanzas,...</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>FacturaLUX es software libre de tipo ERP (Enterprise Resource Planning) orientado a la administración, gestión comercial, finanzas y en general a cualquier tipo de aplicación donde se manejen grandes bases de datos y procesos administrativos. Su aplicación abarca desde la gestión financiera y comercial en empresas hasta la adaptación a procesos complejos de producción.</APP_DESCRIPTION>
                 <APP_FILE>facturalux-lite-2.0-x86-Win32.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://puzzle.dl.sourceforge.net/sourceforge/facturalux/facturalux-lite-2.0-x86-Win32.exe</APP_DOWNLOAD_URL>
@@ -657,42 +1030,25 @@ This concept is directly inspired from RARS. </APP_DESCRIPTION>
                 <APP_NAME>Mono</APP_NAME>
 		<APP_VERSION>1.1.15</APP_VERSION>
                 <APP_SITE>http://www.mono-project.com</APP_SITE>
-                <APP_MANUAL>http://www.go-mono.com/docs/</APP_MANUAL>
-                <APP_DESCRIPTION>he Mono Project is an open development initiative sponsored by Novell to develop an open source, UNIX version of the Microsoft .NET development platform. Its objective is to enable UNIX developers to build and deploy cross-platform .NET Applications. The project implements various technologies developed by Microsoft that have now been submitted to the ECMA for standardization.
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Mono Documentation Library</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.go-mono.com/docs/</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>The On-Line Mono Documentation Libraries</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>The Mono Project is an open development initiative sponsored by Novell to develop an open source, UNIX version of the Microsoft .NET development platform.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>The Mono Project is an open development initiative sponsored by Novell to develop an open source, UNIX version of the Microsoft .NET development platform. Its objective is to enable UNIX developers to build and deploy cross-platform .NET Applications. The project implements various technologies developed by Microsoft that have now been submitted to the ECMA for standardization.
 
-The Mono Project has also sparked a lot of interest in developing C#-based components, libraries and frameworks. The most important ones, some of which were developed by the Mono team, are:
-
-    * Gtk# (http://gtk-sharp.sf.net): Bindings for the popular Gtk+ GUI toolkit for UNIX and Windows systems. Other bindings are available: Diacanvas-Sharp and MrProject. 
-
-    * #ZipLib (http://www.icsharpcode.net/OpenSource/SharpZipLib/Default.aspx): A library to manipulate various kinds of compressed files and archives (Zip and tar). 
-
-    * Tao Framework: bindings for OpenGL 
-
-    * Mono.Directory.LDAP / Novell.Directory.LDAP: LDAP access for .NET apps. 
-
-    * Mono.Data: We ship support for PostgreSQL, MySql, Sybase, DB2, SqlLite, Tds (SQL server protocol) and Oracle databases. 
-
-    * Mono.Cairo: Bindings for the Cairo (http://www.cairographics.org) rendering engine (Our System.Drawing is implemented on top of this). 
-
-    * Mono.Posix / Mono.UNIX: Bindings for building POSIX applications using C#. 
-
-    * Mono.Remoting.Channels.Unix: Unix socket based remoting 
-
-    * Mono.Security: Enhanced security and crypto framework 
-
-    * Mono.Math: BigInteger and Prime number generation 
-
-    * Mono.Http: Support for creating custom, embedded HTTP servers and common HTTP handlers for your applications. 
-
-    * Mono.XML: Extended support for XML 
-
-    * Managed.Windows.Forms (aka System.Windows.Forms): A complete and cross platform, System.Drawing based Winforms implementation. 
-
-    * Remoting.CORBA (http://remoting-corba.sourceforge.net/): A CORBA implementation for Mono. 
-
-    * Ginzu: An implementation on top of Remoting for the ICE (http://www.zeroc.com) stack.</APP_DESCRIPTION>
+The Mono Project has also sparked a lot of interest in developing C#-based components, libraries and frameworks. The most important ones, some of which were developed by the Mono team, are:Gtk# (http://gtk-sharp.sf.net): Bindings for the popular Gtk+ GUI toolkit for UNIX and Windows systems. Other bindings are available: Diacanvas-Sharp and MrProject, #ZipLib (http://www.icsharpcode.net/OpenSource/SharpZipLib/Default.aspx): A library to manipulate various kinds of compressed files and archives (Zip and tar), Tao Framework: bindings for OpenGL, Mono.Directory.LDAP / Novell.Directory.LDAP: LDAP access for .NET apps, Mono.Data: We ship support for PostgreSQL, MySql, Sybase, DB2, SqlLite, Tds (SQL server protocol) and Oracle databases, Mono.Cairo: Bindings for the Cairo (http://www.cairographics.org) rendering engine (Our System.Drawing is implemented on top of this), Mono.Posix / Mono.UNIX: Bindings for building POSIX applications using C#, Mono.Remoting.Channels.Unix: Unix socket based remoting, Mono.Security: Enhanced security and crypto framework, Mono.Math: BigInteger and Prime number generation, Mono.Http: Support for creating custom, embedded HTTP servers and common HTTP handlers for your applications, Mono.XML: Extended support for XML, Managed.Windows.Forms (aka System.Windows.Forms): A complete and cross platform, System.Drawing based Winforms implementation, Remoting.CORBA (http://remoting-corba.sourceforge.net/): A CORBA implementation for Mono, Ginzu: An implementation on top of Remoting for the ICE (http://www.zeroc.com) stack...</APP_DESCRIPTION>
                 <APP_FILE>mono-1.1.15-gtksharp-2.8.2-win32-1.exe</APP_FILE>
-                <APP_DOWNLOAD_URL>ftp://www.go-mono.com/archive/1.1.15/windows-installer/1/mono-1.1.15-gtksharp-2.8.2-win32-1.exe</APP_DOWNLOAD_URL>
+                <APP_DOWNLOAD_URL>http://www.go-mono.com/archive/1.1.15/windows-installer/1/mono-1.1.15-gtksharp-2.8.2-win32-1.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>mono.fire.gif</APP_ICON>
                 <APP_ICON_URL>http://primates.ximian.com/~miguel/images/mono.fire.gif</APP_ICON_URL>
                 <APP_MD5SUM>c879b6a3b18f9d082bdbbb1aaf623efb</APP_MD5SUM>
@@ -706,7 +1062,13 @@ The Mono Project has also sparked a lot of interest in developing C#-based compo
                 <APP_NAME>Doxygen</APP_NAME>
 		<APP_VERSION>1.4.6</APP_VERSION>
                 <APP_SITE>http://www.stack.nl/~dimitri/doxygen/</APP_SITE>
-                <APP_MANUAL>http://www.stack.nl/~dimitri/doxygen/manual.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Doxygen is a documentation system for C++, C, Java, Objective-C, Python, IDL (Corba and Microsoft flavors) and to some extent PHP, C#, and D.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Doxygen is a documentation system for C++, C, Java, Objective-C, Python, IDL (Corba and Microsoft flavors) and to some extent PHP, C#, and D.
 
 It can help you in three ways:
@@ -731,7 +1093,11 @@ Doxygen is developed under Linux and Mac OS X, but is set-up to be highly portab
                 <APP_NAME>ClamWin</APP_NAME>
 		<APP_VERSION>0.88.2.3</APP_VERSION>
                 <APP_SITE>http://www.clamwin.com</APP_SITE>
-                <APP_MANUAL>http://www.clamwin.com/content/category/4/22/89/</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>ClamWin Free Antivirus release 0.88.2.3 fixes a potential security issue with scanning of archived files.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>ClamWin Free Antivirus release 0.88.2.3 fixes a potential security issue with scanning of archived files. The details are:
 
 Zip, Rar and other archives were not properly unpacked if a user didn't have write permissions in the root folder (C:\). This bug only appeared if a user was not an administrator of Microsoft Windows 2000/XP/2003 systems.
@@ -752,7 +1118,11 @@ This release also sets "Detect Broken Executables" option to "No" due to high vo
                 <APP_NAME>Bochs</APP_NAME>
 		<APP_VERSION>2.2.6</APP_VERSION>
                 <APP_SITE>http://bochs.sourceforge.net/</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Bochs is a highly portable open source IA-32 (x86) PC emulator written in C++, that runs on most popular platforms.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Bochs is a highly portable open source IA-32 (x86) PC emulator written in C++, that runs on most popular platforms. It includes emulation of the Intel x86 CPU, common I/O devices, and a custom BIOS. Currently, Bochs can be compiled to emulate a 386, 486, Pentium, Pentium Pro or AMD64 CPU, including optional MMX, SSE, SSE2 and 3DNow! instructions.
 Bochs is capable of running most Operating Systems inside the emulation including Linux, DOS, Windows® 95/98 and Windows® NT/2000/XP. Bochs was written by Kevin Lawton and is currently maintained by this project.
     Bochs can be compiled and used in a variety of modes, some which are still in development. The 'typical' use of bochs is to provide complete x86 PC emulation, including the x86 processor, hardware devices, and memory. This allows you to run OS's and software within the emulator on your workstation, much like you have a machine inside of a machine. For instance, let's say your workstation is a Unix/X11 workstation, but you want to run Win'95 applications. Bochs will allow you to run Win 95 and associated software on your Unix/X11 workstation, displaying a window on your workstation, simulating a monitor on a PC. </APP_DESCRIPTION>
@@ -772,8 +1142,12 @@ Bochs is capable of running most Operating Systems inside the emulation includin
 	<APP>
                 <APP_NAME>Eraser</APP_NAME>
 		<APP_VERSION>5.8-beta</APP_VERSION>
-                <APP_SITE>http://www.heidi.ie/eraser/</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_SITE>http://www.tolvanen.com/eraser</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Eraser is an advanced security tool (for Windows), which allows you to completely remove sensitive data from your hard drive by overwriting it several times with carefully selected patterns.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Eraser is an advanced security tool (for Windows), which allows you to completely remove sensitive data from your hard drive by overwriting it several times with carefully selected patterns. Works with Windows  95, 98, ME, NT, 2000, XP and DOS.
 Eraser is Free software and its source code is released under GNU General Public License.
 
@@ -782,8 +1156,8 @@ The patterns used for overwriting are based on Peter Gutmann's paper "Secure Del
 Other methods include the one defined in the National Industrial Security Program Operating Manual of the US Department of Defence and overwriting with pseudorandom data. You can also define your own overwriting methods.</APP_DESCRIPTION>
                 <APP_FILE>eraser58setup.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://mesh.dl.sourceforge.net/sourceforge/eraser/eraser58setup.exe</APP_DOWNLOAD_URL>
-                <APP_ICON>eraser_logo_ball.jpg</APP_ICON>
-                <APP_ICON_URL>http://www.heidi.ie/images/eraser_logo_ball.jpg</APP_ICON_URL>
+                <APP_ICON>eraser_logo.jpg</APP_ICON>
+                <APP_ICON_URL>http://exploit.blogosfere.it/images/eraser_logo_ball.jpg</APP_ICON_URL>
                 <APP_MD5SUM>a45f35d31a8644e8c396d8e95d807eb7</APP_MD5SUM>
                 <APP_CATEGORIES>
                 	<APP_CATEGORY>ssoo</APP_CATEGORY>
@@ -796,25 +1170,12 @@ Other methods include the one defined in the National Industrial Security Progra
                 <APP_NAME>WinMerge</APP_NAME>
 		<APP_VERSION>2.4.6</APP_VERSION>
                 <APP_SITE>http://winmerge.sourceforge.net/</APP_SITE>
-                <APP_MANUAL>http://winmerge.sourceforge.net/2.4/manual/index.html</APP_MANUAL>
-                <APP_DESCRIPTION>WinMerge is an Open Source visual text file differencing and merging tool for Win32 platforms. It is highly useful for determing what has changed between project versions, and then merging changes between versions.
-Features
-
-    * Visual differencing and merging of text files
-    * Flexible editor with syntax highlighting
-    * Handles DOS, UNIX and MAC text file formats
-    * Unicode support
-    * Difference pane shows current difference in two vertical panes
-    * Location pane shows map of files compared
-    * Highlights differences inside lines
-    * File filters in directory diff
-    * Moved lines detection in file compare
-    * Shell Integration
-    * Rudimentary Visual SourceSafe and Rational ClearCase integration
-    * Archive file support using 7-zip
-    * Plugins
-    * Localizable interface via resource DLL
-    * HTML-based Manual
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>WinMerge is an Open Source visual text file differencing and merging tool for Win32 platforms.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>WinMerge is an Open Source visual text file differencing and merging tool for Win32 platforms. It is highly useful for determing what has changed between project versions, and then merging changes between versions. Features: Visual differencing and merging of text files, Flexible editor with syntax highlighting, Handles DOS, UNIX and MAC text file formats, Unicode support, Difference pane shows current difference in two vertical panes, Location pane shows map of files compared, Highlights differences inside lines, File filters in directory diff, Moved lines detection in file compare, Shell Integration, Rudimentary Visual SourceSafe and Rational ClearCase integration, Archive file support using 7-zip, Plugins, Localizable interface via resource DLL and HTML-based Manual.
 </APP_DESCRIPTION>
                 <APP_FILE>WinMerge-2.4.6-Setup.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://heanet.dl.sourceforge.net/sourceforge/winmerge/WinMerge-2.4.6-Setup.exe</APP_DOWNLOAD_URL>
@@ -832,19 +1193,14 @@ Features
                 <APP_NAME>Claroline</APP_NAME>
 		<APP_VERSION>1.76</APP_VERSION>
                 <APP_SITE>http://www.claroline.net/</APP_SITE>
-                <APP_MANUAL>http://www.claroline.net/documentation.htm</APP_MANUAL>
-                <APP_DESCRIPTION>Claroline is a free application based on PHP/MySQL allowing teachers or education organizations to create and administrate courses through the web.
-
-Developed from teachers to teachers, Claroline is built over sound pedagogical principles allowing a large variety of pedagogical setup including widening of traditional classroom and online collaborative learning.
-
-Claroline is translated in 32 languages and used by hundreds of institutions around the world. The software is released under Open Source licence (GPL). Downloading and using Claroline is completely free of charge.
-
- To install Claroline on a server, whether locally or remotely, you need the following devices on the computer:
-
-    * A web server (We recommend Apache, but others should work too),
-    * PHP 4.3 or later,
-    * The MySQL databases server 3.23 or later,
-    * A Mail Transport Agent (optional)</APP_DESCRIPTION>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Claroline is a free application based on PHP/MySQL allowing teachers or education organizations to create and administrate courses through the web.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Claroline is a free application based on PHP/MySQL allowing teachers or education organizations to create and administrate courses through the web. Developed from teachers to teachers, Claroline is built over sound pedagogical principles allowing a large variety of pedagogical setup including widening of traditional classroom and online collaborative learning. Claroline is translated in 32 languages and used by hundreds of institutions around the world. The software is released under Open Source licence (GPL). Downloading and using Claroline is completely free of charge. To install Claroline on a server, whether locally or remotely, you need the following devices on the computer: a web server (We recommend Apache, but others should work too), PHP 4.3 or later, the MySQL databases server 3.23 or later,a Mail Transport Agent (optional)...</APP_DESCRIPTION>
                 <APP_FILE>claroline176.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>http://www.claroline.net/dlarea/claroline176.zip</APP_DOWNLOAD_URL>
                 <APP_ICON>caroline.png</APP_ICON>
@@ -862,7 +1218,13 @@ Claroline is translated in 32 languages and used by hundreds of institutions aro
                 <APP_NAME>Moodle</APP_NAME>
 		<APP_VERSION>1.5.4</APP_VERSION>
                 <APP_SITE>http://moodle.org/</APP_SITE>
-                <APP_MANUAL>http://docs.moodle.org/en</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Moodle is a course management system (CMS) to help educators create effective online learning communities.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Moodle is a course management system (CMS) - a free, Open Source software package designed using sound pedagogical principles, to help educators create effective online learning communities. You can download and use it on any computer you have handy (including webhosts), yet it can scale from a single-teacher site to a 50,000-student University. This site itself is created using Moodle, so check out the Moodle Demonstration Courses or read the latest Moodle Buzz.</APP_DESCRIPTION>
                 <APP_FILE>moodle-latest-15.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>http://download.moodle.org/stable15/moodle-latest-15.zip</APP_DOWNLOAD_URL>
@@ -881,10 +1243,14 @@ Claroline is translated in 32 languages and used by hundreds of institutions aro
                 <APP_NAME>Sky Charts</APP_NAME>
 		<APP_VERSION>2.76</APP_VERSION>
                 <APP_SITE>http://www.stargazing.net/astropc/</APP_SITE>
-                <APP_MANUAL>http://www.stargazing.net/astropc/doc/eindex.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>This program enables you to draw sky charts, making use of the data in 16 catalogs of stars and nebulae. </APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>This program enables you to draw sky charts, making use of the data in 16 catalogs of stars and nebulae. In addition the position of planets, asteroids and comets are shown.
 
-The purpose of this program is to prepare different sky maps for a particular observation. 
+The purpose of this program is to prepare different sky maps for a particular observation.
 A large number of parameters permit you to choose specifically or automatically which catalogs to use, the colour and dimension of stars and nebulae, the representation of planets, the display of labels and coordinate grids, the superimposition of pictures, the condition of visibility and more.
 These features make this celestial atlas more complete than a conventional planetarium. </APP_DESCRIPTION>
                 <APP_FILE>cdcin276.zip</APP_FILE>
@@ -902,19 +1268,13 @@ These features make this celestial atlas more complete than a conventional plane
                 <APP_NAME>Solfege</APP_NAME>
 		<APP_VERSION>3.2.1</APP_VERSION>
                 <APP_SITE>http://www.solfege.org/</APP_SITE>
-                <APP_MANUAL>http://www.solfege.org/Main/DeveloperManual</APP_MANUAL>
-                <APP_DESCRIPTION>Solfege is free music education software. Use it to train your rhythm, interval, scale and chord skills. Solfege - Smarten your ears!
-
-Features
-
-    * Recognise melodic and harmonic intervals
-    * Compare interval sizes
-    * Sing the intervals the computer asks for
-    * Identify chords
-    * Sing chords
-    * Scales
-    * Dictation
-    * Remembering rhythmic patterns </APP_DESCRIPTION>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Solfege is free music education software. Use it to train your rhythm, interval, scale and chord skills.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Solfege is free music education software. Use it to train your rhythm, interval, scale and chord skills. Solfege - Smarten your ears! Features: recognise melodic and harmonic intervals, compare interval sizes, sing the intervals the computer asks for, identify chords, sing chords, scales, dictation, remembering rhythmic patterns,... </APP_DESCRIPTION>
                 <APP_FILE>solfege-win32-3.2.1.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://kent.dl.sourceforge.net/sourceforge/solfege/solfege-win32-3.2.1.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>solfege.png</APP_ICON>
@@ -931,8 +1291,14 @@ Features
                 <APP_NAME>OpenSocks</APP_NAME>
 		<APP_VERSION>1.0</APP_VERSION>
                 <APP_SITE>http://sourceforge.net/project/showfiles.php?group_id=39736</APP_SITE>
-                <APP_MANUAL>http://sourceforge.net/docman/?group_id=39736</APP_MANUAL>
-                <APP_DESCRIPTION> Management system for internet/intranet for universities. It manages staff, modules/programmes, committees/subject groups, timetables, research groups/grants/projects, PhD students, electronic documents, lecture/tutorial notes, publications, etc.
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Management system for internet/intranet for universities.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Management system for internet/intranet for universities. It manages staff, modules/programmes, committees/subject groups, timetables, research groups/grants/projects, PhD students, electronic documents, lecture/tutorial notes, publications, etc.
  </APP_DESCRIPTION>
                 <APP_FILE>open_socks_1.0.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>http://switch.dl.sourceforge.net/sourceforge/opensocks/open_socks_1.0.zip</APP_DOWNLOAD_URL>
@@ -951,7 +1317,12 @@ Features
                 <APP_NAME>FET</APP_NAME>
 		<APP_VERSION>4.1.7</APP_VERSION>
                 <APP_SITE>http://www.lalescu.ro/liviu/fet/</APP_SITE>
-                <APP_MANUAL>http://hosty.org/fet/FET%20Guide.htm</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>FET is a probabilistic program (using a genetic algoritm) for automatically generating the timetable of a school.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>FET is a probabilistic program (using a genetic algoritm) for automatically generating the timetable of a school, high-school or university. It is licensed under GNU/GPL (free software, open source).
 
 IMPORTANT: You must notice that FET might not always find a suitable timetable for your school. In a comparison with gp-untis on a very constrained timetable data, FET took more time and failed to find a timetable, which gp-untis found immediately. FET looks now more like an experimental program and the algorithm must be improved in the future. </APP_DESCRIPTION>
@@ -970,7 +1341,12 @@ IMPORTANT: You must notice that FET might not always find a suitable timetable f
                 <APP_NAME>YACAS</APP_NAME>
 		<APP_VERSION>1.0.58rev1</APP_VERSION>
                 <APP_SITE>http://www.xs4all.nl/~apinkus/yacas.html</APP_SITE>
-                <APP_MANUAL>http://yacas.sourceforge.net/manindex.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Yacas is a general purpose easy to use Computer Algebra System.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Yacas is a general purpose easy to use Computer Algebra System (a CAS is a program that can be used to do symbolic manipulation of mathematical expressions). It is built on top of its own programming language designed for this purpose, in which new algorithms can easily be implemented. In addition, it comes with extensive documentation on the functionality implemented and methods used to implement them. </APP_DESCRIPTION>
                 <APP_FILE>Yacas-Windows-Console-1.0.58rev1.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>http://www.xs4all.nl/~apinkus/backups/Yacas-Windows-Console-1.0.58rev1.zip</APP_DOWNLOAD_URL>
@@ -987,18 +1363,15 @@ IMPORTANT: You must notice that FET might not always find a suitable timetable f
                 <APP_NAME>Gretl</APP_NAME>
 		<APP_VERSION>1.5.1</APP_VERSION>
                 <APP_SITE>http://gretl.sourceforge.net/</APP_SITE>
-                <APP_MANUAL>http://ricardo.ecn.wfu.edu/pub//gretl/manual/es/</APP_MANUAL>
-                <APP_DESCRIPTION>s a cross-platform software package for econometric analysis, written in the C programming language. It is is free, open-source software. You may redistribute it and/or modify it under the terms of the GNU General Public License (GPL) as published by the Free Software Foundation.
-Features
-
-    * Easy intuitive interface (now in French, Italian, Spanish, Polish and German as well as English)
-    * A wide variety of least-squares and maximum-likelihood estimators, including systems estimators
-    * Single commands to launch things like augmented Dickey-Fuller test, Chow test for structural stability, Vector Autoregressions, ARMA estimation
-    * Output models as LaTeX files, in tabular or equation format
-    * Integrated scripting language: enter commands either via the gui or via script
-    * Command loop structure for Monte Carlo simulations and iterative estimation procedures
-    * GUI controller for fine-tuning Gnuplot graphs
-    * Link to GNU R for further data analysis</APP_DESCRIPTION>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Is a cross-platform software package for econometric analysis.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Is a cross-platform software package for econometric analysis, written in the C programming language. It is is free, open-source software. You may redistribute it and/or modify it under the terms of the GNU General Public License (GPL) as published by the Free Software Foundation.
+Features: easy intuitive interface (now in French, Italian, Spanish, Polish and German as well as English), a wide variety of least-squares and maximum-likelihood estimators, including systems estimators, single commands to launch things like augmented Dickey-Fuller test, Chow test for structural stability, Vector Autoregressions, ARMA estimation, output models as LaTeX files, in tabular or equation format, integrated scripting language: enter commands either via the gui or via script, command loop structure for Monte Carlo simulations and iterative estimation procedures, gUI controller for fine-tuning Gnuplot graphs and link to GNU R for further data analysis</APP_DESCRIPTION>
                 <APP_FILE>gretl-1.5.1.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://kent.dl.sourceforge.net/sourceforge/gretl/gretl-1.5.1.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>gretl-text.png</APP_ICON>
@@ -1014,7 +1387,13 @@ Features
                 <APP_NAME>GNUPlot</APP_NAME>
 		<APP_VERSION>4.0.0</APP_VERSION>
                 <APP_SITE>http://www.gnuplot.info/</APP_SITE>
-                <APP_MANUAL>http://www.gnuplot.info/documentation.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Gnuplot is a portable command-line driven interactive data and function plotting utility.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Gnuplot is a portable command-line driven interactive data and function plotting utility for UNIX, IBM OS/2, MS Windows, DOS, Macintosh, VMS, Atari and many other platforms. The software is copyrighted but freely distributed (i.e., you don't have to pay for it). It was originally intended as to allow scientists and students to visualize mathematical functions and data. It does this job pretty well, but has grown to support many non-interactive uses, including web scripting and integration as a plotting engine for third-party applications like Octave. Gnuplot has been supported and under development since 1986.
 
 Gnuplot supports many types of plots in either 2D and 3D. It can draw using lines, points, boxes, contours, vector fields, surfaces, and various associated text. It also supports various specialized plot types.
@@ -1035,7 +1414,12 @@ Gnuplot supports many different types of terminals: interactive screen terminals
                 <APP_NAME>TexMacs</APP_NAME>
 		<APP_VERSION>1.0.5</APP_VERSION>
                 <APP_SITE>http://www.texmacs.org/</APP_SITE>
-                <APP_MANUAL>http://www.texmacs.org/tmweb/help/help.en.html</APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>GNU TeXmacs is a free wysiwyw (what you see is what you want) editing platform with special features for scientists.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>GNU TeXmacs is a free wysiwyw (what you see is what you want) editing platform with special features for scientists. The software aims to provide a unified and user friendly framework for editing structured documents with different types of content (text, graphics, mathematics, interactive content, etc.). The rendering engine uses high-quality typesetting algorithms so as to produce professionally looking documents, which can either be printed out or presented from a laptop.
 
 The software includes a text editor with support for mathematical formulas, a small technical picture editor and a tool for making presentations from a laptop. Moreover, TeXmacs can be used as an interface for many external systems for computer algebra, numerical analysis, statistics, etc. New presentation styles can be written by the user and new features can be added to the editor using the Scheme extension language. A native spreadsheet and tools for collaborative authoring are planned for later.
@@ -1056,8 +1440,13 @@ TeXmacs runs on all major Unix platforms and Windows. Documents can be saved in 
                 <APP_NAME>SAGA GIS</APP_NAME>
 		<APP_VERSION>2.0b</APP_VERSION>
                 <APP_SITE>http://www.saga-gis.uni-goettingen.de/html/index.php</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
-                <APP_DESCRIPTION>ystem for Automated Geoscientific Analyses- is a hybrid GIS software. The first objective of SAGA is to give (geo-)scientists an effective but easy learnable platform for the implementation of geoscientific methods, which is achieved by SAGA's unique Application Programming Interface (API). The second is to make these methods accessible in a user friendly way. This is mainly done by the Graphical User Interface (GUI). Together this results in SAGA's true strength: a fast growing set of geoscientifc methods, bundled in exchangeable Module Libraries.
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>System for Automated Geoscientific Analyses- is a hybrid GIS software.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>System for Automated Geoscientific Analyses- is a hybrid GIS software. The first objective of SAGA is to give (geo-)scientists an effective but easy learnable platform for the implementation of geoscientific methods, which is achieved by SAGA's unique Application Programming Interface (API). The second is to make these methods accessible in a user friendly way. This is mainly done by the Graphical User Interface (GUI). Together this results in SAGA's true strength: a fast growing set of geoscientifc methods, bundled in exchangeable Module Libraries.
 
 SAGA is written in the widespread and powerful C++ programming language and follows an object oriented approach. Moreover it relies on the GNU Public License, which means it is an open source project. All this designates SAGA to be a first choice tool for everybody who works in the field of geosciences, in particular for those who want transparent state of the art methods.</APP_DESCRIPTION>
                 <APP_FILE>saga_2.0b_051019_wxmsw_mingw.zip</APP_FILE>
@@ -1075,7 +1464,12 @@ SAGA is written in the widespread and powerful C++ programming language and foll
                 <APP_NAME>gvSIG</APP_NAME>
 		<APP_VERSION>0.6</APP_VERSION>
                 <APP_SITE>http://www.gvsig.gva.es</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>gvSIG is a tool oriented to manage geographic information.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>gvSIG is a tool oriented to manage geographic information. It is characterized by a user-friendly interface, with a quick access to the most usual raster and vector formats. In the same view it includes local as well as remote data through a WMS or WFS source.
 
 It is aimed at users of geographic information, whether professionals or civil servants (city councils, councils, regional councils or ministries) from any part of the world ( at the moment its interface is in Spanish, Valencian, English, Basque, Gallego, Czech , French, German, Italian and Portuguese), in addition to being freeware.
@@ -1096,22 +1490,14 @@ Given its freeware nature (open source) it is highly interesting for the interna
                 <APP_NAME>Thuban</APP_NAME>
 		<APP_VERSION>1.1.0-5</APP_VERSION>
                 <APP_SITE>http://thuban.intevation.org/</APP_SITE>
-                <APP_MANUAL>http://thuban.intevation.org/documentation.html</APP_MANUAL>
-                <APP_DESCRIPTION>Thuban is an Interactive Geographic Data Viewer  with the following features:
-
-    * Vector Data Support: Shapefile, PostGIS Layer
-    * Raster Data Support: GeoTIFF Layer
-    * Comfortable Map Navigation
-    * Object Identification and Annotation
-    * Legend Editor and Classification
-    * Table Queries and Joins
-    * Projection Support
-    * Printing and Vector Export
-    * API for Add-Ons (Extensions)
-    * Multi-Language Support: English, French, German, Hungarian, Italian, Russian and Spanish
-    * User Manual (English)
-
-Thuban is extensible and multi-platform (GNU/Linux, Windows, ...). It is Free Software under the GNU General Public License (GNU GPL). </APP_DESCRIPTION>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Thuban is an Interactive Geographic Data Viewer.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Thuban is an Interactive Geographic Data Viewer with the following features: vector Data Support: Shapefile, PostGIS Layer, raster Data Support: GeoTIFF Layer, comfortable Map Navigation, object Identification and Annotation, legend Editor and Classification, table Queries and Joins, projection Support, printing and Vector Export, aPI for Add-Ons (Extensions), multi-Language Support: English, French, German, Hungarian, Italian, Russian and Spanish and a user Manual (English). Thuban is extensible and multi-platform (GNU/Linux, Windows, ...). It is Free Software under the GNU General Public License (GNU GPL). </APP_DESCRIPTION>
                 <APP_FILE>Thuban-1.1.0-5.exe</APP_FILE>
                 <APP_DOWNLOAD_URL>http://wald.intevation.org/frs/download.php/212/Thuban-1.1.0-5.exe</APP_DOWNLOAD_URL>
                 <APP_ICON>thuban.png</APP_ICON>
@@ -1127,7 +1513,12 @@ Thuban is extensible and multi-platform (GNU/Linux, Windows, ...). It is Free So
                 <APP_NAME>OrbisCAD</APP_NAME>
 		<APP_VERSION>1.0</APP_VERSION>
                 <APP_SITE>http://orbiscad.sourceforge.net/</APP_SITE>
-                <APP_MANUAL></APP_MANUAL>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Orbis is a latin word which means 'the world' or 'belonging to the world' and CAD stands for Computer Aided Design.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Orbis is a latin word which means 'the world' or 'belonging to the world' and CAD stands for Computer Aided Design. In short, OrbisCAD intends to be the World's Computer Aided Design Program.
 
 Led and developed by The Community, OrbisCAD pursues two basic objectives: (1) building a powerful and reliable project which can fully handle the needs of the sector and (2) generating an interactive methodology based on continuous feedback in order to be able to accomplish the first aim. </APP_DESCRIPTION>
@@ -1146,7 +1537,19 @@ Led and developed by The Community, OrbisCAD pursues two basic objectives: (1) b
                 <APP_NAME>CygWIN</APP_NAME>
 		<APP_VERSION>1.5.19-4</APP_VERSION>
                 <APP_SITE>http://www.cygwin.com/</APP_SITE>
-                <APP_MANUAL>http://cygwin.com/docs.html</APP_MANUAL>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>Cygwin Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://cygwin.com/docs.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Cygwin User's Guide, API Reference and FAQs </APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Cygwin is a Linux-like environment for Windows.</APP_MINIDESCRIPTION>
                 <APP_DESCRIPTION>Cygwin is a Linux-like environment for Windows. It consists of two parts: A DLL (cygwin1.dll) which acts as a Linux API emulation layer providing substantial Linux API functionality.
 # A collection of tools, which provide Linux look and feel.
 
@@ -1167,18 +1570,21 @@ The Cygwin DLL works with all non-beta, non "release candidate", ix86 32 bit ver
                 <APP_NAME>GTK+</APP_NAME>
 		<APP_VERSION>2.8.9</APP_VERSION>
                 <APP_SITE>http://www.gtk.org/</APP_SITE>
-                <APP_MANUAL>http://www.gtk.org/tutorial</APP_MANUAL>
-                <APP_DESCRIPTION>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.
-
-GTK+ is free software and part of the GNU Project. However, the licensing terms for GTK+, the GNU LGPL, allow it to be used by all developers, including those developing proprietary software, without any license fees or royalties.
-
-GTK+ is based on three libraries developed by the GTK+ team:
-
-    * GLib is the low-level core library that forms the basis of GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.
-    * Pango is a library for layout and rendering of text, with an emphasis on internationalization. It forms the core of text and font handling for GTK+-2.0.
-    * The ATK library provides a set of interfaces for accessibility. By supporting the ATK interfaces, an application or toolkit can be used with such tools as screen readers, magnifiers, and alternative input devices.
-
-GTK+ has been designed from the ground up to support a range of languages, not only C/C++. Using GTK+ from languages such as Perl and Python (especially in combination with the Glade GUI builder) provides an effective method of rapid application development.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>GTK+ 2.0 Tutorial</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.gtk.org/tutorial</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>This is a tutorial on how to use GTK (the GIMP Toolkit) through its C interface.</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>GTK+ is a multi-platform toolkit for creating graphical user interfaces.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites. GTK+ is free software and part of the GNU Project. However, the licensing terms for GTK+, the GNU LGPL, allow it to be used by all developers, including those developing proprietary software, without any license fees or royalties. GTK+ is based on three libraries developed by the GTK+ team: GLib is the low-level core library that forms the basis of GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system. Pango is a library for layout and rendering of text, with an emphasis on internationalization. It forms the core of text and font handling for GTK+-2.0. The ATK library provides a set of interfaces for accessibility. By supporting the ATK interfaces, an application or toolkit can be used with such tools as screen readers, magnifiers, and alternative input devices. GTK+ has been designed from the ground up to support a range of languages, not only C/C++. Using GTK+ from languages such as Perl and Python (especially in combination with the Glade GUI builder) provides an effective method of rapid application development.</APP_DESCRIPTION>
                 <APP_FILE>gtk+-2.8.9.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>ftp://ftp.gtk.org/pub/gtk/v2.8/win32/gtk+-2.8.9.zip</APP_DOWNLOAD_URL>
                 <APP_ICON>gtk-logo-rgb.gif</APP_ICON>
@@ -1194,10 +1600,28 @@ GTK+ has been designed from the ground up to support a range of languages, not o
                 <APP_NAME>PostgreSQL</APP_NAME>
 		<APP_VERSION>8.1.4-1</APP_VERSION>
                 <APP_SITE>http://www.postgresql.org</APP_SITE>
-                <APP_MANUAL>http://www.postgresql.org/docs/</APP_MANUAL>
-                <APP_DESCRIPTION>PostgreSQL is a powerful, open source relational database system. It has more than 15 years of active development and a proven architecture that has earned it a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), and Windows. It is fully ACID compliant, has full support for foreign keys, joins, views, triggers, and stored procedures (in multiple languages). It includes most SQL92 and SQL99 data types, including INTEGER, NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP. It also supports storage of binary large objects, including pictures, sounds, or video. It has native programming interfaces for C/C++, Java, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
-
-An enterprise class database, PostgreSQL boasts sophisticated features such as Multi-Version Concurrency Control (MVCC), point in time recovery, tablespaces, asynchronous replication, nested transactions (savepoints), online/hot backups, a sophisticated query planner/optimizer, and write ahead logging for fault tolerance. It supports international character sets, multibyte character encodings, Unicode, and it is locale-aware for sorting, case-sensitivity, and formatting. It is highly scalable both in the sheer quantity of data it can manage and and in the number of concurrent users it can accommodate. There are active PostgreSQL systems in production environments that manage in excess of 4 terabytes of data.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>PostgreSQL 8.1.4 On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.postgresql.org/docs/8.1/interactive/index.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>PostgreSQL 8.1.4 On-Line Documentation</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME>PostgreSQL 8.1.4 Documentation</APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL>http://www.postgresql.org/files/documentation/pdf/8.1/postgresql-8.1-A4.pdf</APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE>postgresql-8.1-A4.pdf</APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION>PostgreSQL 8.1.4 Printable Documentation</APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG>English</APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>PostgreSQL is a powerful, open source relational database system.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>PostgreSQL is a powerful, open source relational database system. It has more than 15 years of active development and a proven architecture that has earned it a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), and Windows. It is fully ACID compliant, has full support for foreign keys, joins, views, triggers, and stored procedures (in multiple languages). It includes most SQL92 and SQL99 data types, including INTEGER, NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP. It also supports storage of binary large objects, including pictures, sounds, or video. It has native programming interfaces for C/C++, Java, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation. An enterprise class database, PostgreSQL boasts sophisticated features such as Multi-Version Concurrency Control (MVCC), point in time recovery, tablespaces, asynchronous replication, nested transactions (savepoints), online/hot backups, a sophisticated query planner/optimizer, and write ahead logging for fault tolerance. It supports international character sets, multibyte character encodings, Unicode, and it is locale-aware for sorting, case-sensitivity, and formatting. It is highly scalable both in the sheer quantity of data it can manage and and in the number of concurrent users it can accommodate. There are active PostgreSQL systems in production environments that manage in excess of 4 terabytes of data.</APP_DESCRIPTION>
                 <APP_FILE>postgresql-8.1.4-1.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>ftp://ftp5.es.postgresql.org/mirror/postgresql/binary/v8.1.4/win32/postgresql-8.1.4-1.zip</APP_DOWNLOAD_URL>
                 <APP_ICON>psql.png</APP_ICON>
@@ -1213,12 +1637,21 @@ An enterprise class database, PostgreSQL boasts sophisticated features such as M
                 <APP_NAME>pgAdmin</APP_NAME>
 		<APP_VERSION>1.4.2</APP_VERSION>
                 <APP_SITE>http://www.pgadmin.org/</APP_SITE>
-                <APP_MANUAL>http://www.pgadmin.org/docs/</APP_MANUAL>
-                <APP_DESCRIPTION>pgAdmin III is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world. The application may be used on Linux, FreeBSD, Solaris, Mac OSX and Windows platforms to manage PostgreSQL 7.3 and above running on any platform, as well as commercial versions of PostgreSQL such as Pervasive Postgres, EnterpriseDB, Mammoth Replicator and SRA PowerGres.
-
-pgAdmin III is designed to answer the needs of all users, from writing simple SQL queries to developing complex databases. The graphical interface supports all PostgreSQL features and makes administration easy. The application also includes a syntax highlighting SQL editor, a server-side code editor, an SQL/batch/shell job scheduling agent, support for the Slony-I replication engine and much more. Server connection may be made using TCP/IP or Unix Domain Sockets (on *nix platforms), and may be SSL encrypted for security. No additional drivers are required to communicate with the database server.
-
-pgAdmin III is developed by a community of PostgreSQL experts around the world and is available in more than a dozen languages. It is Free Software released under the Artistic License.</APP_DESCRIPTION>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME>pgAdmin 1.4 On-Line Documentation</APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL>http://www.pgadmin.org/docs/1.4/index.html</APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION>Oficial pgAdmin 1.4 On-Line Documentation</APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG>English</APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+		</APP_MANUALS>
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>pgAdmin III is the most popular and feature rich Open Source administration and development platform for PostgreSQL,</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>pgAdmin III is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world. The application may be used on Linux, FreeBSD, Solaris, Mac OSX and Windows platforms to manage PostgreSQL 7.3 and above running on any platform, as well as commercial versions of PostgreSQL such as Pervasive Postgres, EnterpriseDB, Mammoth Replicator and SRA PowerGres. pgAdmin III is designed to answer the needs of all users, from writing simple SQL queries to developing complex databases. The graphical interface supports all PostgreSQL features and makes administration easy. The application also includes a syntax highlighting SQL editor, a server-side code editor, an SQL/batch/shell job scheduling agent, support for the Slony-I replication engine and much more. Server connection may be made using TCP/IP or Unix Domain Sockets (on *nix platforms), and may be SSL encrypted for security. No additional drivers are required to communicate with the database server. pgAdmin III is developed by a community of PostgreSQL experts around the world and is available in more than a dozen languages. It is Free Software released under the Artistic License.</APP_DESCRIPTION>
                 <APP_FILE>pgadmin3-1.4.2.zip</APP_FILE>
                 <APP_DOWNLOAD_URL>ftp://ftp5.es.postgresql.org/mirror/postgresql/pgadmin3/release/v1.4.2/win32/pgadmin3-1.4.2.zip</APP_DOWNLOAD_URL>
                 <APP_ICON>pgadmin.jpg</APP_ICON>
@@ -1230,4 +1663,222 @@ pgAdmin III is developed by a community of PostgreSQL experts around the world a
                 <APP_ALTERNATIVES>
                 </APP_ALTERNATIVES>
         </APP>
+	<APP>
+                <APP_NAME>yamiPod</APP_NAME>
+		<APP_VERSION>0.99.2</APP_VERSION>
+                <APP_SITE>http://www.yamipod.com</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>YamiPod is a freeware application to efficiently manage your iPod under Mac OS X, Windows and Linux.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>YamiPod is a freeware application to efficiently manage your iPod under Mac OS X, Windows and Linux. It can be run directly from your iPod and needs no installation. Take a look at the feature list to find out what it can do and feel free to suggest anything that might be missing.</APP_DESCRIPTION>
+                <APP_FILE>yam-win.zip</APP_FILE>
+                <APP_DOWNLOAD_URL>http://www.pochoirs.de/leechs/yam/yamipod/yam-win.zip</APP_DOWNLOAD_URL>
+                <APP_ICON>yamipod.png</APP_ICON>
+                <APP_ICON_URL>http://www.yamipod.com/main/themes/kubrick/images/kubrickheader.png</APP_ICON_URL>
+                <APP_MD5SUM>e0d0bafcd7653840f572fc90f3ed90e6</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>multimedia</APP_CATEGORY>
+			<APP_CATEGORY>other</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>R</APP_NAME>
+		<APP_VERSION>2.3.1</APP_VERSION>
+                <APP_SITE>http://www.r-project.org/</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>R is a system for statistical computation and graphics.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>R is a system for statistical computation and graphics. It consists of a language plus a run-time environment with graphics, a debugger, access to certain system functions, and the ability to run programs stored in script files. The design of R has been heavily influenced by two existing languages: Becker, Chambers and Wilks' S (see What is S?) and Sussman's Scheme. Whereas the resulting language is very similar in appearance to S, the underlying implementation and semantics are derived from Scheme. See What are the differences between R and S?, for further details.The core of R is an interpreted computer language which allows branching and looping as well as modular programming using functions. Most of the user-visible functions in R are written in R. It is possible for the user to interface to procedures written in the C, C++, or FORTRAN languages for efficiency. The R distribution contains functionality for a large number of statistical procedures. Among these are: linear and generalized linear models, nonlinear regression models, time series analysis, classical parametric and nonparametric tests, clustering and smoothing. There is also a large set of functions which provide a flexible graphical environment for creating various kinds of data presentations. Additional modules (“add-on packages”) are available for a variety of specific purposes</APP_DESCRIPTION>
+                <APP_FILE>R-2.3.1-win32.exe</APP_FILE>
+                <APP_DOWNLOAD_URL>http://cran.es.r-project.org/bin/windows/base/R-2.3.1-win32.exe</APP_DOWNLOAD_URL>
+                <APP_ICON>Rlogo.jpg</APP_ICON>
+                <APP_ICON_URL>http://www.r-project.org/Rlogo.jpg</APP_ICON_URL>
+                <APP_MD5SUM>d54c545890dda8d684399ce5f67cb993</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>math</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>MikTeX</APP_NAME>
+		<APP_VERSION>2.5-beta8</APP_VERSION>
+                <APP_SITE>http://www.miktex.org/</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>MiKTeX (pronounced mick-tech) is an up-to-date implementation of TeX and related programs for Windows.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>MiKTeX (pronounced mick-tech) is an up-to-date implementation of TeX and related programs for Windows (all current variants) on x86 systems. TeX is a typesetting system invented by  Donald E. Knuth. MiKTeXs main features include: easy to install, complete: 1200 packages (fonts, macros, ...) are included, living: packages are updated regularily (last update: 5/26/2006 ),easy package management: missing packages can be installed automatically; a wizard helps you to keep your MiKTeX system up-to-date, fast previewing: the TeX output viewer Yap allows for an optimized edit-compile-view cycle (if the TeX authoring system in use supports source specials), MiKTeX is open source... The MiKTeX distribution consists of the following components: TeX: the classic TeX compiler, pdfTeX, e-TeX, pdf-e-TeX, Omega, NTS: various TeX variants, Dvipdfm/Dvipdfmx: converts TeX output into PDF documents, MetaPost: converts picture specifications into PostScript commands, a complete set of macro packages and fonts (e.g., ConTeXt, LaTeX, ...), Yap: a viewer for TeX output, TeXify: a TeX compiler driver, MiKTeX Options: assists in configuring MiKTeX, lots of utilities: tools for the creation of bibliographies and indexes, PostScript utilities, and more. MiKTeX is a free TeX distribution. You are welcome to redistribute MiKTeX under certain conditions. </APP_DESCRIPTION>
+                <APP_FILE>basic-miktex-2.5-beta-8.exe</APP_FILE>
+                <APP_DOWNLOAD_URL>http://belnet.dl.sourceforge.net/sourceforge/miktex/basic-miktex-2.5-beta-8.exe</APP_DOWNLOAD_URL>
+                <APP_ICON>miktex.png</APP_ICON>
+                <APP_ICON_URL>http://www.miktex.org/Images/miktex3.png</APP_ICON_URL>
+                <APP_MD5SUM>44154d4a959017d12b026e3f03495e7d</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>office</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>leoCAD</APP_NAME>
+		<APP_VERSION>0.75</APP_VERSION>
+                <APP_SITE>http://leocad.org/</APP_SITE>
+                <APP_MANUALS />
+		<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>leoCAD is a CAD program that uses bricks similar to those found in many toys.00</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>leoCAD is a CAD program that uses bricks similar to those found in many toys (but they don't represent any particular brand). Currently it has a library of more than 1000 different pieces, most of them were created by James Jessiman (the author of LDraw).</APP_DESCRIPTION>
+                <APP_FILE>LeoCAD-0.75-Windows.exe</APP_FILE>
+                <APP_DOWNLOAD_URL>http://leocad.org/files/LeoCAD-0.75-Windows.exe</APP_DOWNLOAD_URL>
+                <APP_ICON>leocadLogo.gif</APP_ICON>
+                <APP_ICON_URL>http://leocad.org/models/old/clsotw.gif</APP_ICON_URL>
+                <APP_MD5SUM>97dc453c86aac83fc601fa8a0347e74d</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>games</APP_CATEGORY>
+			<APP_CATEGORY>tecnic</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>gEDA</APP_NAME>
+		<APP_VERSION>2002_05_27-m4</APP_VERSION>
+                <APP_SITE>http://geda.seul.org/</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>The gEDA project is working on producing a full GPL'd suite of Electronic Design Automation tools.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>The gEDA project is working on producing a full GPL'd suite of Electronic Design Automation tools. These tools are used for electrical circuit design, schematic capture, simulation, prototyping, and production. Currently, the gEDA project offers a mature suite of free software applications for electronics design, including schematic capture, attribute management, bill of materials (BOM) generation, netlisting into over 20 netlist formats, analog and digital simulation, and printed circuit board (PCB) layout. The gEDA project was started because of the lack of free EDA tools for UNIX. The tools are being developed mainly on GNU/Linux machines, but considerable effort is being made to make sure that gEDA runs on other UNIX variants.</APP_DESCRIPTION>
+                <APP_FILE>gEDA-gaf-20020527m4.exe</APP_FILE>
+                <APP_DOWNLOAD_URL>http://gnuwin.epfl.ch/apps/geda/en/install/gEDA-gaf-20020527m4.exe</APP_DOWNLOAD_URL>
+                <APP_ICON>gEDA.png</APP_ICON>
+                <APP_ICON_URL>http://geda.seul.org/graphics/logo.png</APP_ICON_URL>
+                <APP_MD5SUM>4dcd5cdc7ac5d4722b466a01f237f48f</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>tecnic</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>XEmacs</APP_NAME>
+		<APP_VERSION>21.4.19</APP_VERSION>
+                <APP_SITE>http://www.es.xemacs.org/</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+			<APP_PLAT>Mac OSX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>XEmacs is a highly customizable open source text editor and application development system.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>XEmacs is a highly customizable open source text editor and application development system. It is protected under the GNU Public License and related to other versions of Emacs, in particular GNU Emacs. Its emphasis is on modern graphical user interface support and an open software development model, similar to Linux. XEmacs has an active development community numbering in the hundreds, and runs on Windows 95 and NT, Linux and nearly every other version of Unix in existence. Support for XEmacs has been supplied by Sun Microsystems, University of Illinois, Lucid, ETL/Electrotechnical Laboratory, Amdahl Corporation, BeOpen, and others, as well as the unpaid time of a great number of individual developers.</APP_DESCRIPTION>
+                <APP_FILE>XEmacs Setup 21.4.19.exe</APP_FILE>
+                <APP_DOWNLOAD_URL>http://ftp.xemacs.org/pub/xemacs/binaries/win32/InnoSetup/XEmacs%20Setup%2021.4.19.exe</APP_DOWNLOAD_URL>
+                <APP_ICON>xemacs.gif</APP_ICON>
+                <APP_ICON_URL>http://www.xemacs.org/Images/xemacs.gif</APP_ICON_URL>
+                <APP_MD5SUM>d41d8cd98f00b204e9800998ecf8427e</APP_MD5SUM>
+                <APP_CATEGORIES>
+			<APP_CATEGORY>devel</APP_CATEGORY>
+			<APP_CATEGORY>office</APP_CATEGORY>
+                	<APP_CATEGORY>other</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>Sodipodi</APP_NAME>
+		<APP_VERSION>0.33.beta2</APP_VERSION>
+                <APP_SITE>http://www.sodipodi.com/index.php3</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+			<APP_PLAT>GNU-Linux/UNIX</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>Sodipodi is a vector-based drawing program, like CorelDraw® or Adobe Illustrator® from the proprietary software world,</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>Sodipodi is a vector-based drawing program, like CorelDraw® or Adobe Illustrator® from the proprietary software world, and Sketch or Karbon14 from the free software world. It is free software, distributed under the terms of the Gnu General Public License, Version 2. Sodipodi uses W3C SVG as its native file format. It is therefore a very useful tool for web designers. It has a relatively modern display engine, giving you finely antialiased display, alpha transparencies, vector fonts and so on. Sodipodi is written in C, using the Gtk+ toolkit and optionally some Gnome or KDE libraries. Sodipodi works under most versions of Unix and Windows.</APP_DESCRIPTION>
+                <APP_FILE>Sodipodi_0_33_beta2_Setup.exe</APP_FILE>
+                <APP_DOWNLOAD_URL>http://www.sodipodi.com/files/Sodipodi_0_33_beta2_Setup.exe</APP_DOWNLOAD_URL>
+                <APP_ICON>sodipodi.png</APP_ICON>
+                <APP_ICON_URL>http://www.sodipodi.com/images/orav.png</APP_ICON_URL>
+                <APP_MD5SUM>ac72590bf2e466b3c755aee66db1ea32</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>graphics</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+	<APP>
+                <APP_NAME>virtualDub</APP_NAME>
+		<APP_VERSION>1.6.15</APP_VERSION>
+                <APP_SITE>http://www.virtualdub.org</APP_SITE>
+                <APP_MANUALS />
+	 	<APP_PLATAFORMS>
+			<APP_PLAT>Windows</APP_PLAT>
+		</APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION>VirtualDub is a video capture/processing utility.</APP_MINIDESCRIPTION>
+                <APP_DESCRIPTION>VirtualDub is a video capture/processing utility for 32-bit Windows platforms (95/98/ME/NT4/2000/XP), licensed under the GNU General Public License (GPL).  It lacks the editing power of a general-purpose editor such as Adobe Premiere, but is streamlined for fast linear operations over video.  It has batch-processing capabilities for processing large numbers of files and can be extended with third-party video filters.  VirtualDub is mainly geared toward processing AVI files, although it can read (not write) MPEG-1 and also handle sets of BMP images. I basically started VirtualDub in college to do some quick capture-and-encoding that I wanted done; from there it's basically grown into a more general utility that can trim and clean up video before exporting to tape or processing with another program.  I released it on the web and others found it useful, so I've been tinkering around with its code ever since.</APP_DESCRIPTION>
+                <APP_FILE>VirtualDub-1.6.15.zip</APP_FILE>
+                <APP_DOWNLOAD_URL>http://heanet.dl.sourceforge.net/sourceforge/virtualdub/VirtualDub-1.6.15.zip</APP_DOWNLOAD_URL>
+                <APP_ICON>virtualdub.jpg</APP_ICON>
+                <APP_ICON_URL></APP_ICON_URL>
+                <APP_MD5SUM>088e7f05da3e1076f381ab132642b5cd</APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY>multimedia</APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+                </APP_ALTERNATIVES>
+        </APP>
+<!--	<APP>
+                <APP_NAME></APP_NAME>
+		<APP_VERSION></APP_VERSION>
+                <APP_SITE></APP_SITE>
+                <APP_MANUALS>
+			<APP_MAN_ONLINE>
+                                <APP_MAN_ONLINE_NAME></APP_MAN_ONLINE_NAME>
+                                <APP_MAN_ONLINE_URL></APP_MAN_ONLINE_URL>
+                                <APP_MAN_ONLINE_DESCRIPTION></APP_MAN_ONLINE_DESCRIPTION>
+                                <APP_MAN_ONLINE_LANG></APP_MAN_ONLINE_LANG>
+                        </APP_MAN_ONLINE>
+                        <APP_MAN_OFFLINE>
+                                <APP_MAN_OFFLINE_NAME></APP_MAN_OFFLINE_NAME>
+                                <APP_MAN_OFFLINE_URL></APP_MAN_OFFLINE_URL>
+                                <APP_MAN_OFFLINE_FILE></APP_MAN_OFFLINE_FILE>
+                                <APP_MAN_OFFLINE_DESCRIPTION></APP_MAN_OFFLINE_DESCRIPTION>
+                                <APP_MAN_OFFLINE_LANG></APP_MAN_OFFLINE_LANG>
+                        </APP_MAN_OFFLINE>
+		</APP_MANUALS>
+                <APP_PLATAFORMS>
+                        <APP_PLAT></APP_PLAT>
+                </APP_PLATAFORMS>
+		<APP_MINIDESCRIPTION></APP_MINIDESCRIPTION>
+		<APP_DESCRIPTION></APP_DESCRIPTION>
+                <APP_FILE></APP_FILE>
+                <APP_DOWNLOAD_URL></APP_DOWNLOAD_URL>
+                <APP_ICON></APP_ICON>
+                <APP_ICON_URL></APP_ICON_URL>
+                <APP_MD5SUM></APP_MD5SUM>
+                <APP_CATEGORIES>
+                	<APP_CATEGORY></APP_CATEGORY>
+                </APP_CATEGORIES>
+                <APP_ALTERNATIVES>
+			<APP_ALT></APP_ALT>
+                </APP_ALTERNATIVES>
+        </APP> -->
 </APPLICATIONS>

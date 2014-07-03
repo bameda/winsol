@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Cd-Crisol newLine Template</title>
+	</head>
+
+	<body bgcolor="#FFFFFF" background="./mis/images/bg.gif" text="#990000" link="#990000" vlink="#990000" alink="#990000">
+		<table width="760" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+    			<td align="center" height="70" width="295">&nbsp;</td>
+    			<td height="70" width="49"><img src="./mis/images/spacer.gif" width="4" height="4"></td>
+   			  <td width="416" height="70"><font color="#990000" face="Arial, Helvetica, sans-serif" size="6"><b>CD - CRISOL  </b></font></td>
+  		  	</tr>
+  			<tr> 
+    			<td width="295" valign="top">&nbsp;</td>
+    			<td width="49"><img src="./mis/images/spacer.gif" width="4" height="4"></td>
+    			<td valign="top">&nbsp;</td>
+  			</tr>
+  			<tr> 
+    			<td width="295" valign="top" align="center">
+					<font color="#990000" face="Arial, Helvetica, sans-serif">
+					<!-- Menu List -->
+						<h3 align="center"><A href="./index.html">INICIO</A></h3>
+						<h3 align="center">CATEGORIAS</h3>
+						#for $category in $categories:
+							<div> <A href="./categories/$category.html_file">$category.name ($category.label)</A> </div>
+						#end for 
+				    </font></td>
+    			<td width="49"></td>
+    			<td valign="top"> 
+    	  			<div align="justify"> 
+						<!-- Description -->
+						<h2>¿Que es CD-CRISOL?</h2><P>CD Crisol es una herramienta que nos va a permitir generar cds de software libre para windows de manera rapida y facil. 
+		      		</div>
+    			</td>
+  			</tr>
+  			<tr> 
+    			<td width="295" valign="top">&nbsp;</td>
+    			<td width="49">&nbsp;</td>
+    			<td valign="top"> 
+    	  			<div align="center">
+    	    			<p><font face="Arial, Helvetica, sans-serif" size="1" color="#990000"><b><font color="#990000">&copy; 2006 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a> <br> <font color="#990000">Contact:</font> <a href="mailto:&#098;&#097;&#109;&#101;&#100;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">CD-Crisol Devel Team</p>
+      				</div>
+    			</td>
+  			</tr>
+	</table>
+	</body>
+</html>

@@ -1,31 +1,156 @@
-<html>
-	<head>
-		<div align="center">
-			<h1><h1>CD Software Libre del Crisol</h1></title>
-		</div>
-	</head>
-	
-	<body bgcolor="#D6AA95">
-		<div align="center">
-			<h2>Aplicación</h2>
-			<table>
-				<TR><TD> NOMBRE:</TD><TD>$application.name</TD></TR>
-				<TR><TD> VERSION:</td><TD>$application.version</TD></TR>
-				<TR><TD> WEB:</td><TD>$application.site </TD></TR>
-				<TR><TD> MANUAL:</td><TD>$application.manual</TD></TR>
-				<TR><TD> DESCRIPCIÓN:</td><TD>$application.description </TD></TR>
-				<TR><TD> CATEGORIAS:</td><TD>
-						#for $cat in $application.categories
-							$cat
-						#end for
-				</TD></TR>
-				<TR><TD> ALTERNATIVAS:</td><TD>
-						#for $alt in $application.alternatives
-							$alt 
-						#end for
-				</TD></TR>
-				<TR>  <A href="../../software/$application.file">Instalar $application.name version $application.version</A> </div> <TR>
-			</table> 
-		</div>
-	</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="cjimenez" />
+    <meta name="generator" content="VIM" />
+    <style type="text/css">
+      /***************************************************************
+       * TITLE: Violet (Default Template for the CD-Crisol v. 0.2)   * 
+       * AUTHOR: Claudio Jimenez Castillo                            *
+       * DATE: August 3rd, 2006                                      *
+       * LICENSE: GPL                                                *
+       *                                                             *
+       * BASED ON: Common Stylesheet for Blue Haze BY haran          *
+       * URI: http://www.oswd.org/design/xxx/bluehaze/bluehaze.css   *
+       * MODIF: 2003-01-05 1608 +0800                                *
+       ***************************************************************/
+      /* @@@@@ BACKGROUND COLORS @@@@@ */
+      body {background-color: #f0f0f0;}
+      #wrap, #header, #footer, #bodyText a, .sideBox a, .headerTitle {background-color: #dadaff;}
+      .sideBox div {background-color: #b9b9ff;}
+      /* @@@@@ FONT COLORS @@@@@ */
+      #header, #footer, h1, .headerTitle, .sideBox div {color: #222299;}
+      body, #wrap {color: #000;}
+      /* @@@@@ BORDER COLOR @@@@@ */
+      #header, .sideBox, .sideBox div, #footer, h1 {border-color: #229;}
+      /* @@@@@ LINKS COLOR AND BACKGROUND @@@@@ */
+      .sideBox a {color: #000;}
+      .sideBox a:hover {color:#000; background-color: #b9b9ff;}
+      #bodyText a {color: #000; border-bottom-color: #000;}
+      #instal a {color: #229; border-bottom-color: #229;}
+      
+      /* @@@@@ GENERAL DESIGN @@@@@ */
+      body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 10pt;}
+      #wrap {margin: 0 auto; width: 760px;}
+      h1 {font-family: "trebuchet ms", tahoma, sans-serif; font-weight: bold; font-size: 15pt; border-bottom-style: solid; border-bottom-width: 1px; padding-bottom: 5px;}
+      h3 a {font-size: 8pt; text-decoration: none; border-bottom-style: solid; border-bottom-width: 1px;}
+      img {border: none;}
+      /* @@@@@@ Body TEXT @@@@@@ */
+      #bodyText {font-size:10pt; text-align: justify; margin: 0 0 15px 175px; padding: 0 15px 0 0;}
+      #bodyText p {padding-bottom: 2px;}
+      #bodyText a {text-decoration: none;}
+      #instal a {text-decoration: none; border:none;}
+      #bodyText a:hover {border-bottom: none; font-size: 105%;}
+      
+      /* @@@@@@ HEADER @@@@@@ */
+      #header {border-bottom-style: solid; border-bottom-width: 2px; padding: 15px; margin-bottom: 25px;}
+      .headerTitle {font-size: 25pt; font-weight: bold;}
+
+      /* @@@@@@ SIDE BOX @@@@@@ */
+      .sideBox {float: left; clear: left; border-style: solid none solid none; border-width: 2px 0 2px 0; width: 11em; margin-bottom: 25px;}
+      .sideBox div {font-weight: bold; border-bottom-style: solid; border-bottom-width: 1px; padding: 0.5ex 0.5em 0.5ex 0.75em;}
+      .sideBox a, .sideBox a:hover, .sideBox span {text-decoration: none; line-height: 1.25em; display: block; padding: 1.25ex 0.5em 1.25ex 0.75em;}
+      
+      /* @@@@@@ FOOTER @@@@@@ */
+      #footer {border-style: solid none solid none; border-width: 2px 0 2px 0; padding-top: 0.75ex; padding-bottom: 0.75ex; clear: left;}
+      #footer div {font-size: 9pt; line-height: 1.25em; text-align: right; padding: 0 5px 0 5px;}
+      #footer a:hover {text-decoration: none;}
+      .footerLeft {float: left;clear: left;}
+    </style>
+
+    <title>CD Crisol - Aplicacion</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+  
+      <!-- @@@@@@ HEADER @@@@@@ -->
+      <div id="header">
+        <span class="headerTitle">CD Crisol</span>
+      </div>
+  
+      <!-- @@@@@@ SIDE BOXES @@@@@@ -->
+      <div class="sideBox">
+        <a href="../index.html">Inicio</a>
+      </div>
+      <div class="sideBox">
+        <div>Categorias</div>
+          #for $category in $categories:
+            <a href="../categories/$category.html_file">$category.name ($category.label)</a>
+          #end for
+      </div>
+  
+      <!-- @@@@@@ BODY TEXT @@@@@@ -->
+      <div id="bodyText">
+        <h1>$application.name</h1>
+	<a href="$application.site"><img src="../../../icons/$application.icon" alt="icono" /></a>
+	<div id="instal"><h3><a href="../../software/$application.file">Instalar $application.name $application.version</a></h3></div>
+	<table border="0">
+          <tr>
+	      <td> <strong>Web:</strong></td>
+	      <td><a href="$application.site">$application.site</a></td>
+	  </tr>
+          <tr>
+              <td> <strong>Plataformas:</strong></td>
+              <td>
+                #for $plat in $application.plataforms
+                  $plat<br />
+                #end for
+              </td>
+          </tr>
+          <tr>
+	      <td> <strong>Categorias:</strong></td>
+	      <td>
+                #for $cat in $application.categories
+                  $cat<br />
+                #end for
+              </td>
+	  </tr>
+          <tr>
+	      <td> <strong>Alternativas:</strong></td>
+	      <td>
+                #for $alt in $application.alternatives
+                  $alt<br /> 
+                #end for
+              </td>
+	  </tr>
+          <tr>
+	      <td> <strong> Manuales:</strong></td>
+	      <td>
+                #for $man in $application.manuals.app_man_online
+                  <strong><a href="$man.app_man_on_url">$man.app_man_on_name</a> (OnLine):</strong> $man.app_man_on_description<br />
+                #end for
+                #for $man in $application.manuals.app_man_offline
+                  <strong><a href="../../manuals/$man.app_man_off_file">$man.app_man_off_name</a> (OffLine):</strong> $man.app_man_off_description<br />
+                #end for
+              </td>
+	  </tr>
+          <tr>
+	      <td> <strong>Descripción:</strong></td>
+	      <td align="justify">$application.description </td>
+	  </tr>
+        </table>
+      </div>
+      
+      <!-- @@@@@@ FOOTER @@@@@@ -->
+      <div id="footer">
+        <div class="footerLeft">
+          Contacto: <a href="mailto:&#098;&#097;&#109;&#101;&#100;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">CD-Crisol Devel Team</a>
+        </div>
+        <div class="footerLeft">
+          &copy; 2006 - Crisol-UC3M <a href="http://crisol.uc3m.es">(http://crisol.uc3m.es)</a>
+        </div>
+        <div>
+          Template diseñado por <a href="mailto:&#099;&#106;&#105;&#109;&#101;&#110;&#101;&#122;&#064;&#103;&#117;&#108;&#046;&#117;&#099;&#051;&#109;&#046;&#101;&#115;">cjimenez</a>
+        </div>
+        <div>
+          Valida <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS 2</a>  y <a href="http://validator.w3.org/check/referer">XHTML 1.0 Strict</a>
+        </div>
+      </div>
+      
+    </div>
+  </body>
 </html>

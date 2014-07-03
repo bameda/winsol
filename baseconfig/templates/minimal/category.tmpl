@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<div align="center">
+			<h1><h1>CD Software Libre del Crisol</h1></title>
+		</div>
+	</head>
+	
+	<body bgcolor="#D6AA95">
+		<div align="center">
+			<h2>Categoría</h2>
+			<table>
+				<TR><TD> NOMBRE:</TD><TD> $category.name </TD></TR>
+				<TR><TD> ETIQUETA:</td><TD> $category.label</TD></TR>
+				<TR><TD> APLICACIONES:</td><TD> 
+					#for $app in $category.apps:
+							 #if $app.included :   
+								<div> <A href="../apps/$app.html_file">$app.name</A> </div>
+							#end if
+					#end for
+				</TD></TR>
+			</table> 
+		</div>
+	</body>
+</html>

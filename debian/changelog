@@ -1,3 +1,30 @@
+cd-crisol (0.2-1) unstable; urgency=low
+  
+  * Added more functions to select and unselect all applications or all by
+    category and all categories.
+  * Added "select all" and "unselect all" function to select/unselect all
+    applications and categories.
+  * Fixed some errors in download applications and icons process.
+  * Fixed some encoding problems in application's dictionary generation.
+  * Fixed some errors in creating ISO image process.
+  * Added "violet" html template (default CD-Crisol v 0.2 html template)
+    designed by Claudio Jimenez.
+  * Added "minimal" html tenmplate (old default html template).
+  * Added "revival" html template.
+  * Added "darktranquility" html template.
+  * Added "oranges" html template.
+  * Added "apps.log" file: a changelog applications xml file.
+  * Changed the application's manual structure: there are online manuals
+    and offline manuals (incluiding in the ISO Image).
+  * Added a new applications atributes: plataforms and minidescriptions.
+  * When a application download url is broke, it's unselec automaticly.
+  * When a application manual url is broke, this one is delete 
+    automaticly.
+  * When a aplications icon url is broke, this icon is delete 
+    automaticly.
+
+ -- Jesúus Espino Garcia <jespino@di.uc3m.es>  Sun, 25 Jun 2006 01:56:37 +0200
+
 cd-crisol (0.1-1) unstable; urgency=low
 
   * Initial release.
