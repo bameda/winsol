@@ -9,4 +9,10 @@ Finally, we will generate a file in the format you prefer: support recording app
 
 Download our custom composition will be as easy as clicking on a link will receive in our email.
 
+#### Changelog:
+2006-09-25 - v 0.3  
+2006-08-07 - v 0.2  
+2006-05-29 - v 0.1  
+  
+  
 > NOTE: This was my firts webapp in python, done in 2006. The code quality is very questionable... so be lenient ;-P
